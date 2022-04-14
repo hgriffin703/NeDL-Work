@@ -1,0 +1,15 @@
+C:\Users\HGriffin\Desktop\NeDL\Day4Review\bin\Debug\net6.0\Day4Review.exe
+C:\Users\HGriffin\Desktop\NeDL\Day4Review\bin\Debug\net6.0\Day4Review.deps.json
+C:\Users\HGriffin\Desktop\NeDL\Day4Review\bin\Debug\net6.0\Day4Review.runtimeconfig.json
+C:\Users\HGriffin\Desktop\NeDL\Day4Review\bin\Debug\net6.0\Day4Review.dll
+C:\Users\HGriffin\Desktop\NeDL\Day4Review\bin\Debug\net6.0\ref\Day4Review.dll
+C:\Users\HGriffin\Desktop\NeDL\Day4Review\bin\Debug\net6.0\Day4Review.pdb
+C:\Users\HGriffin\Desktop\NeDL\Day4Review\obj\Debug\net6.0\Day4Review.csproj.AssemblyReference.cache
+C:\Users\HGriffin\Desktop\NeDL\Day4Review\obj\Debug\net6.0\Day4Review.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HGriffin\Desktop\NeDL\Day4Review\obj\Debug\net6.0\Day4Review.AssemblyInfoInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\Day4Review\obj\Debug\net6.0\Day4Review.AssemblyInfo.cs
+C:\Users\HGriffin\Desktop\NeDL\Day4Review\obj\Debug\net6.0\Day4Review.csproj.CoreCompileInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\Day4Review\obj\Debug\net6.0\Day4Review.dll
+C:\Users\HGriffin\Desktop\NeDL\Day4Review\obj\Debug\net6.0\ref\Day4Review.dll
+C:\Users\HGriffin\Desktop\NeDL\Day4Review\obj\Debug\net6.0\Day4Review.pdb
+C:\Users\HGriffin\Desktop\NeDL\Day4Review\obj\Debug\net6.0\Day4Review.genruntimeconfig.cache

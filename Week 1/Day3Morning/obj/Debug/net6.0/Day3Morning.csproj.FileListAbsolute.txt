@@ -1,0 +1,15 @@
+C:\Users\HGriffin\Desktop\NeDL\Day3Morning\bin\Debug\net6.0\Day3Morning.exe
+C:\Users\HGriffin\Desktop\NeDL\Day3Morning\bin\Debug\net6.0\Day3Morning.deps.json
+C:\Users\HGriffin\Desktop\NeDL\Day3Morning\bin\Debug\net6.0\Day3Morning.runtimeconfig.json
+C:\Users\HGriffin\Desktop\NeDL\Day3Morning\bin\Debug\net6.0\Day3Morning.dll
+C:\Users\HGriffin\Desktop\NeDL\Day3Morning\bin\Debug\net6.0\ref\Day3Morning.dll
+C:\Users\HGriffin\Desktop\NeDL\Day3Morning\bin\Debug\net6.0\Day3Morning.pdb
+C:\Users\HGriffin\Desktop\NeDL\Day3Morning\obj\Debug\net6.0\Day3Morning.csproj.AssemblyReference.cache
+C:\Users\HGriffin\Desktop\NeDL\Day3Morning\obj\Debug\net6.0\Day3Morning.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HGriffin\Desktop\NeDL\Day3Morning\obj\Debug\net6.0\Day3Morning.AssemblyInfoInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\Day3Morning\obj\Debug\net6.0\Day3Morning.AssemblyInfo.cs
+C:\Users\HGriffin\Desktop\NeDL\Day3Morning\obj\Debug\net6.0\Day3Morning.csproj.CoreCompileInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\Day3Morning\obj\Debug\net6.0\Day3Morning.dll
+C:\Users\HGriffin\Desktop\NeDL\Day3Morning\obj\Debug\net6.0\ref\Day3Morning.dll
+C:\Users\HGriffin\Desktop\NeDL\Day3Morning\obj\Debug\net6.0\Day3Morning.pdb
+C:\Users\HGriffin\Desktop\NeDL\Day3Morning\obj\Debug\net6.0\Day3Morning.genruntimeconfig.cache

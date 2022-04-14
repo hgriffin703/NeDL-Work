@@ -1,0 +1,15 @@
+C:\Users\HGriffin\Desktop\NeDL\Day6Arrays\bin\Debug\net6.0\Day6Arrays.exe
+C:\Users\HGriffin\Desktop\NeDL\Day6Arrays\bin\Debug\net6.0\Day6Arrays.deps.json
+C:\Users\HGriffin\Desktop\NeDL\Day6Arrays\bin\Debug\net6.0\Day6Arrays.runtimeconfig.json
+C:\Users\HGriffin\Desktop\NeDL\Day6Arrays\bin\Debug\net6.0\Day6Arrays.dll
+C:\Users\HGriffin\Desktop\NeDL\Day6Arrays\bin\Debug\net6.0\ref\Day6Arrays.dll
+C:\Users\HGriffin\Desktop\NeDL\Day6Arrays\bin\Debug\net6.0\Day6Arrays.pdb
+C:\Users\HGriffin\Desktop\NeDL\Day6Arrays\obj\Debug\net6.0\Day6Arrays.csproj.AssemblyReference.cache
+C:\Users\HGriffin\Desktop\NeDL\Day6Arrays\obj\Debug\net6.0\Day6Arrays.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HGriffin\Desktop\NeDL\Day6Arrays\obj\Debug\net6.0\Day6Arrays.AssemblyInfoInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\Day6Arrays\obj\Debug\net6.0\Day6Arrays.AssemblyInfo.cs
+C:\Users\HGriffin\Desktop\NeDL\Day6Arrays\obj\Debug\net6.0\Day6Arrays.csproj.CoreCompileInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\Day6Arrays\obj\Debug\net6.0\Day6Arrays.dll
+C:\Users\HGriffin\Desktop\NeDL\Day6Arrays\obj\Debug\net6.0\ref\Day6Arrays.dll
+C:\Users\HGriffin\Desktop\NeDL\Day6Arrays\obj\Debug\net6.0\Day6Arrays.pdb
+C:\Users\HGriffin\Desktop\NeDL\Day6Arrays\obj\Debug\net6.0\Day6Arrays.genruntimeconfig.cache

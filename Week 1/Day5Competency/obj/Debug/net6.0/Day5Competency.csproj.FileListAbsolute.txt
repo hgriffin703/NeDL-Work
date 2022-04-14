@@ -1,0 +1,15 @@
+C:\Users\HGriffin\Desktop\NeDL\Day5Competency\bin\Debug\net6.0\Day5Competency.exe
+C:\Users\HGriffin\Desktop\NeDL\Day5Competency\bin\Debug\net6.0\Day5Competency.deps.json
+C:\Users\HGriffin\Desktop\NeDL\Day5Competency\bin\Debug\net6.0\Day5Competency.runtimeconfig.json
+C:\Users\HGriffin\Desktop\NeDL\Day5Competency\bin\Debug\net6.0\Day5Competency.dll
+C:\Users\HGriffin\Desktop\NeDL\Day5Competency\bin\Debug\net6.0\ref\Day5Competency.dll
+C:\Users\HGriffin\Desktop\NeDL\Day5Competency\bin\Debug\net6.0\Day5Competency.pdb
+C:\Users\HGriffin\Desktop\NeDL\Day5Competency\obj\Debug\net6.0\Day5Competency.csproj.AssemblyReference.cache
+C:\Users\HGriffin\Desktop\NeDL\Day5Competency\obj\Debug\net6.0\Day5Competency.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HGriffin\Desktop\NeDL\Day5Competency\obj\Debug\net6.0\Day5Competency.AssemblyInfoInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\Day5Competency\obj\Debug\net6.0\Day5Competency.AssemblyInfo.cs
+C:\Users\HGriffin\Desktop\NeDL\Day5Competency\obj\Debug\net6.0\Day5Competency.csproj.CoreCompileInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\Day5Competency\obj\Debug\net6.0\Day5Competency.dll
+C:\Users\HGriffin\Desktop\NeDL\Day5Competency\obj\Debug\net6.0\ref\Day5Competency.dll
+C:\Users\HGriffin\Desktop\NeDL\Day5Competency\obj\Debug\net6.0\Day5Competency.pdb
+C:\Users\HGriffin\Desktop\NeDL\Day5Competency\obj\Debug\net6.0\Day5Competency.genruntimeconfig.cache

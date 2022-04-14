@@ -1,0 +1,15 @@
+C:\Users\HGriffin\Desktop\NeDL\Day3Afternoon\bin\Debug\net6.0\Day3Afternoon.exe
+C:\Users\HGriffin\Desktop\NeDL\Day3Afternoon\bin\Debug\net6.0\Day3Afternoon.deps.json
+C:\Users\HGriffin\Desktop\NeDL\Day3Afternoon\bin\Debug\net6.0\Day3Afternoon.runtimeconfig.json
+C:\Users\HGriffin\Desktop\NeDL\Day3Afternoon\bin\Debug\net6.0\Day3Afternoon.dll
+C:\Users\HGriffin\Desktop\NeDL\Day3Afternoon\bin\Debug\net6.0\ref\Day3Afternoon.dll
+C:\Users\HGriffin\Desktop\NeDL\Day3Afternoon\bin\Debug\net6.0\Day3Afternoon.pdb
+C:\Users\HGriffin\Desktop\NeDL\Day3Afternoon\obj\Debug\net6.0\Day3Afternoon.csproj.AssemblyReference.cache
+C:\Users\HGriffin\Desktop\NeDL\Day3Afternoon\obj\Debug\net6.0\Day3Afternoon.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HGriffin\Desktop\NeDL\Day3Afternoon\obj\Debug\net6.0\Day3Afternoon.AssemblyInfoInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\Day3Afternoon\obj\Debug\net6.0\Day3Afternoon.AssemblyInfo.cs
+C:\Users\HGriffin\Desktop\NeDL\Day3Afternoon\obj\Debug\net6.0\Day3Afternoon.csproj.CoreCompileInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\Day3Afternoon\obj\Debug\net6.0\Day3Afternoon.dll
+C:\Users\HGriffin\Desktop\NeDL\Day3Afternoon\obj\Debug\net6.0\ref\Day3Afternoon.dll
+C:\Users\HGriffin\Desktop\NeDL\Day3Afternoon\obj\Debug\net6.0\Day3Afternoon.pdb
+C:\Users\HGriffin\Desktop\NeDL\Day3Afternoon\obj\Debug\net6.0\Day3Afternoon.genruntimeconfig.cache

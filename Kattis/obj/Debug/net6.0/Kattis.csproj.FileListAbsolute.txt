@@ -1,0 +1,15 @@
+C:\Users\HGriffin\Desktop\NeDL\Kattis\bin\Debug\net6.0\Kattis.exe
+C:\Users\HGriffin\Desktop\NeDL\Kattis\bin\Debug\net6.0\Kattis.deps.json
+C:\Users\HGriffin\Desktop\NeDL\Kattis\bin\Debug\net6.0\Kattis.runtimeconfig.json
+C:\Users\HGriffin\Desktop\NeDL\Kattis\bin\Debug\net6.0\Kattis.dll
+C:\Users\HGriffin\Desktop\NeDL\Kattis\bin\Debug\net6.0\ref\Kattis.dll
+C:\Users\HGriffin\Desktop\NeDL\Kattis\bin\Debug\net6.0\Kattis.pdb
+C:\Users\HGriffin\Desktop\NeDL\Kattis\obj\Debug\net6.0\Kattis.csproj.AssemblyReference.cache
+C:\Users\HGriffin\Desktop\NeDL\Kattis\obj\Debug\net6.0\Kattis.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HGriffin\Desktop\NeDL\Kattis\obj\Debug\net6.0\Kattis.AssemblyInfoInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\Kattis\obj\Debug\net6.0\Kattis.AssemblyInfo.cs
+C:\Users\HGriffin\Desktop\NeDL\Kattis\obj\Debug\net6.0\Kattis.csproj.CoreCompileInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\Kattis\obj\Debug\net6.0\Kattis.dll
+C:\Users\HGriffin\Desktop\NeDL\Kattis\obj\Debug\net6.0\ref\Kattis.dll
+C:\Users\HGriffin\Desktop\NeDL\Kattis\obj\Debug\net6.0\Kattis.pdb
+C:\Users\HGriffin\Desktop\NeDL\Kattis\obj\Debug\net6.0\Kattis.genruntimeconfig.cache

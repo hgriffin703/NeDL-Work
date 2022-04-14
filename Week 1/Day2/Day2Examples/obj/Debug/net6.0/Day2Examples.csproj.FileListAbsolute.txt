@@ -1,0 +1,15 @@
+C:\Users\HGriffin\Desktop\NeDL\Day2Examples\bin\Debug\net6.0\Day2Examples.exe
+C:\Users\HGriffin\Desktop\NeDL\Day2Examples\bin\Debug\net6.0\Day2Examples.deps.json
+C:\Users\HGriffin\Desktop\NeDL\Day2Examples\bin\Debug\net6.0\Day2Examples.runtimeconfig.json
+C:\Users\HGriffin\Desktop\NeDL\Day2Examples\bin\Debug\net6.0\Day2Examples.dll
+C:\Users\HGriffin\Desktop\NeDL\Day2Examples\bin\Debug\net6.0\ref\Day2Examples.dll
+C:\Users\HGriffin\Desktop\NeDL\Day2Examples\bin\Debug\net6.0\Day2Examples.pdb
+C:\Users\HGriffin\Desktop\NeDL\Day2Examples\obj\Debug\net6.0\Day2Examples.csproj.AssemblyReference.cache
+C:\Users\HGriffin\Desktop\NeDL\Day2Examples\obj\Debug\net6.0\Day2Examples.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HGriffin\Desktop\NeDL\Day2Examples\obj\Debug\net6.0\Day2Examples.AssemblyInfoInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\Day2Examples\obj\Debug\net6.0\Day2Examples.AssemblyInfo.cs
+C:\Users\HGriffin\Desktop\NeDL\Day2Examples\obj\Debug\net6.0\Day2Examples.csproj.CoreCompileInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\Day2Examples\obj\Debug\net6.0\Day2Examples.dll
+C:\Users\HGriffin\Desktop\NeDL\Day2Examples\obj\Debug\net6.0\ref\Day2Examples.dll
+C:\Users\HGriffin\Desktop\NeDL\Day2Examples\obj\Debug\net6.0\Day2Examples.pdb
+C:\Users\HGriffin\Desktop\NeDL\Day2Examples\obj\Debug\net6.0\Day2Examples.genruntimeconfig.cache
