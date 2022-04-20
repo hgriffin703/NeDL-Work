@@ -88,7 +88,7 @@ namespace MyApplication
           Console.WriteLine("Please enter a valid option");
         }
        } while (!validUserChoice);
-      //if the option is L or l then load the text file (ValidNames.txt) into the array
+        //loads the file structure into the Array
         if(userChoice == "L" || userChoice == "l")
         {
           Console.WriteLine("this is the L area");
@@ -107,8 +107,7 @@ namespace MyApplication
             Console.WriteLine("");
          }
         }
-      //elseif the option is an S or s then store the array into the text file
-        
+      //save/store the array into the text file
         else if(userChoice == "S" || userChoice == "s")
         {
           Console.WriteLine("In the S/s area");
@@ -119,41 +118,48 @@ namespace MyApplication
           }
           using(StreamWriter fileStr = File.CreateText(fileName))
           { //rewrite the data
-            for (int index = 0; index <NameArray.Length; index++)
+            for (int index = 0; index < NameArray.Length; index++)
             {
               fileStr.WriteLine(NameArray[index]);
             }
           }
           Console.WriteLine(fileName + " has been saved");
           }
-      //elseif the option is a C or c then add a name to the array (if there is room we will have a limit)
+      //add a name to the array (if there is room)
         else if(userChoice == "C" || userChoice == "c")
-        {  
+        { 
+           int index = 0;
           Console.WriteLine("What name do you want to add?");
           string newName = Console.ReadLine();
           bool found = false;
-          Console.WriteLine("");
-          int index = 0;
-
+          Console.WriteLine(""); //entering a blank line to give some space
+          //index to add it to the array
           for (index = 0; index < 10; index++)
-          //{
-            if((NameArray[index] == "Open") && found == false)
+          {
+            if((NameArray[index] == "") && found == false)
             {
               NameArray[index] = newName;
               found = true;
 
               Console.WriteLine(NameArray[index]); 
             }  
-          //}
+          } //end the for loop
+            if (found == false) //didn't need anything else because this is bool
+          {
+            Console.WriteLine("There is no space to add");
+          }
         }
-        
-      //elseif the option is an R or r then read a name from the array (if it is there)
+          
+    //if the option is an R or r then read a name from the array (if it is there)
         else if(userChoice == "R" || userChoice == "r")
         {
           Console.WriteLine("in the R/r area");
+          Console.WriteLine("Which array spot would you like to find?");
+          int findName = Convert.ToInt16(Console.ReadLine());
+
            for (int index = 0; index < 10; index++)
           {
-            Console.WriteLine(NameArray[index]);
+            Console.WriteLine(NameArray[index]); //fix this
           }
         }
       //elseif the option is a U or u then update a name in the array (if it is there)
@@ -168,7 +174,7 @@ namespace MyApplication
           {
             if((NameArray[index] == nameToUpdate))
             { //updates the name
-            Console.WriteLine("What value would you like to change " + nameToUpdate);
+            Console.WriteLine("What value would you like to change " + nameToUpdate + " to?");
             string updateName = Console.ReadLine();
             NameArray[index] = updateName;
             }
@@ -177,7 +183,30 @@ namespace MyApplication
       //elseif the option is a D or d then delete the name in the array (if it is there)
         else if(userChoice == "D" || userChoice == "d")
         {
-          Console.WriteLine("in the D/d area");
+         int i = 0;
+         Console.WriteLine("What name would you like to remove?");
+         string deleteName = Console.ReadLine();
+
+         Console.WriteLine("Elements before deletion:");
+         for (i = 0; i < 10; i++) 
+         {
+            Console.WriteLine(NameArray[i]);
+         }
+         //gets the indx (position) of the name that should be delete
+          string SearchString = deleteName;
+          int index = Array.IndexOf(NameArray, SearchString);
+          Console.WriteLine(index);
+
+         // Shifts elements depending on the removed value
+         for (i = index; i < 9; i++) 
+         {
+            NameArray[i] = NameArray[i + 1];
+         }
+         Console.WriteLine("Elements after deletion: ");
+         for (i = 0; i < 9; i++) 
+         {
+            Console.WriteLine( NameArray[i]);
+         }
         }
           //else quit program because Q or q were used
           else
