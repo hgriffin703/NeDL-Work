@@ -7,17 +7,37 @@ namespace Day13 //must be the same namespace througout
         static void Main(string[] args)
         {
             Music testMusicMain = new Music("Shakira", "Best Records"); //this inputs data to the Music Class
-            Console.WriteLine(testMusicMain); //this prints out the return from MusicMain Line 21
-            Album testAlbum = new Album("Shakira, Shakira", "10/20/2003", "ShakiraTest", "1Best"); //start with the ones from the Album
-            Console.WriteLine(testAlbum);
-            Songs testSong = new Songs("One Love", "3:45", "Bob Marley", "Long Day Studios");
-            Console.WriteLine(testSong);
+            //Console.WriteLine(testMusicMain); //this prints out the return from MusicMain Line 21
+            Music testAlbum = new Album("Shakira, Shakira", "10/20/2003", "ShakiraTest", "1Best"); //start with the ones from the Album
+            //Console.WriteLine(testAlbum);
+            Music testSong = new Songs("One Love", "3:45", "Bob Marley", "Long Day Studios");
+            //Console.WriteLine(testSong);
             Console.WriteLine("");
+
+            Music[] musicArray = new Music[5]; //music array test
+            musicArray[0] = testMusicMain; //put obj we already created in the Array (Line9)
+            musicArray[1] = new Album ("Elton John", "Best Records", "Vienna", "10/24/1975");
+            musicArray[2] = testAlbum; //same as above
+            musicArray[4] = testSong;
+
+            for(int index = 0; index < musicArray.Length; index++)
+            {
+                if(!(musicArray[index] == null))
+                    Console.WriteLine(musicArray[index]); //printing the return from your album file
+            }
+            Console.WriteLine("");
+
+            //if(musicArray[3] == null)
+            //{
+              //  Console.WriteLine("here"); // this is a test for if it will catch nulls
+            //}
+
+
 
             Album [] musicalArray = new Album[5]; //album array
             for (int index = 0; index < musicalArray.Length; index++)
             {
-                musicalArray[index] = new Album();
+                musicalArray[index] = new Album(); //to use the same array we can't pre initailze this
             }
 
             musicalArray[0].artist = ("Elton John"); //album info

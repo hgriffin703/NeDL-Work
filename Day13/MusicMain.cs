@@ -6,7 +6,7 @@ namespace Day13 //same namespace as Program
     {
         public string artist;
         public string recordLabel;
-        public Music() //call the object class again
+        public Music() //call the object class again; constructor
         {
             artist = null; 
             recordLabel = null;
