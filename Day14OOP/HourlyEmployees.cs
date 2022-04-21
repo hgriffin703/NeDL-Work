@@ -6,7 +6,7 @@ namespace Competency //same namespace as Program
     {
         private double hourlyRate;
         public double HourlyRate;
-        private double hourlyBonus;
+        private double hourlyBonus;//remove here and make a method; try this once done
         public double HourlyBonus;
         public Hourly() //call the object class again; constructor
         {

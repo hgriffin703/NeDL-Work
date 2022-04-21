@@ -10,6 +10,8 @@ namespace Competency //must be the same namespace througout
             string userChoice;
             string fileName = @"EmployeesList.txt";
 
+        Employees[] EmployeeArray = new Employees[25]; //Employee array create
+
             do 
         {
             do
@@ -39,8 +41,6 @@ namespace Competency //must be the same namespace througout
         }
 
           } while (!validUserChoice);
-
-            Employees[] EmployeeArray = new Employees[25]; //Employee array create
 
 /*             Employees newEmployee = new Employees ("John", "Smith", 'S');
             //Console.WriteLine(newEmployee);
@@ -97,9 +97,8 @@ namespace Competency //must be the same namespace througout
                   Console.WriteLine(hourlyrate);
                   EmployeeArray[index] = new Hourly (firstName, lastName, eType, hourlyrate);
               }
-              //System.Console.WriteLine(employeeVar);
-              //EmployeeArray[index] = employeeVar;
-              //index = index +1;
+ 
+              index = index +1;
             } 
             Console.WriteLine("");
          }
@@ -152,7 +151,7 @@ namespace Competency //must be the same namespace througout
           {
             if(EmployeeArray[index] != null)
             {
-               Console.WriteLine(EmployeeArray[0]);
+               Console.WriteLine(EmployeeArray[index]);
             } 
           }
             Console.WriteLine("");
