@@ -7,11 +7,23 @@ namespace Competency //same namespace as Program
         public string firstName;
         public string lastName;
         public char eType;
+        public int getSalary
+        {
+            get;
+            set;
+        }
+        public double getHourly
+        {
+            get;
+            set;
+        }
         public Employees() //call the object class again; constructor
         {
             firstName = null; 
             lastName = null;
             eType = '\0';
+            getSalary = 0;
+            getHourly = 0;
         }
     public Employees (string newFirstName, string newLastName, char newEType)
     {

@@ -8,6 +8,16 @@ namespace Competency //same namespace as Program
         public double HourlyRate;
         private double hourlyBonus;//remove here and make a method; try this once done
         public double HourlyBonus;
+        public double getHourly
+        {
+            get
+            {
+                return Convert.ToDouble(HourlyRate);
+            }
+            set{
+                HourlyRate = getHourly;
+            }
+        }
         public Hourly() //call the object class again; constructor
         {
             HourlyRate = 0; 

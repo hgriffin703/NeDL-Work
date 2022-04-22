@@ -8,6 +8,17 @@ namespace Competency //same namespace as Program
         public int AnnualSalary;//public salary
         private double salaryBonus;
         public double SalaryBonus; //public bonus
+        public int getSalary
+        {
+            get
+            {
+                return AnnualSalary;
+            }
+            set{
+                AnnualSalary = getSalary;
+            }
+        }
+
         public Salary() //call the object class again; constructor
         {
             annualSalary = 0; 
