@@ -105,6 +105,10 @@ namespace Competency //must be the same namespace througout
  
         //in the S section - save the file
 
+
+
+
+
         else if (userChoice == "S" || userChoice == "s")
          {
             int index;
@@ -140,6 +144,14 @@ namespace Competency //must be the same namespace througout
           Console.WriteLine(fileName + " has been saved");
           } 
          }
+
+
+
+
+
+
+
+
 
         //now in the R section
         else if(userChoice == "R" || userChoice == "r")
