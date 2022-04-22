@@ -53,7 +53,6 @@ namespace Competency //must be the same namespace througout
             Hourly newHourly2 = new Hourly ("Chris", "Hemsworth", 'H', 30.50);
             Hourly newHourly3 = new Hourly ("Kendall", "Jenner", 'H', 39.00);
             //Console.WriteLine(newHourly);
-
             EmployeeArray[10] = newEmployee; //put obj we already created in the Array (Line9)
             EmployeeArray[15] = new Hourly ("Steve", "Carson", 'H', 25.00);
             EmployeeArray[19] = newSalary; //same as above
@@ -128,14 +127,14 @@ namespace Competency //must be the same namespace througout
                 fileStr.WriteLine(EmployeeArray[index].firstName);
                 fileStr.WriteLine(EmployeeArray[index].lastName);
                 fileStr.WriteLine(EmployeeArray[index].eType);
-                //fileStr.WriteLine(EmployeeArray[index].AnnualSalary);
+                fileStr.WriteLine(EmployeeArray[index].getSalary);
               }
             else if(EmployeeArray[index] != null && eType == 'H' || eType == 'h')
             {
                 fileStr.WriteLine(EmployeeArray[index].firstName);
                 fileStr.WriteLine(EmployeeArray[index].lastName);
                 fileStr.WriteLine(EmployeeArray[index].eType);
-               // fileStr.WriteLine(EmployeeArray[index] = Hourly.HourlyRate);  
+                fileStr.WriteLine(EmployeeArray[index].getHourly);  
             }
           }
           Console.WriteLine(fileName + " has been saved");
@@ -164,7 +163,7 @@ namespace Competency //must be the same namespace througout
            string lastName = null;
            int AnnualSalary = 0;
            double HourlyRate = 0;
-           bool found = false; 
+ 
 
           //gets the employee type to base the questions below on
           Console.WriteLine("What is the employees employment type? S or H");
@@ -188,18 +187,19 @@ namespace Competency //must be the same namespace througout
                 HourlyRate = Convert.ToDouble(Console.ReadLine());   
                 }
           
+           bool found = false; 
           //index to add it new employee to the array
           for (index = 0; index < EmployeeArray.Length; index++)
           {
-             if((EmployeeArray[index] != null) && found == false) //this code is not working; what is wrong?
+             if((EmployeeArray[index] == null) && found == false) 
             {
               if(eType == 'S' || eType == 's') //checks for S
               {
-              EmployeeArray[index] = new Salary(firstName, lastName, eType, AnnualSalary); //doesn't like this either
+              EmployeeArray[index] = new Salary(firstName, lastName, eType, AnnualSalary); 
               found = true;
               }
               else //checks for not
-              EmployeeArray[index] = new Hourly(firstName, lastName, eType, HourlyRate); //doesn't like this either
+              EmployeeArray[index] = new Hourly(firstName, lastName, eType, HourlyRate);
               found = true;
 
               Console.WriteLine(EmployeeArray[index]); 
