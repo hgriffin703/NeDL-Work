@@ -116,6 +116,7 @@ namespace Competency //must be the same namespace througout
             string firstName;
             string lastName;
             int AnnualSalary;
+
           Console.WriteLine("In the S/s area");
           //delete the file if it exists; for Ratings
           if (File.Exists(fileName))
@@ -126,14 +127,14 @@ namespace Competency //must be the same namespace througout
           { //rewrite the data
             for (index = 0; index < EmployeeArray.Length; index++)
             {
-              if(EmployeeArray[index] != null && eType == 'S' || eType == 's')
+             if(EmployeeArray[index] != null && (EmployeeArray[index].eType == 'S' || EmployeeArray[index].eType == 's'))
               {
                 fileStr.WriteLine(EmployeeArray[index].firstName);
                 fileStr.WriteLine(EmployeeArray[index].lastName);
                 fileStr.WriteLine(EmployeeArray[index].eType);
                 fileStr.WriteLine(EmployeeArray[index].getSalary);
               }
-            else if(EmployeeArray[index] != null && eType == 'H' || eType == 'h')
+            else if(EmployeeArray[index] != null && (EmployeeArray[index].eType == 'H' || EmployeeArray[index].eType == 'h'))
             {
                 fileStr.WriteLine(EmployeeArray[index].firstName);
                 fileStr.WriteLine(EmployeeArray[index].lastName);
