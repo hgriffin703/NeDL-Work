@@ -15,7 +15,7 @@ namespace Competency //same namespace as Program
                 return Convert.ToDouble(HourlyRate);
             }
             set{
-                HourlyRate = getHourly;
+                getHourly = HourlyRate;
             }
         }
         public Hourly() //call the object class again; constructor

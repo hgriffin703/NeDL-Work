@@ -22,8 +22,7 @@ namespace Competency //same namespace as Program
             firstName = null; 
             lastName = null;
             eType = '\0';
-            getSalary = 0;
-            getHourly = 0;
+
         }
     public Employees (string newFirstName, string newLastName, char newEType)
     {

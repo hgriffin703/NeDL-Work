@@ -15,7 +15,7 @@ namespace Competency //same namespace as Program
                 return AnnualSalary;
             }
             set{
-                AnnualSalary = getSalary;
+                getSalary = AnnualSalary;
             }
         }
 
