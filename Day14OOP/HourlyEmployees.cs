@@ -8,16 +8,7 @@ namespace Competency //same namespace as Program
         public double HourlyRate;
         private double hourlyBonus;//remove here and make a method; try this once done
         public double HourlyBonus;
-        public double getHourly
-        {
-            get
-            {
-                return Convert.ToDouble(HourlyRate);
-            }
-            set{
-                getHourly = HourlyRate;
-            }
-        }
+
         public Hourly() //call the object class again; constructor
         {
             HourlyRate = 0; 
@@ -27,6 +18,10 @@ namespace Competency //same namespace as Program
         hourlyRate = newHourlyRate;
         hourlyBonus = hourlyRate*80;
 
+    }
+    public override double GetHourly()
+    {
+        return HourlyRate; //sets the GetHourly field from Employees to the Hourly Rate given
     }
     public override string ToString() //overwrites the values to strings
     {

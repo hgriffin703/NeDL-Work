@@ -7,16 +7,7 @@ namespace Competency //same namespace as Program
         public string firstName;
         public string lastName;
         public char eType;
-        public int getSalary
-        {
-            get;
-            set;
-        }
-        public double getHourly
-        {
-            get;
-            set;
-        }
+       
         public Employees() //call the object class again; constructor
         {
             firstName = null; 
@@ -31,6 +22,19 @@ namespace Competency //same namespace as Program
         eType = newEType;
 
     }
+
+    public virtual int GetSalary1()
+//creates a dummy option here to call on the Hourly page for getting the array to be able to read the salary 
+
+    {
+        return -1;
+    }
+    public virtual double GetHourly() 
+//creates a dummy option here to call on the Hourly page for getting the array to be able to read the hourly rate 
+    {
+        return -1.00;
+    }
+
     public override string ToString() //overwrites the values to strings
     {
         return "The employees name is: " + firstName + " " + lastName + " and there employee type is: " + eType;

@@ -8,14 +8,14 @@ namespace Competency //same namespace as Program
         public int AnnualSalary;//public salary
         private double salaryBonus;
         public double SalaryBonus; //public bonus
-        public int getSalary
+        public int GetSalary
         {
             get
             {
-                return AnnualSalary;
+                return GetSalary;
             }
             set{
-                getSalary = AnnualSalary;
+                GetSalary = AnnualSalary;
             }
         }
 
@@ -29,6 +29,11 @@ namespace Competency //same namespace as Program
         AnnualSalary = newAnnualSalary;
         salaryBonus = AnnualSalary*.1;
 
+    }
+
+    public override int GetSalary1()
+    {
+        return AnnualSalary;//sets the GetSalary from employees equal to the Annual Salary
     }
     public override string ToString() //overwrites the values to strings
     {

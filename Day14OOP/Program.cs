@@ -132,14 +132,14 @@ namespace Competency //must be the same namespace througout
                 fileStr.WriteLine(EmployeeArray[index].firstName);
                 fileStr.WriteLine(EmployeeArray[index].lastName);
                 fileStr.WriteLine(EmployeeArray[index].eType);
-                fileStr.WriteLine(EmployeeArray[index].getSalary);
+                fileStr.WriteLine(EmployeeArray[index].GetSalary1());// calls from the salaryemp page but links to the employee page
               }
             else if(EmployeeArray[index] != null && (EmployeeArray[index].eType == 'H' || EmployeeArray[index].eType == 'h'))
             {
                 fileStr.WriteLine(EmployeeArray[index].firstName);
                 fileStr.WriteLine(EmployeeArray[index].lastName);
-                fileStr.WriteLine(EmployeeArray[index].eType);
-                fileStr.WriteLine(EmployeeArray[index].getHourly);  
+                fileStr.WriteLine(EmployeeArray[index].eType); 
+                fileStr.WriteLine(EmployeeArray[index].GetHourly()); //calls from the hourlyemp page but links to the employees page 
             }
           }
           Console.WriteLine(fileName + " has been saved");
