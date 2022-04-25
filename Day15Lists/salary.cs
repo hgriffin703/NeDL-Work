@@ -20,7 +20,7 @@ namespace Day15Lists
 
         public override string ToString()
         {
-            return base.ToString() + " their annual salary is: " + annualSalary + " and their bonus is: " + GetBonus();
+            return base.ToString() + " | Annual Salary: " + annualSalary + " | Bonus: " + GetBonus();
         }
     }
 }

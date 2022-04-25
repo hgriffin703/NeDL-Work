@@ -18,7 +18,7 @@ namespace Day15Lists
         }
         public override string ToString()
         {
-            return base.ToString() + " and their hourly rate is: " + hourlyRate + " and their bonus is: " + GetBonus();
+            return base.ToString() + " | Hourly rate:" + hourlyRate + " | Bonus: " + GetBonus();
         }
     }
 }

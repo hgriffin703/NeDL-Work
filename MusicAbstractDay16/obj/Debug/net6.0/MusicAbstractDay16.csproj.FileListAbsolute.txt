@@ -1,0 +1,15 @@
+C:\Users\HGriffin\Desktop\NeDL\MusicAbstractDay16\obj\Debug\net6.0\MusicAbstractDay16.csproj.AssemblyReference.cache
+C:\Users\HGriffin\Desktop\NeDL\MusicAbstractDay16\obj\Debug\net6.0\MusicAbstractDay16.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HGriffin\Desktop\NeDL\MusicAbstractDay16\obj\Debug\net6.0\MusicAbstractDay16.AssemblyInfoInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\MusicAbstractDay16\obj\Debug\net6.0\MusicAbstractDay16.AssemblyInfo.cs
+C:\Users\HGriffin\Desktop\NeDL\MusicAbstractDay16\obj\Debug\net6.0\MusicAbstractDay16.csproj.CoreCompileInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\MusicAbstractDay16\bin\Debug\net6.0\MusicAbstractDay16.exe
+C:\Users\HGriffin\Desktop\NeDL\MusicAbstractDay16\bin\Debug\net6.0\MusicAbstractDay16.deps.json
+C:\Users\HGriffin\Desktop\NeDL\MusicAbstractDay16\bin\Debug\net6.0\MusicAbstractDay16.runtimeconfig.json
+C:\Users\HGriffin\Desktop\NeDL\MusicAbstractDay16\bin\Debug\net6.0\MusicAbstractDay16.dll
+C:\Users\HGriffin\Desktop\NeDL\MusicAbstractDay16\bin\Debug\net6.0\ref\MusicAbstractDay16.dll
+C:\Users\HGriffin\Desktop\NeDL\MusicAbstractDay16\bin\Debug\net6.0\MusicAbstractDay16.pdb
+C:\Users\HGriffin\Desktop\NeDL\MusicAbstractDay16\obj\Debug\net6.0\MusicAbstractDay16.dll
+C:\Users\HGriffin\Desktop\NeDL\MusicAbstractDay16\obj\Debug\net6.0\ref\MusicAbstractDay16.dll
+C:\Users\HGriffin\Desktop\NeDL\MusicAbstractDay16\obj\Debug\net6.0\MusicAbstractDay16.pdb
+C:\Users\HGriffin\Desktop\NeDL\MusicAbstractDay16\obj\Debug\net6.0\MusicAbstractDay16.genruntimeconfig.cache

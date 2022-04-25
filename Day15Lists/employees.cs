@@ -25,7 +25,7 @@ namespace Day15Lists //same namespace as Program
 
         public override string ToString()
         {
-            return ("The employee is: " + firstName + " " + lastName + " and they are a: " + empType);
+            return ("Employee Name: " + firstName + " " + lastName + " | Employee Type: " + empType);
         }
     }
 }
