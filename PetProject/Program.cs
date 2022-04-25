@@ -35,7 +35,6 @@ namespace MyApplication
       Console.WriteLine("Your race is on " + inputtedDate);
       Console.WriteLine("You have " + daysUntilRace + " days until your race");
       Console.WriteLine("You have: " + weeksUntilRace + " weeks until the race!");
-      Console.WriteLine(GetValidMiles);
     }
   }
 }

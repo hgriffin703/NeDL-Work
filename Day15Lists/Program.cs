@@ -1,4 +1,4 @@
-﻿
+﻿/* 
 // C# program to create a List<T>
 using System;
 using System.Collections.Generic;
@@ -19,5 +19,22 @@ class Geeks {
         // displaying the first
         // of elements of List<T>
         Console.WriteLine(firstlist[1]);//calls item in the 1 place of the list
+    }
+} */
+
+using System;
+using System.Collections.Generic;
+
+namespace Day15Lists
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Employees newEmployee = new Employees ("Hayley", "Griffin", 'S');
+            //Console.WriteLine(newEmployee);
+            Salary newSalary = new Salary("Hayley", "Griffin", 'S', 100000);
+            Console.WriteLine(newSalary);
+        }
     }
 }
