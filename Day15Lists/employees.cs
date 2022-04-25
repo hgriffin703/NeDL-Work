@@ -20,6 +20,9 @@ namespace Day15Lists //same namespace as Program
             lastName = newLastName;
             empType = newEmpType;
         }
+
+        public abstract double GetBonus();
+
         public override string ToString()
         {
             return ("The employee is: " + firstName + " " + lastName + " and they are a: " + empType);

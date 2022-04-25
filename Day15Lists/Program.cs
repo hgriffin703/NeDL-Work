@@ -33,17 +33,23 @@ namespace Day15Lists
         {
             //Employees newEmployee = new Employees ("Hayley", "Griffin", 'S');
             //Console.WriteLine(newEmployee);
-            Salary newSalary = new Salary("Hayley", "Griffin", 'S', 100000);
+/*             Salary newSalary = new Salary("Hayley", "Griffin", 'S', 100000); test for salary
             Console.WriteLine(newSalary);
-            Hourly newHourly = new Hourly("Derek", "Loseke", 'H', 25.60);
-            Console.WriteLine(newHourly);
+            Hourly newHourly = new Hourly("Derek", "Loseke", 'H', 25.60); test for hourly
+            Console.WriteLine(newHourly); */
 
-            List<Salary> salaryemployeeList = new List<Salary>();
-            salaryemployeeList.Add(new Salary("Hayley", "Griffin", 'S', 99000));
-            salaryemployeeList.Add(new Salary("Derek", "Loseke", 'S', 85000));
-            salaryemployeeList.Add(new Salary("Kristen", "Bell", 'S', 250000));
+            List<Salary> SalaryEmployeeList = new List<Salary>();
+            SalaryEmployeeList.Add(new Salary("Hayley", "Griffin", 'S', 99000));
+            SalaryEmployeeList.Add(new Salary("Derek", "Loseke", 'S', 85000));
+            SalaryEmployeeList.Add(new Salary("Kristen", "Bell", 'S', 250000));
 
-            Console.WriteLine(salaryemployeeList[2]);
+            Console.WriteLine(SalaryEmployeeList[2]);
+
+            List<Hourly> HourlyEmployeeList = new List<Hourly>();
+            HourlyEmployeeList.Add(new Hourly("Carter", "Jenkins", 'H', 25.50));
+            HourlyEmployeeList.Add(new Hourly("Kendall", "Jenner", 'H', 14.00));
+
+            Console.WriteLine(HourlyEmployeeList[1]);
         }
     }
 }

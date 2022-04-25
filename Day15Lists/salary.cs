@@ -13,9 +13,14 @@ namespace Day15Lists
         {
             annualSalary = newAnnualSalary;
         }
+        public override double GetBonus()
+        {
+            return annualSalary * .1;
+        }
+
         public override string ToString()
         {
-            return base.ToString() + " their annual salary is: " + annualSalary;
+            return base.ToString() + " their annual salary is: " + annualSalary + " and their bonus is: " + GetBonus();
         }
     }
 }

@@ -12,9 +12,13 @@ namespace Day15Lists
         {
             hourlyRate = newHourlyRate;
         }
+        public override double GetBonus()
+        {
+            return hourlyRate * 80;
+        }
         public override string ToString()
         {
-            return base.ToString() + " and their hourly rate is: " + hourlyRate;
+            return base.ToString() + " and their hourly rate is: " + hourlyRate + " and their bonus is: " + GetBonus();
         }
     }
 }
