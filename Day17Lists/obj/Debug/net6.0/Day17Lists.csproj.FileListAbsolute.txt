@@ -1,0 +1,15 @@
+C:\Users\HGriffin\Desktop\NeDL\Day17Lists\bin\Debug\net6.0\Day17Lists.exe
+C:\Users\HGriffin\Desktop\NeDL\Day17Lists\bin\Debug\net6.0\Day17Lists.deps.json
+C:\Users\HGriffin\Desktop\NeDL\Day17Lists\bin\Debug\net6.0\Day17Lists.runtimeconfig.json
+C:\Users\HGriffin\Desktop\NeDL\Day17Lists\bin\Debug\net6.0\Day17Lists.dll
+C:\Users\HGriffin\Desktop\NeDL\Day17Lists\bin\Debug\net6.0\ref\Day17Lists.dll
+C:\Users\HGriffin\Desktop\NeDL\Day17Lists\bin\Debug\net6.0\Day17Lists.pdb
+C:\Users\HGriffin\Desktop\NeDL\Day17Lists\obj\Debug\net6.0\Day17Lists.csproj.AssemblyReference.cache
+C:\Users\HGriffin\Desktop\NeDL\Day17Lists\obj\Debug\net6.0\Day17Lists.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HGriffin\Desktop\NeDL\Day17Lists\obj\Debug\net6.0\Day17Lists.AssemblyInfoInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\Day17Lists\obj\Debug\net6.0\Day17Lists.AssemblyInfo.cs
+C:\Users\HGriffin\Desktop\NeDL\Day17Lists\obj\Debug\net6.0\Day17Lists.csproj.CoreCompileInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\Day17Lists\obj\Debug\net6.0\Day17Lists.dll
+C:\Users\HGriffin\Desktop\NeDL\Day17Lists\obj\Debug\net6.0\ref\Day17Lists.dll
+C:\Users\HGriffin\Desktop\NeDL\Day17Lists\obj\Debug\net6.0\Day17Lists.pdb
+C:\Users\HGriffin\Desktop\NeDL\Day17Lists\obj\Debug\net6.0\Day17Lists.genruntimeconfig.cache
