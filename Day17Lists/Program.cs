@@ -73,7 +73,46 @@ namespace Day17
                 sb.Append(sr.ReadToEnd());
             } */
                    //now in the R section
-        if(userChoice == "R" || userChoice == "r")
+         if(userChoice == "C" || userChoice == "c")
+        { 
+           int index = 0;
+          Console.WriteLine("What's the racers first name?");
+            string newRacer = Console.ReadLine();
+          Console.WriteLine("What is the racers last name?");
+            string newRacerL = Console.ReadLine();
+          Console.WriteLine("What's the race name?");
+            string newRaceName = Console.ReadLine();
+          Console.WriteLine("What is the race distance?");
+            string newRaceDistance = Console.ReadLine();
+          Console.WriteLine("What was the result of the race?");
+            string newRaceResult = Console.ReadLine();
+
+          bool found = false; //found for rest.
+          Console.WriteLine(""); //entering a blank line to give some space
+          
+          //index to add it new rest to the array
+          for (index = 0; index < RacersList.Count; index++)
+          {
+            if(found == false)
+            {
+              RacersList[index] = new Events(newRacer, newRacerL, newRaceName, newRaceDistance, newRaceResult);
+              found = true;
+                          
+              Console.WriteLine(RacersList[index]); 
+            } 
+
+          } //end the for name loop
+          
+            if (found == false) 
+          {
+            Console.WriteLine("There is no space to add a new racer!");
+            Console.WriteLine("");
+
+          } //see if a new rating can be entered
+        }
+
+        //R SECTION
+        else if(userChoice == "R" || userChoice == "r")
         {
           Console.WriteLine("in the R/r area");
 
@@ -83,6 +122,8 @@ namespace Day17
           } 
             Console.WriteLine("");
         }//close else if 
+
+        //Q SECTION
         } while (!(userChoice == "Q" || userChoice == "q"));
       }
     }
