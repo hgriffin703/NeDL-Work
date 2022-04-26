@@ -46,7 +46,7 @@ namespace Day17
             RacersList.Add(new Events("Derek", "Loseke", "Boston Marathon", "marathon", "1st place"));
             RacersList.Add(new Events("Molly", "Seidel", "Tokyo Olympics", "Marthon", "Third Place"));
 
-/*         if(userChoice == "L" || userChoice == "l")
+       if(userChoice == "L" || userChoice == "l")
          {
             using (StreamReader sr = File.OpenText("Racers.txt"))
          {
@@ -69,10 +69,10 @@ namespace Day17
 
                 raceResult = sr.ReadLine();
                 Console.WriteLine(raceResult);
-
-                sb.Append(sr.ReadToEnd());
-            } */
-                   //now in the R section
+            }
+         }
+         }
+            //IN THE C SECTION
          if(userChoice == "C" || userChoice == "c")
         { 
            int index = 0;
@@ -100,7 +100,6 @@ namespace Day17
                           
               Console.WriteLine(RacersList[index]); 
             } 
-
           } //end the for name loop
           
             if (found == false) 
@@ -108,7 +107,7 @@ namespace Day17
             Console.WriteLine("There is no space to add a new racer!");
             Console.WriteLine("");
 
-          } //see if a new rating can be entered
+          } 
         }
 
         //R SECTION
