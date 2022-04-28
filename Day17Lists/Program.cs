@@ -11,6 +11,7 @@ namespace Day17
             string userChoice;
             string fileName = @"Racers.txt";
 
+            List<Events> RacersList = new List<Events>();
             do 
             {
             do
@@ -41,22 +42,26 @@ namespace Day17
 
             } while (!validUserChoice);
 
-            List<Events> RacersList = new List<Events>();
-            RacersList.Add(new Events("Hayley", "Griffin", "Good Life Halfsy", "Half Marathon", "100th place"));
-            RacersList.Add(new Events("Derek", "Loseke", "Boston Marathon", "marathon", "1st place"));
-            RacersList.Add(new Events("Molly", "Seidel", "Tokyo Olympics", "Marthon", "Third Place"));
 
-       if(userChoice == "L" || userChoice == "l")
-         {
-            using (StreamReader sr = File.OpenText("Racers.txt"))
+/*             RacersList.Add(new Events("Hayley", "Griffin", "Good Life Halfsy", "Half Marathon", "100th place"));
+            RacersList.Add(new Events("Derek", "Loseke", "Boston Marathon", "marathon", "1st place"));
+            RacersList.Add(new Events("Molly", "Seidel", "Tokyo Olympics", "Marthon", "Eigth Place")); */
+
+
+            //in the L section
+        if(userChoice == "L" || userChoice == "l")
+        {
+         List<string> list = new List<string>();
+         using (StreamReader sr = File.OpenText("Racers.txt"))
          {
             int index = 0;
             string firstName;
             string lastName;
             string raceName;
+            string raceDistance;
             string raceResult;
 
-           while ((firstName = sr.ReadLine()) != null) //sets first line of the file to lastName
+           while ((firstName = sr.ReadLine()) != null) //sets first line equal to first name
             {
                 //firstName = sr.ReadLine();
                 Console.WriteLine(firstName);
@@ -67,11 +72,31 @@ namespace Day17
                 raceName = sr.ReadLine(); //sets the third line of the file to eType
                 Console.WriteLine(raceName);
 
+                raceDistance = sr.ReadLine();
+                Console.WriteLine(raceDistance);
+
                 raceResult = sr.ReadLine();
                 Console.WriteLine(raceResult);
-            }
+        
+              RacersList.Add(new Events(firstName, lastName, raceName, raceDistance, raceResult));
+                
+              foreach (Events Racers in RacersList)
+              {
+                Console.WriteLine(Racers);
+              }  // end foreach  
+            Console.WriteLine("");
          }
          }
+        }
+          else if (userChoice == "S" || userChoice == "s")
+        {
+            using(TextWriter tw = new StreamWriter("Racers.txt"))
+          {
+            foreach (object Events in RacersList)
+                tw.WriteLine(Events);
+          }
+
+        } //close if statement
             //IN THE C SECTION
          if(userChoice == "C" || userChoice == "c")
         { 
@@ -113,13 +138,26 @@ namespace Day17
         //R SECTION
         else if(userChoice == "R" || userChoice == "r")
         {
-          Console.WriteLine("in the R/r area");
+        Console.Write("Please enter a Racer's last name to find: ");
+        string findName = Console.ReadLine();
+        bool found = false;
+        foreach (Events racer in RacersList)
+        {
+            if (racer.lastName == findName)
+            {
+                Console.WriteLine(racer);
+                found = true;
+            }
+        }  // end foreach  
+        if (!(found))
+            Console.WriteLine("Name was not found.");
+          /* Console.WriteLine("in the R/r area");
 
          for (int index = 0; index < RacersList.Count; index++)
           {
             Console.WriteLine(RacersList[index]);
           } 
-            Console.WriteLine("");
+            Console.WriteLine(""); */
         }//close else if 
 
         //Q SECTION

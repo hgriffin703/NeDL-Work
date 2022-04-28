@@ -1,0 +1,15 @@
+C:\Users\HGriffin\Desktop\NeDL\day18listspractice\obj\Debug\net6.0\Day18ListsPractice.csproj.AssemblyReference.cache
+C:\Users\HGriffin\Desktop\NeDL\day18listspractice\obj\Debug\net6.0\Day18ListsPractice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HGriffin\Desktop\NeDL\day18listspractice\obj\Debug\net6.0\Day18ListsPractice.AssemblyInfoInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\day18listspractice\obj\Debug\net6.0\Day18ListsPractice.AssemblyInfo.cs
+C:\Users\HGriffin\Desktop\NeDL\day18listspractice\obj\Debug\net6.0\Day18ListsPractice.csproj.CoreCompileInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\day18listspractice\bin\Debug\net6.0\Day18ListsPractice.exe
+C:\Users\HGriffin\Desktop\NeDL\day18listspractice\bin\Debug\net6.0\Day18ListsPractice.deps.json
+C:\Users\HGriffin\Desktop\NeDL\day18listspractice\bin\Debug\net6.0\Day18ListsPractice.runtimeconfig.json
+C:\Users\HGriffin\Desktop\NeDL\day18listspractice\bin\Debug\net6.0\Day18ListsPractice.dll
+C:\Users\HGriffin\Desktop\NeDL\day18listspractice\bin\Debug\net6.0\ref\Day18ListsPractice.dll
+C:\Users\HGriffin\Desktop\NeDL\day18listspractice\bin\Debug\net6.0\Day18ListsPractice.pdb
+C:\Users\HGriffin\Desktop\NeDL\day18listspractice\obj\Debug\net6.0\Day18ListsPractice.dll
+C:\Users\HGriffin\Desktop\NeDL\day18listspractice\obj\Debug\net6.0\ref\Day18ListsPractice.dll
+C:\Users\HGriffin\Desktop\NeDL\day18listspractice\obj\Debug\net6.0\Day18ListsPractice.pdb
+C:\Users\HGriffin\Desktop\NeDL\day18listspractice\obj\Debug\net6.0\Day18ListsPractice.genruntimeconfig.cache

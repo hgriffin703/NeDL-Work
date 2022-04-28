@@ -1,0 +1,4 @@
+interface IGetInterestRate
+{
+    double getInterestAmount();
+}
