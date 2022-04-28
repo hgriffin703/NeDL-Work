@@ -23,7 +23,7 @@ namespace Week4Competency
 
         public override string ToString()
         {
-            return base.ToString() + " | Annual Interest Earned: " + getInterestAmount() + " | Withdrawal Fee: " + withdrawalFee;
+            return base.ToString() + " | Annual Interest Rate: " + annualInterestRate2 + " | Annual Interest Earned: " + getInterestAmount() + " | Early Withdrawal Fee: " + withdrawalFee;
         }
     }
 }

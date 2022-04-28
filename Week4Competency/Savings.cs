@@ -21,7 +21,7 @@ namespace Week4Competency
 
             public override string ToString()
         {
-            return base.ToString() + " | Annual Interest Earned:" + getInterestAmount();
+            return base.ToString() + " | Interest Rate: " + annualInterestRate + " | Annual Interest Earned:" + getInterestAmount();
         } 
     }
 }
