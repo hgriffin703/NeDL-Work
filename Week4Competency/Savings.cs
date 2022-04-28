@@ -2,7 +2,7 @@ using System;
 
 namespace Week4Competency
 {
-    class Saving: Accounts
+    class Saving: Accounts, IGetInterestRate
     {
         public double annualInterestRate;
         public Saving()
@@ -17,6 +17,11 @@ namespace Week4Competency
         public double getInterestAmount() // interface method
         {
             return (accountBalance * annualInterestRate);
+        }
+
+        public override void getWithdrawal(double makeWithdrawal)
+        {
+            accountBalance = accountBalance - makeWithdrawal;
         }
 
             public override string ToString()

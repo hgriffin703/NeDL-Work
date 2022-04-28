@@ -19,7 +19,7 @@ namespace Week4Competency
 
         // Add a couple of employees to the list to test
             AccountList.Add(new Saving("12345", "Savings", 100000, .1)); 
-            AccountList.Add(new Checking("98765", "Checking", 567094, 100)); 
+            AccountList.Add(new Checking("98765", "Checking", 56700, 100)); 
             AccountList.Add(new CD("10000", "CD", 45000, .25, 150)); 
             AccountList.Add(new Saving("12121", "Savings", 42493, .2));
             AccountList.Add(new Saving("88888", "Savings", 3400, .5)); 
@@ -83,6 +83,7 @@ namespace Week4Competency
              int index;
              bool found = false;
 
+
              Console.WriteLine("What is the account number for the deposit?");
              string enterAccountNum =  Console.ReadLine();
 
@@ -104,11 +105,12 @@ namespace Week4Competency
 
             //checks for the account
             for(index = 0; index < AccountList.Count; index++)
+
             {
                 if ((AccountList[index].accountID == enterAccountNum) && found == false)
                   {
-                    double updateAccountBalance = AccountList[index].accountBalance + enterDeposit; //updates the balance
-                    Console.WriteLine("You deposited: " + enterDeposit + " dollars. Your new account balance is: " + updateAccountBalance);
+                     AccountList[index].makeDeposit(enterDeposit); //updates the balance
+                    Console.WriteLine("You deposited: " + enterDeposit + " dollars. Your new account balance is: " + AccountList[index].accountBalance);
                     Console.WriteLine("");
                   }  
             }
@@ -128,34 +130,38 @@ namespace Week4Competency
           Console.WriteLine("How much would you like to withdraw?");
           double withdrawAmount = Convert.ToDouble(Console.ReadLine());
 
-          for(index = 0; index < AccountList.Count; index++)
+         for(index = 0; index < AccountList.Count; index++)
           {
-            if (AccountList[index].accountType == "Savings")
+             if ((AccountList[index].accountID == withdrawAccount) && AccountList[index].accountType == "Savings")
             {
                 if(withdrawAmount > AccountList[index].accountBalance)
-                 Console.WriteLine("You do not have enough money to withdraw that much");
+                {
+                 Console.WriteLine("You do not have enough money to withdraw that much. Enter a different value");
+                 withdrawAmount = Convert.ToDouble(Console.ReadLine());
+                }
+            } 
+           if((AccountList[index].accountID == withdrawAccount) && AccountList[index].accountType == "Savings")
+            {
+                AccountList[index].getWithdrawal(withdrawAmount); //updates the balance
+                Console.WriteLine("You withdrew: " + withdrawAmount + " dollars. Your new balance is: " + AccountList[index].accountBalance);
+            }  
+
+            //this portion is for the checking account
+           if ((AccountList[index].accountID == withdrawAccount) && AccountList[index].accountType == "Checking")
+            {
+                if(withdrawAmount >= (AccountList[index].accountBalance * .5))
+                 Console.WriteLine("You can't withdraw more than 50% out of your Checking Account. Please enter a different amount");
                  withdrawAmount = Convert.ToDouble(Console.ReadLine());
             }
-            else
+            if ((AccountList[index].accountID == withdrawAccount) && AccountList[index].accountType == "Checking")
             {
-                double newAmount = AccountList[index].accountBalance - withdrawAmount;
-                Console.WriteLine("You withdrew: " + withdrawAmount + " dollars. Your new balance is: " + newAmount);
+                AccountList[index].getWithdrawal(withdrawAmount); //updates the balance
+                Console.WriteLine("You withdrew: " + withdrawAmount + " dollars. Your new balance is: " + AccountList[index].accountBalance);
             }
-           /*  if (AccountList[index].accountType == "Checking")
-            {
-                if(withdrawAmount > AccountList[index].accountBalance)
-                 Console.WriteLine("You do not have enough money to withdraw that much");
-                 withdrawAmount = Convert.ToDouble(Console.ReadLine());
-            }
-            else
-            {
-                double newAmount = AccountList[index].accountBalance - withdrawAmount;
-                Console.WriteLine("You withdrew: " + withdrawAmount + " dollars. Your new balance is: " + newAmount);
-            } */
           }
+        } //closes the else if
 
             Console.WriteLine("");
-        }
  
 
         } while (!(userChoice == "Q" || userChoice == "q"));
