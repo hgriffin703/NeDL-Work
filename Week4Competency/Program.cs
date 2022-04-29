@@ -7,17 +7,9 @@ namespace Week4Competency
    {
     static void Main(string[] args)
     {
-        
-/*         Saving newAccount = new Saving ("12345", "Savings", 123456.00, .01);
-            Console.WriteLine(newAccount);
-        Checking newChecking = new Checking("98765", "Checking", 234953.00, 100); //test for salary
-            Console.WriteLine(newChecking);
-        CD newCD = new CD("34573", "CD", 2345840.00, .10, 100); //test for hourly
-            Console.WriteLine(newCD); */
-
         List<Accounts> AccountList = new List<Accounts>();
 
-        // Add a couple of employees to the list to test
+        // Add a couple of accounts to the list to test
             AccountList.Add(new Saving("12345", "Savings", 100000, .1)); 
             AccountList.Add(new Checking("98765", "Checking", 56700, 100)); 
             AccountList.Add(new CD("10000", "CD", 45000, .25, 150)); 
@@ -32,9 +24,9 @@ namespace Week4Competency
             string userChoice;
 
             do 
-        {
+          {
             do
-        {
+          {
         //initialize variables
         validUserChoice = false;
         //provide the user a menu of options
@@ -59,7 +51,7 @@ namespace Week4Competency
 
           } while (!validUserChoice); 
  
-            //in the L section
+            //in the L section - to read the accounts out
         if(userChoice == "L" || userChoice == "l")
         {
           Console.WriteLine("in the L/l area");
@@ -74,15 +66,12 @@ namespace Week4Competency
             Console.WriteLine("");
         }
 
-
- 
         //in the D section - deposit amount
 
       else if (userChoice == "D" || userChoice == "d")
          {
              int index;
              bool found = false;
-
 
              Console.WriteLine("What is the account number for the deposit?");
              string enterAccountNum =  Console.ReadLine();
@@ -105,24 +94,19 @@ namespace Week4Competency
 
             //checks for the account
             for(index = 0; index < AccountList.Count; index++)
-
             {
-                if ((AccountList[index].accountID == enterAccountNum) && found == false)
-                  {
-                     AccountList[index].makeDeposit(enterDeposit); //updates the balance
-                    Console.WriteLine("You deposited: " + enterDeposit + " dollars. Your new account balance is: " + AccountList[index].accountBalance);
-                    Console.WriteLine("");
-                  }  
+              if ((AccountList[index].accountID == enterAccountNum) && found == false)
+                {
+                  AccountList[index].makeDeposit(enterDeposit); //updates the balance
+                  Console.WriteLine("You deposited: " + enterDeposit + " dollars. Your new account balance is: " + AccountList[index].accountBalance);
+                  Console.WriteLine("");
+                }  
             }
          }
 
-
-
-
-        //now in the W section
+        //now in the W section - to get the withdrawal
         else if(userChoice == "W" || userChoice == "w")
         {
-          Console.WriteLine("in the W/w area");
           int index;
 
           Console.WriteLine("What account number would you like to withdraw from?");
@@ -137,7 +121,7 @@ namespace Week4Competency
             }
 
          for(index = 0; index < AccountList.Count; index++)
-          {
+          { //savings account portion
             if ((AccountList[index].accountID == withdrawAccount) && AccountList[index].accountType == "Savings")
             {
               if(withdrawAmount > AccountList[index].accountBalance)
@@ -151,7 +135,6 @@ namespace Week4Competency
               Console.WriteLine("You withdrew: " + withdrawAmount + " dollars. Your new balance is: " + AccountList[index].accountBalance);
             }
           }
-
 
             //this portion is for the checking account
            if ((AccountList[index].accountID == withdrawAccount) && AccountList[index].accountType == "Checking")
@@ -172,14 +155,14 @@ namespace Week4Competency
 
                //this portion is for the CD account
             if ((AccountList[index].accountID == withdrawAccount) && AccountList[index].accountType == "CD")
-              {
+              { // wrong amount
                 if(withdrawAmount >= (AccountList[index].accountBalance - AccountList[index].GetEarlyFee()))
                 {
                  Console.WriteLine("You are charged a penalty of: " +AccountList[index].GetEarlyFee() + " for withdrawing early so you can't withdraw this amount. Please try again");
                 }
               
                 else if ((AccountList[index].accountID == withdrawAccount) && AccountList[index].accountType == "CD")
-                {
+                { //correct amount
                   AccountList[index].getWithdrawal(withdrawAmount); //updates the balance
                   Console.WriteLine("You withdrew: " + withdrawAmount + " dollars, plus the early fee of: " + AccountList[index].GetEarlyFee() + ". New balance is: " + AccountList[index].accountBalance);
                 }
@@ -189,7 +172,7 @@ namespace Week4Competency
 
             Console.WriteLine("");
  
-
+          //quits the program
         } while (!(userChoice == "Q" || userChoice == "q"));
       }
     }

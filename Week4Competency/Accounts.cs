@@ -26,13 +26,13 @@ namespace Week4Competency
            accountBalance= accountBalance + depositAmount;
         }
 
+        //create an abstract to get the withdrawal amount
         public abstract void getWithdrawal(double makeWithdrawal);
-           public virtual int GetEarlyFee()
-//creates a dummy option here to call on the Hourly page for getting the array to be able to read the salary 
-
-    {
-        return -1;
-    }
+        //creates a dummy option here to call on the Hourly page for getting the array to be able to read the salary
+        public virtual int GetEarlyFee()
+            {
+              return -1;
+            }
 
         public override string ToString()
         {

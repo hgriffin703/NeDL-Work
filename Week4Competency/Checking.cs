@@ -15,9 +15,9 @@ namespace Week4Competency
         }
 
         public override void getWithdrawal(double makeWithdrawal)
-            {
-                accountBalance = accountBalance - makeWithdrawal;
-            }
+        {
+            accountBalance = accountBalance - makeWithdrawal;
+        }
         public override string ToString()
         {
             return base.ToString() + " | Annual Fee: " + annualFee; 

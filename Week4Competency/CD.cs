@@ -22,13 +22,13 @@ namespace Week4Competency
         }
 
         public override int GetEarlyFee()
-    {
-        return withdrawalFee; //sets the GetEarlyFee equal to the withdrawalfee for the accounts page
-    }
+        {
+            return withdrawalFee; //sets the GetEarlyFee equal to the withdrawalfee for the accounts page
+        }
         public override void getWithdrawal(double makeWithdrawal)
-            {
-                accountBalance = accountBalance - makeWithdrawal - withdrawalFee;
-            }
+        {
+            accountBalance = accountBalance - makeWithdrawal - withdrawalFee;
+        }
 
         public override string ToString()
         {
