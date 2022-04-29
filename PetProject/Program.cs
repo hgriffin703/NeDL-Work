@@ -25,6 +25,7 @@ namespace PetProject //must be the same namespace througout
       Console.WriteLine("C: Add a runner to the file");
       Console.WriteLine("R: Get info about a runner");
       Console.WriteLine("T: Track your miles");
+      Console.WriteLine("TL: How much time is left until my race?");
       Console.WriteLine("Q: Quit the program");
       
       //get a valid user option (valid means it is on menu
@@ -34,6 +35,8 @@ namespace PetProject //must be the same namespace througout
                         ||userChoice == "S" || userChoice == "s" 
                         || userChoice == "C" || userChoice == "c" 
                         || userChoice == "R" || userChoice == "r"
+                        || userChoice == "T" || userChoice == "t"
+                        || userChoice == "TL" || userChoice == "tl"
                         || userChoice == "Q" || userChoice == "q");
 
       if(!validUserChoice)
@@ -45,22 +48,21 @@ namespace PetProject //must be the same namespace througout
 
           List<Runners> RunnersList = new List<Runners>();
 
-          RunnersList.Add(new Runners("Hayley", "Griffin", "Half Marathon")); //test for salary
+/*           RunnersList.Add(new Runners("Hayley", "Griffin", "Half Marathon")); //test for salary
           RunnersList.Add(new Runners("Derek", "Loseke", "Marathon"));
           RunnersList.Add(new Runners("Jon", "Foss", "Half Marathon"));
           RunnersList.Add(new Runners("Seth", "Marek", "Marathon"));
-          RunnersList.Add(new Runners("Seth", "Prauner", "Marathon"));
+          RunnersList.Add(new Runners("Seth", "Prauner", "Marathon")); */
  
 
           //in the L section
-    /*   if(userChoice == "L" || userChoice == "l")
+      if(userChoice == "L" || userChoice == "l")
       {
         using (StreamReader sr = File.OpenText("runners.txt"))
         {
-          int index = 0;
-          char eType;
           string firstName;
           string lastName;
+          string distance;
 
           while ((firstName = sr.ReadLine()) != null) //sets first line of the file to lastName
           {
@@ -70,41 +72,23 @@ namespace PetProject //must be the same namespace througout
               lastName = sr.ReadLine(); //sets the second line of the file to lastName
               Console.WriteLine(lastName);
 
-              eType = Convert.ToChar(sr.ReadLine()); //sets the third line of the file to eType
-              Console.WriteLine(eType);
-
-            if(eType == 'S' || eType == 's')
-            {
-                  int salary = Convert.ToInt32(sr.ReadLine());  //if salary, sets fourth line of the file to salary
-                  Console.WriteLine(salary);
-                  EmployeeArray[index] = new Salary (firstName, lastName, eType, salary);
-            }
-            else if (eType == 'H' || eType =='h')
-            {
-                double hourlyrate = Convert.ToDouble(sr.ReadLine());
-                Console.WriteLine(hourlyrate);
-                EmployeeArray[index] = new Hourly (firstName, lastName, eType, hourlyrate);
-            }
-
-            index = index +1;
-          } 
-          Console.WriteLine("");
-        }
-      } //close if statement
-
-      //in the S section - save the file */
+              distance = (sr.ReadLine()); //sets the third line of the file to eType
+              Console.WriteLine(distance);
+                      
+              RunnersList.Add(new Runners(firstName, lastName, distance));
+         }
+         Console.WriteLine("");
+         }
+      }
 
 
-
-
-
+      //in the S section - save the file
      /*  else if (userChoice == "S" || userChoice == "s")
         {
           int index;
-          char eType = '\0';
           string firstName;
           string lastName;
-          int AnnualSalary;
+          string distance;
 
         Console.WriteLine("In the S/s area");
         //delete the file if it exists; for Ratings
@@ -114,29 +98,18 @@ namespace PetProject //must be the same namespace througout
         }
         using(StreamWriter fileStr = File.CreateText(fileName))
         { //rewrite the data
-          for (index = 0; index < EmployeeArray.Length; index++)
+          for (index = 0; index < RunnersList.Count; index++)
           {
-            if(EmployeeArray[index] != null && (EmployeeArray[index].eType == 'S' || EmployeeArray[index].eType == 's'))
+            if(RunnersList[index] != null)
             {
               fileStr.WriteLine(EmployeeArray[index].firstName);
               fileStr.WriteLine(EmployeeArray[index].lastName);
-              fileStr.WriteLine(EmployeeArray[index].eType);
-              fileStr.WriteLine(EmployeeArray[index].GetSalary1());// calls from the salaryemp page but links to the employee page
+              fileStr.WriteLine(EmployeeArray[index].distance);
             }
-          else if(EmployeeArray[index] != null && (EmployeeArray[index].eType == 'H' || EmployeeArray[index].eType == 'h'))
-          {
-              fileStr.WriteLine(EmployeeArray[index].firstName);
-              fileStr.WriteLine(EmployeeArray[index].lastName);
-              fileStr.WriteLine(EmployeeArray[index].eType); 
-              fileStr.WriteLine(EmployeeArray[index].GetHourly()); //calls from the hourlyemp page but links to the employees page 
           }
-        }
         Console.WriteLine(fileName + " has been saved");
         } 
-        }
-
-
-
+      }
  */
 
       //now in the R section
@@ -161,10 +134,6 @@ namespace PetProject //must be the same namespace througout
       else if(userChoice == "C" || userChoice == "c")
       { 
           int index = 0;
-          string firstName = "";
-          string lastName = "";
-          string distance = "";
-
 
         //gets the employee type to base the questions below on
         Console.WriteLine("What is the runners first name?");
@@ -184,11 +153,31 @@ namespace PetProject //must be the same namespace througout
           }
         } //close first for loop
           Console.WriteLine(""); 
-      }//close else if  */
-      }while (!(userChoice == "Q" || userChoice == "q")); 
       }
-  }
-}
+
+      else if(userChoice == "T" || userChoice == "t")
+      {
+        Console.WriteLine("How many miles did you run today?");
+        int milesRan = Convert.ToInt32(Console.ReadLine());
+      }
+
+          //in the TL sections
+       else if(userChoice == "TL" || userChoice == "tl")
+      {
+        Console.Write("Enter a date (e.g. 10/22/1987): ");
+        DateTime inputtedDate = DateTime.Parse(Console.ReadLine());
+        //subtracts your race day - today to get days left
+        double daysUntilRace = inputtedDate.Subtract(DateTime.Today).TotalDays;
+        double weeksUntilRace = daysUntilRace/7;
+        Console.WriteLine("You have " + daysUntilRace + " days until your race");
+        Console.WriteLine("You have: " + weeksUntilRace + " weeks until the race!");
+        Console.WriteLine("");
+      }//close else if  */
+
+      }while (!(userChoice == "Q" || userChoice == "q"));
+  }//close main class 
+  } //close the class
+} //close the namespace
 
 
 
@@ -220,20 +209,13 @@ class Program
     double validStartMiles = startMileage*upMileage;
 
     return Convert.ToInt32(validStartMiles);
-  } */
-/*     static void Main(string[] args)
-      { */ 
+  } 
+     static void Main(string[] args)
+      { 
         
         
         
-        
-        /* //user enters the date of the race
-        int startingMileage = GetValidMiles();
-        Console.Write("Enter a date (e.g. 10/22/1987): ");
-        DateTime inputtedDate = DateTime.Parse(Console.ReadLine());
-        //subtracts your race day - today to get days left
-        double daysUntilRace = inputtedDate.Subtract(DateTime.Today).TotalDays;
-        double weeksUntilRace = daysUntilRace/7;
+/*
 
         int index =0;
         double mileage = startingMileage;
@@ -245,8 +227,6 @@ class Program
       
       
         Console.WriteLine("Your race is on " + inputtedDate);
-        Console.WriteLine("You have " + daysUntilRace + " days until your race");
-        Console.WriteLine("You have: " + weeksUntilRace + " weeks until the race!"); */
- /*     }
+      }
 }
 } */
