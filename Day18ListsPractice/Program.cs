@@ -7,13 +7,7 @@ namespace Day18
     {
         static void Main(string[] args)
         {
-            List<Employees> employeeList = new List<Employees>();
-
-        // Add a couple of employees to the list to test
-       // employeeList.Add(new Employees ("Hayley", "Griffin", 'H'));
-        //employeeList.Add(new Employees ("Derek", "Loseke", 'S'));    
-
-        // Add a couple of hourly employees to the list to test
+         // Add a couple of hourly employees to the list to test
         List<Employees> EmployeeList = new List<Employees>();
 
         // Add a couple of employees to the list to test

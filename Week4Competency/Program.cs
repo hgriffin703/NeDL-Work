@@ -77,9 +77,12 @@ namespace Week4Competency
              string enterAccountNum =  Console.ReadLine();
 
             // checks if the account exists
-             AccountList.Find(item => item.accountID != enterAccountNum);
-             Console.WriteLine("That account does not exist. Please enter another");
-             enterAccountNum = Console.ReadLine();
+          for(index = 0; index < AccountList.Count; index++)
+             if (enterAccountNum != AccountList[index].accountID) 
+              {
+              Console.WriteLine("That account does not exist. Please enter another");
+              enterAccountNum = Console.ReadLine();
+              }
 
             //asks for the deposit amount
              Console.WriteLine("How much would you like to deposit?");

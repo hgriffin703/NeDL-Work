@@ -5,7 +5,7 @@ namespace Week4Competency
     class Saving: Accounts, IGetInterestRate
     {
         public double annualInterestRate;
-        public Saving()
+        public Saving(): base() //calls the base constructor
         {
             annualInterestRate = 0.0;
         }
