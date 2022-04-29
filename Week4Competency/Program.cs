@@ -130,6 +130,12 @@ namespace Week4Competency
           Console.WriteLine("How much would you like to withdraw?");
           double withdrawAmount = Convert.ToDouble(Console.ReadLine());
 
+          while(withdrawAmount <= 0.0)
+            {
+              Console.WriteLine("Your withdrawal must be more than $0. Please enter a diferent amount");
+              withdrawAmount = Convert.ToDouble(Console.ReadLine());
+            }
+
          for(index = 0; index < AccountList.Count; index++)
           {
             if ((AccountList[index].accountID == withdrawAccount) && AccountList[index].accountType == "Savings")
@@ -143,8 +149,8 @@ namespace Week4Competency
             {
               AccountList[index].getWithdrawal(withdrawAmount); //updates the balance
               Console.WriteLine("You withdrew: " + withdrawAmount + " dollars. Your new balance is: " + AccountList[index].accountBalance);
-             }
             }
+          }
 
 
             //this portion is for the checking account
