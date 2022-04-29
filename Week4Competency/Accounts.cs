@@ -27,6 +27,12 @@ namespace Week4Competency
         }
 
         public abstract void getWithdrawal(double makeWithdrawal);
+           public virtual int GetEarlyFee()
+//creates a dummy option here to call on the Hourly page for getting the array to be able to read the salary 
+
+    {
+        return -1;
+    }
 
         public override string ToString()
         {

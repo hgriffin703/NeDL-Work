@@ -24,7 +24,7 @@ namespace Week4Competency
             AccountList.Add(new Saving("12121", "Savings", 42493, .2));
             AccountList.Add(new Saving("88888", "Savings", 3400, .5)); 
             AccountList.Add(new Checking("34567", "Checking", 1000000, 150)); 
-            AccountList.Add(new CD("99999", "CD", 96789, .2, 150)); 
+            AccountList.Add(new CD("99999", "CD", 96500, .2, 150)); 
             AccountList.Add(new Saving("10001", "Checking", 23560, 25));
 
 
@@ -132,33 +132,53 @@ namespace Week4Competency
 
          for(index = 0; index < AccountList.Count; index++)
           {
-             if ((AccountList[index].accountID == withdrawAccount) && AccountList[index].accountType == "Savings")
+            if ((AccountList[index].accountID == withdrawAccount) && AccountList[index].accountType == "Savings")
             {
-                if(withdrawAmount > AccountList[index].accountBalance)
-                {
-                 Console.WriteLine("You do not have enough money to withdraw that much. Enter a different value");
-                 withdrawAmount = Convert.ToDouble(Console.ReadLine());
-                }
-            } 
-           if((AccountList[index].accountID == withdrawAccount) && AccountList[index].accountType == "Savings")
+              if(withdrawAmount > AccountList[index].accountBalance)
+              {
+                Console.WriteLine("You do not have enough money to withdraw that much. Thank you!");
+              }
+             
+            else if((AccountList[index].accountID == withdrawAccount) && AccountList[index].accountType == "Savings")
             {
-                AccountList[index].getWithdrawal(withdrawAmount); //updates the balance
-                Console.WriteLine("You withdrew: " + withdrawAmount + " dollars. Your new balance is: " + AccountList[index].accountBalance);
-            }  
+              AccountList[index].getWithdrawal(withdrawAmount); //updates the balance
+              Console.WriteLine("You withdrew: " + withdrawAmount + " dollars. Your new balance is: " + AccountList[index].accountBalance);
+             }
+            }
+
 
             //this portion is for the checking account
            if ((AccountList[index].accountID == withdrawAccount) && AccountList[index].accountType == "Checking")
-            {
+              {
                 if(withdrawAmount >= (AccountList[index].accountBalance * .5))
-                 Console.WriteLine("You can't withdraw more than 50% out of your Checking Account. Please enter a different amount");
-                 withdrawAmount = Convert.ToDouble(Console.ReadLine());
-            }
-            if ((AccountList[index].accountID == withdrawAccount) && AccountList[index].accountType == "Checking")
-            {
-                AccountList[index].getWithdrawal(withdrawAmount); //updates the balance
-                Console.WriteLine("You withdrew: " + withdrawAmount + " dollars. Your new balance is: " + AccountList[index].accountBalance);
-            }
-          }
+                {
+                 Console.WriteLine("You can't withdraw more than 50% out of your Checking Account. Thank you!");
+                }
+              
+                else if ((AccountList[index].accountID == withdrawAccount) && AccountList[index].accountType == "Checking")
+                {
+                  AccountList[index].getWithdrawal(withdrawAmount); //updates the balance
+                  Console.WriteLine("You withdrew: " + withdrawAmount + " dollars. Your new balance is: " + AccountList[index].accountBalance);
+                }
+              }
+
+
+
+               //this portion is for the CD account
+            if ((AccountList[index].accountID == withdrawAccount) && AccountList[index].accountType == "CD")
+              {
+                if(withdrawAmount >= (AccountList[index].accountBalance - AccountList[index].GetEarlyFee()))
+                {
+                 Console.WriteLine("You are charged a penalty of: " +AccountList[index].GetEarlyFee() + " for withdrawing early so you can't withdraw this amount. Please try again");
+                }
+              
+                else if ((AccountList[index].accountID == withdrawAccount) && AccountList[index].accountType == "CD")
+                {
+                  AccountList[index].getWithdrawal(withdrawAmount); //updates the balance
+                  Console.WriteLine("You withdrew: " + withdrawAmount + " dollars, plus the early fee of: " + AccountList[index].GetEarlyFee() + ". New balance is: " + AccountList[index].accountBalance);
+                }
+              }
+          } //closes the for loop
         } //closes the else if
 
             Console.WriteLine("");
