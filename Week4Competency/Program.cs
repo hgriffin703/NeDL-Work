@@ -21,11 +21,11 @@ namespace Week4Competency
             AccountList.Add(new Saving("12345", "Savings", 100000, .1)); 
             AccountList.Add(new Checking("98765", "Checking", 56700, 100)); 
             AccountList.Add(new CD("10000", "CD", 45000, .25, 150)); 
-            AccountList.Add(new Saving("12121", "Savings", 42493, .2));
+            AccountList.Add(new Saving("12121", "Savings", 42000, .2));
             AccountList.Add(new Saving("88888", "Savings", 3400, .5)); 
             AccountList.Add(new Checking("34567", "Checking", 1000000, 150)); 
             AccountList.Add(new CD("99999", "CD", 96500, .2, 150)); 
-            AccountList.Add(new Saving("10001", "Checking", 23560, 25));
+            AccountList.Add(new Saving("10001", "Checking", 23500, 25));
 
 
          bool validUserChoice = false;
