@@ -6,6 +6,14 @@ namespace Week5Competency
     {
         static void Main(string[] args)
         {
+          List<Memberships> MembersList = new List<Memberships>();
+
+        // Add a couple of memberships to the list to test
+            MembersList.Add(new Regular("10000", "hg@gmail.com", "Regular", 50.00, 150.00, .1)); 
+            MembersList.Add(new Executive("10001", "exec@gmail.com", "Executive", 75.00, 500.00, .2)); 
+            MembersList.Add(new NonProfit("10002", "nonprofit@hotmail.com", "Non Profit", 25.00, 700.00, .15)); 
+            MembersList.Add(new Corporate("10003", "Corporate@yahoo.com", "Corporate", 100.00, 2000.00, .25));
+
             
          bool validUserChoice = false;
             string userChoice;
@@ -48,33 +56,11 @@ namespace Week5Competency
 
           } while (!validUserChoice);
 
-
-            List<Memberships> MembersList = new List<Memberships>();
-
-        // Add a couple of memberships to the list to test
-            MembersList.Add(new Regular("10000", "hg@gmail.com", "Regular", 50.00, 150.00, .1)); 
-            MembersList.Add(new Executive("10001", "exec@gmail.com", "Executive", 75.00, 500.00, .2)); 
-            MembersList.Add(new NonProfit("10002", "nonprofit@hotmail.com", "Non Profit", 25.00, 700.00, .15)); 
-            MembersList.Add(new Corporate("10003", "Corporate@yahoo.com", "Corporate", 100.00, 2000.00, .25));
-
             //in the L section - to read the accounts out
-        if(userChoice == "L" || userChoice == "l" || userChoice == "R" || userChoice == "r")
-        {
-          Console.WriteLine("in the R/r pr L/l area");
-
-         for (int index = 0; index < MembersList.Count; index++)
-          {
-            if(MembersList[index] != null)
-            {
-               Console.WriteLine(MembersList[index]);
-            } 
-          } //close for loop
-            Console.WriteLine("");
-        }
 
         //in the C section - create a new membership
 
-      else if (userChoice == "C" || userChoice == "c")
+      if (userChoice == "C" || userChoice == "c")
          {
              int index;
              bool found = false;
@@ -101,7 +87,7 @@ namespace Week5Competency
                 newMemAnnualCost = Convert.ToDouble(Console.ReadLine()); 
                 Console.WriteLine("What is the annual percent of cash back?");
                 newMemCashback = Convert.ToDouble(Console.ReadLine());
-                                MembersList.Add(new Corporate(enterMembershipID, newMemType, newMemEmail, newMemAnnualCost, newMemCashback, newPurchaseAmount));
+              MembersList.Add(new Corporate(enterMembershipID, newMemType, newMemEmail, newMemAnnualCost, newMemCashback, newPurchaseAmount));
                 break;
              }
           }//close the for loop
@@ -117,17 +103,17 @@ namespace Week5Competency
           for(index = 0; index < MembersList.Count; index++) 
             {
               if(MembersList[index].membershipID == updatemembership)
-              {
-              Console.WriteLine("Please enter the new email address?");
-              string updateValue = Console.ReadLine();
-              MembersList[index].SetEmail(updateValue);
-              found = true;
-              }
+                {
+                Console.WriteLine("Please enter the new email address?");
+                string updateValue = Console.ReadLine();
+                MembersList[index].SetEmail(updateValue);
+                found = true;
+                }
             }
             if (found)
-            {
+              {
               Console.WriteLine("This has been found and updated");
-            }
+              }
             else
               Console.WriteLine("This has not been found. Nothing was updated");
               Console.WriteLine("");
@@ -180,9 +166,27 @@ namespace Week5Competency
               {
                 MembersList[index].SetNewBalance(purchaseValue); //updates the balance
                 Console.WriteLine("You spent: " + purchaseValue + " dollars. Your new balance is: " + MembersList[index].totalPurchaseAmount);
-              }
-           }
+              } //if loop
+           } //for loop
          }
+         else if (userChoice == "T" || userChoice == "t")
+         {
+            Console.WriteLine("What is the membership ID for the account?");
+            string returnAccount = Console.ReadLine();
+         }
+         else if(userChoice == "L" || userChoice == "l" || userChoice == "R" || userChoice == "r")
+        {
+          Console.WriteLine("in the R/r pr L/l area");
+
+         for (int index = 0; index < MembersList.Count; index++)
+          {
+            if(MembersList[index] != null)
+            {
+               Console.WriteLine(MembersList[index]);
+            } 
+          } //close for loop
+            Console.WriteLine("");
+        }
          } while (!(userChoice == "Q" || userChoice == "q")); //closes first do
         }//close the main loop
     }//closes the class
