@@ -1,0 +1,15 @@
+C:\Users\HGriffin\Desktop\NeDL\Week5FinalCompetency\obj\Debug\net6.0\Week5FinalCompetency.csproj.AssemblyReference.cache
+C:\Users\HGriffin\Desktop\NeDL\Week5FinalCompetency\obj\Debug\net6.0\Week5FinalCompetency.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HGriffin\Desktop\NeDL\Week5FinalCompetency\obj\Debug\net6.0\Week5FinalCompetency.AssemblyInfoInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\Week5FinalCompetency\obj\Debug\net6.0\Week5FinalCompetency.AssemblyInfo.cs
+C:\Users\HGriffin\Desktop\NeDL\Week5FinalCompetency\obj\Debug\net6.0\Week5FinalCompetency.csproj.CoreCompileInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\Week5FinalCompetency\bin\Debug\net6.0\Week5FinalCompetency.exe
+C:\Users\HGriffin\Desktop\NeDL\Week5FinalCompetency\bin\Debug\net6.0\Week5FinalCompetency.deps.json
+C:\Users\HGriffin\Desktop\NeDL\Week5FinalCompetency\bin\Debug\net6.0\Week5FinalCompetency.runtimeconfig.json
+C:\Users\HGriffin\Desktop\NeDL\Week5FinalCompetency\bin\Debug\net6.0\Week5FinalCompetency.dll
+C:\Users\HGriffin\Desktop\NeDL\Week5FinalCompetency\bin\Debug\net6.0\ref\Week5FinalCompetency.dll
+C:\Users\HGriffin\Desktop\NeDL\Week5FinalCompetency\bin\Debug\net6.0\Week5FinalCompetency.pdb
+C:\Users\HGriffin\Desktop\NeDL\Week5FinalCompetency\obj\Debug\net6.0\Week5FinalCompetency.dll
+C:\Users\HGriffin\Desktop\NeDL\Week5FinalCompetency\obj\Debug\net6.0\ref\Week5FinalCompetency.dll
+C:\Users\HGriffin\Desktop\NeDL\Week5FinalCompetency\obj\Debug\net6.0\Week5FinalCompetency.pdb
+C:\Users\HGriffin\Desktop\NeDL\Week5FinalCompetency\obj\Debug\net6.0\Week5FinalCompetency.genruntimeconfig.cache

@@ -173,8 +173,8 @@ namespace PetProject //must be the same namespace througout
         Console.WriteLine("You have: " + weeksUntilRace + " weeks until the race!");
         Console.WriteLine("");
       }//close else if  */
-
-      }while (!(userChoice == "Q" || userChoice == "q"));
+      } 
+      while (!(userChoice == "Q" || userChoice == "q"));
   }//close main class 
   } //close the class
 } //close the namespace
