@@ -1,0 +1,4 @@
+interface ISpecialOffers
+{
+    double getSpecialOffer();
+}

@@ -17,11 +17,7 @@ namespace Week5Competency
         {
             cashBack = totalPurchaseAmount *ExecCashback;
         }
-        public override void SetEmail(string newestEmail)
-        {
-            email = newestEmail;
-        }
-
+        
         public override string ToString()
         {
             return base.ToString() + " | Cashback Percent: " + ExecCashback;

@@ -192,7 +192,11 @@ namespace Week5Competency
               }
             }
          }
-
+          else if(userChoice == "A" || userChoice =="a")
+          {
+            Console.WriteLine("What membership ID would you like to get your Cash Back from?");
+            string cashbackID = Console.ReadLine();
+          }
 
          //R/L section
          else if(userChoice == "L" || userChoice == "l" || userChoice == "R" || userChoice == "r")

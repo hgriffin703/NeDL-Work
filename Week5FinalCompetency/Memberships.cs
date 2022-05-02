@@ -44,7 +44,7 @@ namespace Week5Competency
         public abstract void applyCashBack(double cashBack);
         public virtual void SetEmail(string newestEmail)
         {
-            //nothing goes in here
+            email = newestEmail;
         }
         public virtual void SetNewBalance(double newestBalance)
         {
