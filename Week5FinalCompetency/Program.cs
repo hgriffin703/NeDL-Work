@@ -77,7 +77,7 @@ namespace Week5Competency
             // checks if the account exists
           for(index = 0; index < MembersList.Count; index++) 
           {
-              if(MembersList[index].membershipID != enterMembershipID)
+              if(enterMembershipID != MembersList[index].membershipID)
              {
                 Console.WriteLine("what type of membership is it?");
                 newMemType = Console.ReadLine();
