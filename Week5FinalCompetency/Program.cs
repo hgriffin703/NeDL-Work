@@ -129,30 +129,23 @@ namespace Week5Competency
          else if (userChoice == "U" || userChoice == "u")
          {
             int index;
-
-            Console.WriteLine("In the update section");
-            Console.WriteLine("What account would you like to update?");
-            string updateMembership = Console.ReadLine();
             bool found = false;
-           for(index =0; index < MembersList.Count; index++);
-           {
-             if ((MembersList[index].membershipID != updateMembership) && found == false)
+
+            Console.WriteLine("What account would you like to update?");
+            string updatemembership = Console.ReadLine();
+
+          for(index = 0; index < MembersList.Count; index++) 
+            {
+              if(MembersList[index].membershipID == updatemembership)
               {
-                Console.WriteLine("This is membership does not exists. Please enter a different ID");
-                updateMembership = Console.ReadLine();;
+              Console.WriteLine("Please enter the new value to update?");
+              string updateValue = Console.ReadLine();
+              MembersList[index].SetEmail(updateValue);
+              found = true;
               }
-              else if(updateMembership == MembersList[index].membershipID)
-              {
-                Console.WriteLine("What would you like to update?");
-                string updateValue = Console.ReadLine();
-              if (updateValue == "email" || updateValue == "Email")
-              {
-                Console.WriteLine("What email would you like to input?");
-                string updateEmail = Console.ReadLine();
-                MembersList[index].SetEmail(updateEmail);
             }
-            }
-           }
+           foreach (Memberships theMember in MembersList)
+           Console.WriteLine(theMember);
          }
          } while (!(userChoice == "Q" || userChoice == "q")); //closes first do
         }//close the main loop
