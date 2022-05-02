@@ -111,7 +111,7 @@ namespace Week5Competency
             int index;
             bool found = false;
 
-            Console.WriteLine("What account would you like to update?");
+            Console.WriteLine("What account would you like to update the email for?");
             string updatemembership = Console.ReadLine();
 
           for(index = 0; index < MembersList.Count; index++) 
@@ -132,16 +132,20 @@ namespace Week5Competency
               Console.WriteLine("This has not been found. Nothing was updated");
               Console.WriteLine("");
          }
+
+
+
+         //Issue: this will not actually save the deleted so when I read the file again it is not updated
          else if(userChoice == "D" || userChoice == "d")
          {
            int index;
            bool found = false;
 
-           Console.WriteLine("which acocunt would you like to delete?");
-           string deleteID = Console.ReadLine();
+           Console.WriteLine("which Membership would you like to delete?");
+           string deleteMember = Console.ReadLine();
            for(index = 0; index < MembersList.Count; index++)
            {
-             if((MembersList[index].membershipID == deleteID)&& found == false)
+             if((MembersList[index].membershipID == deleteMember)&& found == false)
              {
                MembersList.RemoveAt(index);
                found = true;
@@ -152,8 +156,32 @@ namespace Week5Competency
           else
             Console.WriteLine("The membership was not found. Please enter a valid membership");
 
-           foreach(Memberships theMembership in MembersList)
-            Console.WriteLine(theMembership);
+          foreach(Memberships theMember in MembersList)
+            Console.WriteLine(theMember);
+         }
+
+          // in the P section for Purchases
+         else if (userChoice == "P" || userChoice == "p")
+         {
+           bool found = false;
+          Console.WriteLine("What is the membership ID for the purchase?");
+          string purchaseID = Console.ReadLine();
+          Console.WriteLine("How much money did you spend (just the number)?");
+          double purchaseValue = Convert.ToDouble(Console.ReadLine());
+            while(purchaseValue <= 0)
+             {
+              Console.WriteLine("Your purchase must be more than 0 dollars");
+              purchaseValue = Convert.ToDouble(Console.ReadLine());
+             }
+
+          for(int index = 0; index < MembersList.Count; index++)
+           {
+            if((MembersList[index].membershipID == purchaseID)&& found == false)
+              {
+                MembersList[index].SetNewBalance(purchaseValue); //updates the balance
+                Console.WriteLine("You spent: " + purchaseValue + " dollars. Your new balance is: " + MembersList[index].totalPurchaseAmount);
+              }
+           }
          }
          } while (!(userChoice == "Q" || userChoice == "q")); //closes first do
         }//close the main loop

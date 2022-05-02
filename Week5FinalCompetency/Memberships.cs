@@ -46,6 +46,10 @@ namespace Week5Competency
         {
             //nothing goes in here
         }
+        public virtual void SetNewBalance(double newestBalance)
+        {
+            totalPurchaseAmount = totalPurchaseAmount + newestBalance;
+        }
 
         public override string ToString()
         {
