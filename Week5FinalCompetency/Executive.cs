@@ -21,10 +21,6 @@ namespace Week5Competency
         {
             email = newestEmail;
         }
-        public override void SetNewBalance(double newestBalance)
-        {
-            totalPurchaseAmount = totalPurchaseAmount + newestBalance;
-        }
 
         public override string ToString()
         {

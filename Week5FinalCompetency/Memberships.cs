@@ -50,6 +50,10 @@ namespace Week5Competency
         {
             totalPurchaseAmount = totalPurchaseAmount + newestBalance;
         }
+        public virtual void SetReturnBalance(double SetReturnBalance)
+        {
+            totalPurchaseAmount = totalPurchaseAmount - SetReturnBalance;
+        }
 
         public override string ToString()
         {

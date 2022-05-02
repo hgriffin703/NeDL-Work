@@ -92,6 +92,8 @@ namespace Week5Competency
              }
           }//close the for loop
          } //close the else if loop
+
+         //won't check for account doesn't exist
          else if (userChoice == "U" || userChoice == "u")
          {
             int index;
@@ -119,9 +121,6 @@ namespace Week5Competency
               Console.WriteLine("");
          }
 
-
-
-         //Issue: this will not actually save the deleted so when I read the file again it is not updated
          else if(userChoice == "D" || userChoice == "d")
          {
            int index;
@@ -169,11 +168,33 @@ namespace Week5Competency
               } //if loop
            } //for loop
          }
+
+         //the T: RETURNS SECTION
          else if (userChoice == "T" || userChoice == "t")
          {
             Console.WriteLine("What is the membership ID for the account?");
             string returnAccount = Console.ReadLine();
+            Console.WriteLine("How much in dollars are you returning?");
+            double returnAmount = Convert.ToDouble(Console.ReadLine());
+
+            while(returnAmount <= 0)
+            {
+              Console.WriteLine("Your return cannot be less than or equal to 0");
+              returnAmount = Convert.ToDouble(Console.ReadLine());
+            }
+
+            for(int index = 0; index < MembersList.Count; index++)
+            {
+              if(returnAccount == MembersList[index].membershipID)
+              {
+                MembersList[index].SetReturnBalance(returnAmount); //updates the balance
+                Console.WriteLine("You returned: " + returnAmount + " dollars. Your new balance is: " + MembersList[index].totalPurchaseAmount);
+              }
+            }
          }
+
+
+         //R/L section
          else if(userChoice == "L" || userChoice == "l" || userChoice == "R" || userChoice == "r")
         {
           Console.WriteLine("in the R/r pr L/l area");
