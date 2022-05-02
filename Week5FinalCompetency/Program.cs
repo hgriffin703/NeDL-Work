@@ -138,7 +138,7 @@ namespace Week5Competency
             {
               if(MembersList[index].membershipID == updatemembership)
               {
-              Console.WriteLine("Please enter the new value to update?");
+              Console.WriteLine("Please enter the new email address?");
               string updateValue = Console.ReadLine();
               MembersList[index].SetEmail(updateValue);
               found = true;
