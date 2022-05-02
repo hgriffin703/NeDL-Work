@@ -91,13 +91,8 @@ namespace Week5Competency
             // checks if the account exists
           for(index = 0; index < MembersList.Count; index++) 
           {
-             if ((MembersList[index].membershipID == enterMembershipID) && found == false)
-              {
-                Console.WriteLine("This is membership ID already exists. Please enter a different ID");
-                enterMembershipID = Console.ReadLine();;
-              }
-              else if(enterMembershipID != MembersList[index].membershipID)
-              {
+              if(MembersList[index].membershipID != enterMembershipID)
+             {
                 Console.WriteLine("what type of membership is it?");
                 newMemType = Console.ReadLine();
                 Console.WriteLine("Please enter a contact email address");
@@ -106,24 +101,9 @@ namespace Week5Competency
                 newMemAnnualCost = Convert.ToDouble(Console.ReadLine()); 
                 Console.WriteLine("What is the annual percent of cash back?");
                 newMemCashback = Convert.ToDouble(Console.ReadLine());
-
-              switch(newMemType)
-              {
-                case "Regular":
-                MembersList.Add(new Regular(enterMembershipID, newMemEmail, newMemType, newMemAnnualCost, newPurchaseAmount, newMemCashback));
+                                MembersList.Add(new Corporate(enterMembershipID, newMemType, newMemEmail, newMemAnnualCost, newMemCashback, newPurchaseAmount));
                 break;
-                case "Corporate":
-                MembersList.Add(new Corporate(enterMembershipID, newMemEmail, newMemType, newMemAnnualCost, newPurchaseAmount, newMemCashback));
-                break;
-                case "Non Profit":
-                MembersList.Add(new NonProfit(enterMembershipID, newMemEmail, newMemType, newMemAnnualCost, newPurchaseAmount, newMemCashback));
-                break;
-                case "Executive":
-                MembersList.Add(new Executive(enterMembershipID, newMemEmail, newMemType, newMemAnnualCost, newPurchaseAmount, newMemCashback));
-                break;
-              }
-              break;
-              }
+             }
           }//close the for loop
          } //close the else if loop
          else if (userChoice == "U" || userChoice == "u")
@@ -145,12 +125,35 @@ namespace Week5Competency
               }
             }
             if (found)
+            {
               Console.WriteLine("This has been found and updated");
+            }
             else
               Console.WriteLine("This has not been found. Nothing was updated");
-              
-           foreach (Memberships theMember in MembersList)
-           Console.WriteLine(theMember);
+              Console.WriteLine("");
+         }
+         else if(userChoice == "D" || userChoice == "d")
+         {
+           int index;
+           bool found = false;
+
+           Console.WriteLine("which acocunt would you like to delete?");
+           string deleteID = Console.ReadLine();
+           for(index = 0; index < MembersList.Count; index++)
+           {
+             if((MembersList[index].membershipID == deleteID)&& found == false)
+             {
+               MembersList.RemoveAt(index);
+               found = true;
+             }
+           }
+           if(found)
+            Console.WriteLine("The members has been deleted. Thank you!");
+          else
+            Console.WriteLine("The membership was not found. Please enter a valid membership");
+
+           foreach(Memberships theMembership in MembersList)
+            Console.WriteLine(theMembership);
          }
          } while (!(userChoice == "Q" || userChoice == "q")); //closes first do
         }//close the main loop
