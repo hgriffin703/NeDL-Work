@@ -144,6 +144,11 @@ namespace Week5Competency
               found = true;
               }
             }
+            if (found)
+              Console.WriteLine("This has been found and updated");
+            else
+              Console.WriteLine("This has not been found. Nothing was updated");
+              
            foreach (Memberships theMember in MembersList)
            Console.WriteLine(theMember);
          }
