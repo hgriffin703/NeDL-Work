@@ -119,11 +119,6 @@ namespace Week5Competency
                     MembersList.Add(new Corporate(enterMembershipID, newMemEmail, newMemType, newMemAnnualCost, newPurchaseAmount));
                     break;
                   }
-                  default:
-                  {
-                    Console.WriteLine("Enter a valid membership type");
-                    break;
-                  }
                 }
          } //close the else if loop
 
