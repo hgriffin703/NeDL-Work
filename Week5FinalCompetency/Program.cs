@@ -62,6 +62,7 @@ namespace Week5Competency
       if (userChoice == "C" || userChoice == "c")
          {
              int index;
+             bool found = false;
              double newPurchaseAmount = 0;
              string enterMembershipID;
              string newMemType;
@@ -70,29 +71,59 @@ namespace Week5Competency
 
              Console.WriteLine("What is the account number you would like to add?");
              enterMembershipID =  Console.ReadLine();
-
-            // checks if the account exists
-          for(index = 0; index < MembersList.Count; index++) 
-          {
-              if(enterMembershipID != MembersList[index].membershipID)
-            {
-              Console.WriteLine("what type of membership is it?");
-              newMemType = Console.ReadLine();
-              Console.WriteLine("Please enter a contact email address");
-              newMemEmail = Console.ReadLine();
-              Console.WriteLine("Please enter an annual cost of membership");
-              newMemAnnualCost = Convert.ToDouble(Console.ReadLine()); 
-
-              MembersList.Add(new Corporate(enterMembershipID, newMemEmail, newMemType, newMemAnnualCost, newPurchaseAmount));
+             foreach(Memberships theMember in MembersList)
+             {
+               for(index = 0; index < MembersList.Count; index++)
+               {
+                if(MembersList[index].membershipID == enterMembershipID)
+               {
+                found = true;
                 break;
-            }
-            else
-            {
-              Console.WriteLine("That already exists. Please try entering a different membership ID.");
-              Console.WriteLine("");
-              break;
-            }
-          }//close the for loop
+               }
+                else
+                {
+                  found = false;
+                }
+               }  
+              if(found == true)
+              {
+                Console.WriteLine("That membership ID already exists.");
+                break;
+              }
+             } while(found == true);
+
+                Console.WriteLine("what type of membership is it?");
+                newMemType = Console.ReadLine();
+                Console.WriteLine("Please enter a contact email address");
+                newMemEmail = Console.ReadLine();
+                Console.WriteLine("Please enter an annual cost of membership");
+                newMemAnnualCost = Convert.ToDouble(Console.ReadLine()); 
+
+                switch(newMemType)
+                {
+                  case "Regular":
+                  {
+                    MembersList.Add(new Regular(enterMembershipID, newMemEmail, newMemType, newMemAnnualCost, newPurchaseAmount));
+                    break;
+                  }
+                  case "Executive":
+                  {
+                    MembersList.Add(new Executive(enterMembershipID, newMemEmail, newMemType, newMemAnnualCost, newPurchaseAmount));
+                    break;
+                  }
+                  case "Non Profit":
+                  {
+                    Console.WriteLine("What type of Non Profit is it?");
+                    string newNPType = Console.ReadLine();
+                    MembersList.Add(new NonProfit(enterMembershipID, newMemEmail, newMemType, newMemAnnualCost, newPurchaseAmount, newNPType));
+                    break;
+                  }
+                  case "Corporate":
+                  {
+                    MembersList.Add(new Corporate(enterMembershipID, newMemEmail, newMemType, newMemAnnualCost, newPurchaseAmount));
+                    break;
+                  }
+                }
          } //close the else if loop
 
          //won't check for account doesn't exist
@@ -207,6 +238,9 @@ namespace Week5Competency
               }
             }
          }
+
+
+         //in the A section
           else if(userChoice == "A" || userChoice =="a")
           {
             Console.WriteLine("What membership ID would you like to get your Cash Back from?");
