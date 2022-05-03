@@ -61,19 +61,16 @@ namespace Week5Competency
 
       if (userChoice == "C" || userChoice == "c")
          {
-             int index;
              bool found = false;
              double newPurchaseAmount = 0;
              string enterMembershipID;
              string newMemType;
              string newMemEmail;
              double newMemAnnualCost;
-
              Console.WriteLine("What is the account number you would like to add?");
              enterMembershipID =  Console.ReadLine();
-             foreach(Memberships theMember in MembersList)
-             {
-               for(index = 0; index < MembersList.Count; index++)
+
+               for(int index = 0; index < MembersList.Count; index++)
                {
                 if(MembersList[index].membershipID == enterMembershipID)
                {
@@ -90,7 +87,6 @@ namespace Week5Competency
                 Console.WriteLine("That membership ID already exists.");
                 break;
               }
-             } while(found == true);
 
                 Console.WriteLine("what type of membership is it?");
                 newMemType = Console.ReadLine();
@@ -121,6 +117,11 @@ namespace Week5Competency
                   case "Corporate":
                   {
                     MembersList.Add(new Corporate(enterMembershipID, newMemEmail, newMemType, newMemAnnualCost, newPurchaseAmount));
+                    break;
+                  }
+                  default:
+                  {
+                    Console.WriteLine("Enter a valid membership type");
                     break;
                   }
                 }
