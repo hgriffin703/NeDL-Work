@@ -57,20 +57,16 @@ namespace Week5Competency
 
           } while (!validUserChoice);
 
-            //in the L section - to read the accounts out
-
         //in the C section - create a new membership
 
       if (userChoice == "C" || userChoice == "c")
          {
              int index;
-             bool found = false;
              double newPurchaseAmount = 0;
              string enterMembershipID;
              string newMemType;
              string newMemEmail;
              double newMemAnnualCost;
-             double newMemCashback;
 
              Console.WriteLine("What is the account number you would like to add?");
              enterMembershipID =  Console.ReadLine();
@@ -79,17 +75,23 @@ namespace Week5Competency
           for(index = 0; index < MembersList.Count; index++) 
           {
               if(enterMembershipID != MembersList[index].membershipID)
-             {
-                Console.WriteLine("what type of membership is it?");
-                newMemType = Console.ReadLine();
-                Console.WriteLine("Please enter a contact email address");
-                newMemEmail = Console.ReadLine();
-                Console.WriteLine("Please enter an annual cost of membership");
-                newMemAnnualCost = Convert.ToDouble(Console.ReadLine()); 
+            {
+              Console.WriteLine("what type of membership is it?");
+              newMemType = Console.ReadLine();
+              Console.WriteLine("Please enter a contact email address");
+              newMemEmail = Console.ReadLine();
+              Console.WriteLine("Please enter an annual cost of membership");
+              newMemAnnualCost = Convert.ToDouble(Console.ReadLine()); 
 
               MembersList.Add(new Corporate(enterMembershipID, newMemEmail, newMemType, newMemAnnualCost, newPurchaseAmount));
                 break;
-             }
+            }
+            else
+            {
+              Console.WriteLine("That already exists. Please try entering a different membership ID.");
+              Console.WriteLine("");
+              break;
+            }
           }//close the for loop
          } //close the else if loop
 
@@ -105,12 +107,12 @@ namespace Week5Competency
           for(index = 0; index < MembersList.Count; index++) 
             {
               if(MembersList[index].membershipID == updatemembership)
-                {
+              {
                 Console.WriteLine("Please enter the new email address?");
                 string updateValue = Console.ReadLine();
                 MembersList[index].SetEmail(updateValue);
                 found = true;
-                }
+              }
             }
             if (found)
               {
@@ -137,12 +139,13 @@ namespace Week5Competency
              }
            }
            if(found)
+           {
             Console.WriteLine("The members has been deleted. Thank you!");
+            Console.WriteLine("");
+           }
           else
             Console.WriteLine("The membership was not found. Please enter a valid membership");
-
-          foreach(Memberships theMember in MembersList)
-            Console.WriteLine(theMember);
+            Console.WriteLine("");
          }
 
           // in the P section for Purchases
@@ -153,11 +156,11 @@ namespace Week5Competency
           string purchaseID = Console.ReadLine();
           Console.WriteLine("How much money did you spend (just the number)?");
           double purchaseValue = Convert.ToDouble(Console.ReadLine());
-            while(purchaseValue <= 0)
-             {
+          while(purchaseValue <= 0)
+            {
               Console.WriteLine("Your purchase must be more than 0 dollars");
               purchaseValue = Convert.ToDouble(Console.ReadLine());
-             }
+            }
 
           for(int index = 0; index < MembersList.Count; index++)
            {
@@ -166,6 +169,12 @@ namespace Week5Competency
                 MembersList[index].SetNewBalance(purchaseValue); //updates the balance
                 Console.WriteLine("You spent: " + purchaseValue + " dollars. Your new balance is: " + MembersList[index].totalPurchaseAmount);
               } //if loop
+              else
+              {
+                Console.WriteLine("That account does not exist. No purchase was added.");
+                Console.WriteLine("");
+                break;
+              }
            } //for loop
          }
 
@@ -189,6 +198,12 @@ namespace Week5Competency
               {
                 MembersList[index].SetReturnBalance(returnAmount); //updates the balance
                 Console.WriteLine("You returned: " + returnAmount + " dollars. Your new balance is: " + MembersList[index].totalPurchaseAmount);
+              }
+              else
+              {
+                Console.WriteLine("The return was not processed! That account does not exist.");
+                Console.WriteLine("");
+                break;
               }
             }
          }
