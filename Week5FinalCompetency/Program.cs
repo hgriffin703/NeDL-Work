@@ -9,10 +9,11 @@ namespace Week5Competency
           List<Memberships> MembersList = new List<Memberships>();
 
         // Add a couple of memberships to the list to test
-            MembersList.Add(new Regular("10000", "hg@gmail.com", "Regular", 50.00, 150.00, .1)); 
-            MembersList.Add(new Executive("10001", "exec@gmail.com", "Executive", 75.00, 500.00, .2)); 
-            MembersList.Add(new NonProfit("10002", "nonprofit@hotmail.com", "Non Profit", 25.00, 700.00, .15)); 
-            MembersList.Add(new Corporate("10003", "Corporate@yahoo.com", "Corporate", 100.00, 2000.00, .25));
+            MembersList.Add(new Regular("10000", "hg@gmail.com", "Regular", 50.00, 150.00)); 
+            MembersList.Add(new Executive("10001", "exec@gmail.com", "Executive", 75.00, 500.00)); 
+            MembersList.Add(new NonProfit("10002", "nonprofit@hotmail.com", "Non Profit", 25.00, 700.00, "Military")); 
+            MembersList.Add(new NonProfit("10003", "NonMilitary@events.com", "Non Profit", 250.00, 2500.00, "Volunteer"));
+            MembersList.Add(new Corporate("10004", "Corporate@yahoo.com", "Corporate", 100.00, 2000.00));
 
             
          bool validUserChoice = false;
@@ -85,9 +86,8 @@ namespace Week5Competency
                 newMemEmail = Console.ReadLine();
                 Console.WriteLine("Please enter an annual cost of membership");
                 newMemAnnualCost = Convert.ToDouble(Console.ReadLine()); 
-                Console.WriteLine("What is the annual percent of cash back?");
-                newMemCashback = Convert.ToDouble(Console.ReadLine());
-              MembersList.Add(new Corporate(enterMembershipID, newMemType, newMemEmail, newMemAnnualCost, newMemCashback, newPurchaseAmount));
+
+              MembersList.Add(new Corporate(enterMembershipID, newMemEmail, newMemType, newMemAnnualCost, newPurchaseAmount));
                 break;
              }
           }//close the for loop
@@ -196,6 +196,12 @@ namespace Week5Competency
           {
             Console.WriteLine("What membership ID would you like to get your Cash Back from?");
             string cashbackID = Console.ReadLine();
+
+            for(int index = 0; index < MembersList.Count; index++)
+            if(MembersList[index].membershipID == cashbackID)
+            {
+              MembersList[index].applyCashBack();
+            }
           }
 
          //R/L section

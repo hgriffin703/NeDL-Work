@@ -2,24 +2,27 @@ using System;
 
 namespace Week5Competency
 {
-    class Regular: Memberships
+    class Regular: Memberships, ISpecialOffers
     {
-        public double cashback;
-        public Regular()
+        
+        public Regular(string newMembershipID, string newEmail, string newMembershipType, double newAnnualCost, double newTotalPurchaseAmount): base (newMembershipID, newEmail, newMembershipType, newAnnualCost, newTotalPurchaseAmount)
         {
-            cashback = 0.0;
+            //only uses the base class values. The cashback amount is not needed
         }
-        public Regular(string newMembershipID, string newEmail, string newMembershipType, double newAnnualCost, double newTotalPurchaseAmount, double newCashback): base (newMembershipID, newEmail, newMembershipType, newAnnualCost, newTotalPurchaseAmount)
+         public override void applyCashBack()
         {
-            cashback = newCashback;
-        }
-         public override void applyCashBack(double cashBack)
-        {
-            cashBack = totalPurchaseAmount *cashback;
+            double cashbackPercent = .1;
+            double cashbackAmount = cashbackPercent*totalPurchaseAmount;
+            totalPurchaseAmount = 0;
+            Console.WriteLine("Your cash back amount is: " + cashbackAmount + " dollars! Your new total Purchase Amount: " + totalPurchaseAmount);
         } 
+        public double getSpecialOffer()
+        {
+            return (annualCost * .25);
+        }
         public override string ToString()
         {
-            return base.ToString() + " | Cashback Percent: " + cashback;
+            return base.ToString() + " you got a special offer of 25% of your annual cost: " + getSpecialOffer();
         }
     }
 }

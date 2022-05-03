@@ -14,6 +14,7 @@ namespace Week5Competency
         {get;set;}
         public double totalPurchaseAmount
         {get;set;}
+        public double cashbackAmount;
         public Memberships()
         {
             membershipID = "";
@@ -21,6 +22,7 @@ namespace Week5Competency
             membershipType = "";
             annualCost = 0.0;
             totalPurchaseAmount = 0.0;
+            cashbackAmount = 0.0;
         }
         public Memberships(string newMembershipID, string newEmail, string newMembershipType, double newAnnualCost, double newTotalPurchaseAmount)
         {
@@ -29,19 +31,12 @@ namespace Week5Competency
             membershipType = newMembershipType;
             annualCost = newAnnualCost;
             totalPurchaseAmount = newTotalPurchaseAmount;
+            cashbackAmount = 0.0;
         }
-        //take the amount of the purchase and adds it to our running total to call in each section
-        /* public double makePurchase(double purchaseAmount)
-        {
-            totalPurchaseAmount = totalPurchaseAmount + purchaseAmount;
-        } */
-        //takes our return amount and subtracts it from our running total to call in each section
-/*         public double makeReturn (double returnAmount)
-        {
-            totalPurchaseAmount = totalPurchaseAmount - returnAmount;
-        } */
+
         //takes our cashback amount for E and R and sets our totalPurchaseamount = to 0 
-        public abstract void applyCashBack(double cashBack);
+        public abstract void applyCashBack();
+
         public virtual void SetEmail(string newestEmail)
         {
             email = newestEmail;

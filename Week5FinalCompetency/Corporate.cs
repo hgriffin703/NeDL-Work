@@ -4,23 +4,21 @@ namespace Week5Competency
 {
     class Corporate: Memberships
     {
-        public double corpCashback;
-        public Corporate()
+        public Corporate(string newMembershipID, string newEmail, string newMembershipType, double newAnnualCost, double newTotalPurchaseAmount): base (newMembershipID, newEmail, newMembershipType, newAnnualCost, newTotalPurchaseAmount)
         {
-            corpCashback = 0.0;
+
         }
-        public Corporate(string newMembershipID, string newEmail, string newMembershipType, double newAnnualCost, double newTotalPurchaseAmount, double newCorpCashback): base (newMembershipID, newEmail, newMembershipType, newAnnualCost, newTotalPurchaseAmount)
+        public override void applyCashBack()
         {
-            corpCashback = newCorpCashback;
-        }
-        public override void applyCashBack(double cashBack)
-        {
-            cashBack = totalPurchaseAmount *corpCashback;
+            double cashbackpercent = .25;
+            double cashbackdollars = cashbackpercent* totalPurchaseAmount;
+            totalPurchaseAmount = 0;
+            Console.WriteLine("Your cashback amount is: " + cashbackdollars + " dollars! Your new total purchase amount is: " + totalPurchaseAmount);
         }
 
         public override string ToString()
         {
-            return base.ToString() + " | Cashback Percent: " + corpCashback;
+            return base.ToString();
         }
     }
 }
