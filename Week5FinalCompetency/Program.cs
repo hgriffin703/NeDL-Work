@@ -179,75 +179,103 @@ namespace Week5Competency
          else if (userChoice == "P" || userChoice == "p")
          {
            bool found = false;
-          Console.WriteLine("What is the membership ID for the purchase?");
-          string purchaseID = Console.ReadLine();
-          Console.WriteLine("How much money did you spend (just the number)?");
-          double purchaseValue = Convert.ToDouble(Console.ReadLine());
-          while(purchaseValue <= 0)
-            {
-              Console.WriteLine("Your purchase must be more than 0 dollars");
-              purchaseValue = Convert.ToDouble(Console.ReadLine());
-            }
+           int index;
+            Console.WriteLine("What is the membership ID for the account?");
+            string purchaseAccount = Console.ReadLine();
 
-          for(int index = 0; index < MembersList.Count; index++)
-           {
-            if((MembersList[index].membershipID == purchaseID)&& found == false)
+          for(index = 0; index < MembersList.Count; index++) 
+            {
+              if(MembersList[index].membershipID == purchaseAccount)
               {
-                MembersList[index].SetNewBalance(purchaseValue); //updates the balance
-                Console.WriteLine("You spent: " + purchaseValue + " dollars. Your new balance is: " + MembersList[index].totalPurchaseAmount);
-              } //if loop
-              else
-              {
-                Console.WriteLine("That account does not exist. No purchase was added.");
-                Console.WriteLine("");
-                break;
+                Console.WriteLine("Please enter the purchase amount?");
+                double purchaseValue = Convert.ToDouble(Console.ReadLine());
+                while(purchaseValue <= 0)
+                {
+                  Console.WriteLine("your purchase must be greater than $0. Please enter a new amount");
+                  purchaseValue = Convert.ToDouble(Console.ReadLine());
+                }
+                MembersList[index].SetNewBalance(purchaseValue);
+                found = true;
               }
-           } //for loop
+            }
+            if (found)
+              {
+              Console.WriteLine("This has been found and updated");
+              foreach (Memberships themembers in MembersList)
+              {
+                Console.WriteLine(themembers);
+              }
+              }
+            else
+              Console.WriteLine("This has not been found. Nothing was updated");
+              Console.WriteLine("");
          }
+ 
 
          //the T: RETURNS SECTION
          else if (userChoice == "T" || userChoice == "t")
          {
+           bool found = false;
+           int index;
             Console.WriteLine("What is the membership ID for the account?");
             string returnAccount = Console.ReadLine();
-            Console.WriteLine("How much in dollars are you returning?");
-            double returnAmount = Convert.ToDouble(Console.ReadLine());
 
-            while(returnAmount <= 0)
+          for(index = 0; index < MembersList.Count; index++) 
             {
-              Console.WriteLine("Your return cannot be less than or equal to 0");
-              returnAmount = Convert.ToDouble(Console.ReadLine());
-            }
-
-            for(int index = 0; index < MembersList.Count; index++)
-            {
-              if(returnAccount == MembersList[index].membershipID)
+              if(MembersList[index].membershipID == returnAccount)
               {
-                MembersList[index].SetReturnBalance(returnAmount); //updates the balance
-                Console.WriteLine("You returned: " + returnAmount + " dollars. Your new balance is: " + MembersList[index].totalPurchaseAmount);
-              }
-              else
-              {
-                Console.WriteLine("The return was not processed! That account does not exist.");
-                Console.WriteLine("");
-                break;
+                Console.WriteLine("Please enter the return amount?");
+                double returnValue = Convert.ToDouble(Console.ReadLine());
+                while(returnValue <= 0)
+                {
+                  Console.WriteLine("your return must be greater than $0. Please enter a new amount");
+                  returnValue = Convert.ToDouble(Console.ReadLine());
+                }
+                MembersList[index].SetReturnBalance(returnValue);
+                found = true;
               }
             }
+            if (found)
+              {
+              Console.WriteLine("This has been found and updated");
+              foreach (Memberships themembers in MembersList)
+              {
+                Console.WriteLine(themembers);
+              }
+              }
+            else
+              Console.WriteLine("This has not been found. Nothing was updated");
+              Console.WriteLine("");
          }
+
 
 
          //in the A section
           else if(userChoice == "A" || userChoice =="a")
           {
-            Console.WriteLine("What membership ID would you like to get your Cash Back from?");
-            string cashbackID = Console.ReadLine();
+            bool found = false;
+           int index;
+            Console.WriteLine("What is the membership ID for the cashback account?");
+            string cashBackAccount = Console.ReadLine();
 
-            for(int index = 0; index < MembersList.Count; index++)
-            if(MembersList[index].membershipID == cashbackID)
+          for(index = 0; index < MembersList.Count; index++) 
             {
+              if(MembersList[index].membershipID == cashBackAccount)
+              {
               MembersList[index].applyCashBack();
+                found = true;
+              }
             }
-          }
+            if (found)
+              {
+              Console.WriteLine("");
+              Console.WriteLine("This has been found and updated");
+              }
+            else
+              Console.WriteLine("This has not been found. Nothing was updated");
+              Console.WriteLine("");
+         }
+          
 
          //R/L section
          else if(userChoice == "L" || userChoice == "l" || userChoice == "R" || userChoice == "r")

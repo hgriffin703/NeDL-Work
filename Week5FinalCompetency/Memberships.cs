@@ -41,6 +41,7 @@ namespace Week5Competency
         {
             email = newestEmail;
         }
+
         public virtual void SetNewBalance(double newestBalance)
         {
             totalPurchaseAmount = totalPurchaseAmount + newestBalance;
