@@ -59,7 +59,7 @@ namespace Week5Competency
 
         //in the C section - create a new membership
 
-      if (userChoice == "C" || userChoice == "c")
+     if (userChoice == "C" || userChoice == "c")
          {
              bool found = false;
              double newPurchaseAmount = 0;
