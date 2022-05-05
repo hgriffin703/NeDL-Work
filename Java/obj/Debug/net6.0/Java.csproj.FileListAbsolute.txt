@@ -1,0 +1,5 @@
+C:\Users\HGriffin\Desktop\NeDL\Java\obj\Debug\net6.0\Java.csproj.AssemblyReference.cache
+C:\Users\HGriffin\Desktop\NeDL\Java\obj\Debug\net6.0\Java.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HGriffin\Desktop\NeDL\Java\obj\Debug\net6.0\Java.AssemblyInfoInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\Java\obj\Debug\net6.0\Java.AssemblyInfo.cs
+C:\Users\HGriffin\Desktop\NeDL\Java\obj\Debug\net6.0\Java.csproj.CoreCompileInputs.cache
