@@ -10,7 +10,7 @@ namespace PetProject //must be the same namespace througout
           string userChoice;
           string fileName = @"runners.txt";
 
-      //Employees[] EmployeeArray = new Employees[25]; //Employee array create
+          List<Runners> RunnersList = new List<Runners>();
 
           do 
       {
@@ -46,48 +46,58 @@ namespace PetProject //must be the same namespace througout
 
         } while (!validUserChoice);
 
-          List<Runners> RunnersList = new List<Runners>();
-
-/*           RunnersList.Add(new Runners("Hayley", "Griffin", "Half Marathon")); //test for salary
-          RunnersList.Add(new Runners("Derek", "Loseke", "Marathon"));
-          RunnersList.Add(new Runners("Jon", "Foss", "Half Marathon"));
-          RunnersList.Add(new Runners("Seth", "Marek", "Marathon"));
-          RunnersList.Add(new Runners("Seth", "Prauner", "Marathon")); */
+ 
+/*           RunnersList.Add(new Runners("Hayley", "Griffin", "Good Life Halfsy", "Half Marathon")); //test for salary
+          RunnersList.Add(new Runners("Derek", "Loseke", "Berlin Marathon", "Marathon"));
+          RunnersList.Add(new Runners("Jon", "Foss", "Good Life Halfsy", "Half Marathon"));
+          RunnersList.Add(new Runners("Seth", "Marek", "New York City Marathon", "Marathon"));
+          RunnersList.Add(new Runners("Seth", "Prauner", "Lincoln Marathon", "Marathon"));  */
  
 
           //in the L section
-      if(userChoice == "L" || userChoice == "l")
-      {
-        using (StreamReader sr = File.OpenText("runners.txt"))
+        if(userChoice == "L" || userChoice == "l")
         {
-          string firstName;
-          string lastName;
-          string distance;
+         List<string> list = new List<string>();
+         using (StreamReader sr = File.OpenText("runners.txt"))
+         {
+            string firstName;
+            string lastName;
+            string raceName;
+            string distance;
 
-          while ((firstName = sr.ReadLine()) != null) //sets first line of the file to lastName
-          {
-              //firstName = sr.ReadLine();
-              Console.WriteLine(firstName);
+           while ((firstName = sr.ReadLine()) != null) //sets first line equal to first name
+            {
+                //firstName = sr.ReadLine();
+                Console.WriteLine(firstName);
 
-              lastName = sr.ReadLine(); //sets the second line of the file to lastName
-              Console.WriteLine(lastName);
+                lastName = sr.ReadLine(); //sets the second line of the file to lastName
+                Console.WriteLine(lastName);
 
-              distance = (sr.ReadLine()); //sets the third line of the file to eType
-              Console.WriteLine(distance);
-                      
-              RunnersList.Add(new Runners(firstName, lastName, distance));
+                raceName = sr.ReadLine(); //sets the third line of the file to eType
+                Console.WriteLine(raceName);
+
+                distance = sr.ReadLine();
+                Console.WriteLine(distance);
+        
+              RunnersList.Add(new Runners(firstName, lastName, raceName, distance));
+                
+              foreach (Runners Runners in RunnersList)
+              {
+                Console.WriteLine(Runners);
+              }  // end foreach  
+            Console.WriteLine("");
          }
-         Console.WriteLine("");
          }
-      }
+        }
 
 
       //in the S section - save the file
-     /*  else if (userChoice == "S" || userChoice == "s")
+      else if (userChoice == "S" || userChoice == "s")
         {
           int index;
           string firstName;
           string lastName;
+          string raceName;
           string distance;
 
         Console.WriteLine("In the S/s area");
@@ -102,34 +112,36 @@ namespace PetProject //must be the same namespace througout
           {
             if(RunnersList[index] != null)
             {
-              fileStr.WriteLine(EmployeeArray[index].firstName);
-              fileStr.WriteLine(EmployeeArray[index].lastName);
-              fileStr.WriteLine(EmployeeArray[index].distance);
+              fileStr.WriteLine(RunnersList[index].firstName);
+              fileStr.WriteLine(RunnersList[index].lastName);
+              fileStr.WriteLine(RunnersList[index].raceName);
+              fileStr.WriteLine(RunnersList[index].distance);
             }
           }
         Console.WriteLine(fileName + " has been saved");
         } 
       }
- */
+
 
       //now in the R section
-      if(userChoice == "R" || userChoice == "r")
-      {
-        Console.WriteLine("in the R/r area");
-
-        Console.WriteLine("What runner would you like to find?");
-        string findRunner = Console.ReadLine();
-        bool found = false;
-        foreach (Runners theRunner in RunnersList)
+        //R SECTION
+        else if(userChoice == "R" || userChoice == "r")
         {
-          if(theRunner.firstName == findRunner)
-          {
-            Console.WriteLine(theRunner);
-            found = true;
-          }
-        }
-          Console.WriteLine("");
-      }
+        Console.Write("Please enter a Racer's last name to find: ");
+        string findName = Console.ReadLine();
+        bool found = false;
+        foreach (Runners racer in RunnersList)
+        {
+            if (racer.lastName == findName)
+            {
+                Console.WriteLine(racer);
+                found = true;
+            }
+        }  // end foreach  
+        if (!(found))
+            Console.WriteLine("Name was not found.");
+        }//close else if 
+
       //create an employee if there is space
       else if(userChoice == "C" || userChoice == "c")
       { 
@@ -140,6 +152,8 @@ namespace PetProject //must be the same namespace througout
         string newUserFName = Console.ReadLine();
         Console.WriteLine("What is the runners last name?");
         string newUserLName = Console.ReadLine();
+        Console.WriteLine("What is the race name?");
+        string newRaceName = Console.ReadLine();
         Console.WriteLine("What is the main distance they run?");
         string newDistance = Console.ReadLine();
         
@@ -149,7 +163,7 @@ namespace PetProject //must be the same namespace througout
         {
             if((RunnersList[index] == null) && found == false) 
           {
-            RunnersList.Add(new Runners(newUserFName, newUserLName, newDistance));
+            RunnersList.Add(new Runners(newUserFName, newUserLName, newRaceName, newDistance));
           }
         } //close first for loop
           Console.WriteLine(""); 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HGriffin\\Desktop\\NeDL\\day17lists\\Day17Lists.csproj": {}
+    "C:\\Users\\HGriffin\\Desktop\\NeDL\\Day17Lists\\Day17Lists.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HGriffin\\Desktop\\NeDL\\day17lists\\Day17Lists.csproj": {
+    "C:\\Users\\HGriffin\\Desktop\\NeDL\\Day17Lists\\Day17Lists.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HGriffin\\Desktop\\NeDL\\day17lists\\Day17Lists.csproj",
+        "projectUniqueName": "C:\\Users\\HGriffin\\Desktop\\NeDL\\Day17Lists\\Day17Lists.csproj",
         "projectName": "Day17Lists",
-        "projectPath": "C:\\Users\\HGriffin\\Desktop\\NeDL\\day17lists\\Day17Lists.csproj",
+        "projectPath": "C:\\Users\\HGriffin\\Desktop\\NeDL\\Day17Lists\\Day17Lists.csproj",
         "packagesPath": "C:\\Users\\HGriffin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HGriffin\\Desktop\\NeDL\\day17lists\\obj\\",
+        "outputPath": "C:\\Users\\HGriffin\\Desktop\\NeDL\\Day17Lists\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HGriffin\\AppData\\Roaming\\NuGet\\NuGet.Config",
