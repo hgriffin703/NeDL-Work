@@ -13,7 +13,7 @@ public class Main {
         int goodday = myObj.nextInt();
         System.out.println("How has your week been on a scale of 1-10?");
         int goodweek = myObj.nextInt();
-        int overall = goodday + goodweek;
+        int overall = (goodday + goodweek)/2;
         System.out.println("your week has been a " + overall);
     }
 }

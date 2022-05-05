@@ -71,14 +71,57 @@ namespace Application
     }
 } */
 
-using System;
+/* using System;
 namespace Kattis
 {
     class Program
     {
         static void Main(string[] args)
         {
-           Console.WriteLine("How many carrots?"); 
+           Console.WriteLine("How many contestants?");
+           int N = Convert.ToInt16(Console.ReadLine());
+           Console.WriteLine("How many huffle-puff problems are there?");
+           int P = Convert.ToInt16(Console.ReadLine());
+
+           for(int index = 0; index < N; index++)
+           {
+               while (index < N)
+               {
+                   Console.WriteLine("Describe the next contestant");
+                   string description = Console.ReadLine();
+                   index++;
+               }
+           }
+           Console.WriteLine("You are going to give out " + P + " carrots!");
+        }
+    }
+} */
+
+/* using System;
+namespace KattisPractice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("What is the value of R1?");
+            int R1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("What is the value of S1?");
+            int S1 = Convert.ToInt32(Console.ReadLine());
+            int R2 = (2*S1)-R1;
+            Console.WriteLine(R2);
+        }
+    }
+} */
+
+using System;
+namespace KattisPractice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
         }
     }
 }

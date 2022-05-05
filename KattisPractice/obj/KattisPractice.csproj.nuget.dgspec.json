@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HGriffin\\Desktop\\NeDL\\KattisPractice\\KattisPractice.csproj": {}
+    "C:\\Users\\HGriffin\\Desktop\\NeDL\\kattispractice\\KattisPractice.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HGriffin\\Desktop\\NeDL\\KattisPractice\\KattisPractice.csproj": {
+    "C:\\Users\\HGriffin\\Desktop\\NeDL\\kattispractice\\KattisPractice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HGriffin\\Desktop\\NeDL\\KattisPractice\\KattisPractice.csproj",
+        "projectUniqueName": "C:\\Users\\HGriffin\\Desktop\\NeDL\\kattispractice\\KattisPractice.csproj",
         "projectName": "KattisPractice",
-        "projectPath": "C:\\Users\\HGriffin\\Desktop\\NeDL\\KattisPractice\\KattisPractice.csproj",
+        "projectPath": "C:\\Users\\HGriffin\\Desktop\\NeDL\\kattispractice\\KattisPractice.csproj",
         "packagesPath": "C:\\Users\\HGriffin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HGriffin\\Desktop\\NeDL\\KattisPractice\\obj\\",
+        "outputPath": "C:\\Users\\HGriffin\\Desktop\\NeDL\\kattispractice\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HGriffin\\AppData\\Roaming\\NuGet\\NuGet.Config",
