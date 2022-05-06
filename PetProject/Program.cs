@@ -121,6 +121,7 @@ namespace PetProject //must be the same namespace througout
               fileStr.WriteLine(RunnersList[index].lastName);
               fileStr.WriteLine(RunnersList[index].raceName);
               fileStr.WriteLine(RunnersList[index].distance);
+              fileStr.WriteLine(RunnersList[index].weeklyMiles);
             }
           }
         Console.WriteLine(fileName + " has been saved");
