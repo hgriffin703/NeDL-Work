@@ -85,18 +85,17 @@ namespace Day17
                 Console.WriteLine(Racers);
               }  // end foreach  
             Console.WriteLine("");
-         }
+            }
          }
         }
           else if (userChoice == "S" || userChoice == "s")
-        {
-            using(TextWriter tw = new StreamWriter("Racers.txt"))
           {
+            using(TextWriter tw = new StreamWriter("Racers.txt"))
             foreach (object Events in RacersList)
                 tw.WriteLine(Events);
           }
 
-        } //close if statement
+ //close if statement
             //IN THE C SECTION
          if(userChoice == "C" || userChoice == "c")
         { 

@@ -1,15 +1,3 @@
-Molly
-Seidel
-Tokyo Olympics
-Marathon
-3rd place
-Jim
-Walmsley
-Leadville 100
-100 miles
-1st place
-Gwen
-Jorgenson
-Athens Olympics
-Triathalon
-1st place
+Runners Name: Hayley Griffin | the Race: maathon | the Distance: testing | the Result: dnf
+Runners Name: Jim Walmsley | the Race: 100 miles | the Distance: Leadville 100 | the Result: 1st place
+Runners Name: Gwen Jorgenson | the Race: Triathalon | the Distance: Athens Olympics | the Result: 1st place

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PetProject //must be the same namespace througout
 {
@@ -12,9 +13,9 @@ namespace PetProject //must be the same namespace througout
 
           List<Runners> RunnersList = new List<Runners>();
 
-          do 
+        do 
       {
-          do
+        do
       {
       //initialize variables
       validUserChoice = false;
@@ -47,7 +48,7 @@ namespace PetProject //must be the same namespace througout
         } while (!validUserChoice);
 
  
-/*           RunnersList.Add(new Runners("Hayley", "Griffin", "Good Life Halfsy", "Half Marathon")); //test for salary
+/*        RunnersList.Add(new Runners("Hayley", "Griffin", "Good Life Halfsy", "Half Marathon")); //test for salary
           RunnersList.Add(new Runners("Derek", "Loseke", "Berlin Marathon", "Marathon"));
           RunnersList.Add(new Runners("Jon", "Foss", "Good Life Halfsy", "Half Marathon"));
           RunnersList.Add(new Runners("Seth", "Marek", "New York City Marathon", "Marathon"));
@@ -60,45 +61,49 @@ namespace PetProject //must be the same namespace througout
          List<string> list = new List<string>();
          using (StreamReader sr = File.OpenText("runners.txt"))
          {
+           int index = 0;
             string firstName;
             string lastName;
             string raceName;
             string distance;
+            int miles;
 
            while ((firstName = sr.ReadLine()) != null) //sets first line equal to first name
             {
                 //firstName = sr.ReadLine();
-                Console.WriteLine(firstName);
+                //Console.WriteLine(firstName);
 
                 lastName = sr.ReadLine(); //sets the second line of the file to lastName
-                Console.WriteLine(lastName);
+                //Console.WriteLine(lastName);
 
-                raceName = sr.ReadLine(); //sets the third line of the file to eType
-                Console.WriteLine(raceName);
+                raceName = sr.ReadLine(); //sets the third line of the file to raceName
+                //Console.WriteLine(raceName);
 
-                distance = sr.ReadLine();
-                Console.WriteLine(distance);
+                distance = sr.ReadLine();//sets the fourth line of the file to distance
+                //Console.WriteLine(distance);
+
+                miles = Convert.ToInt16(sr.ReadLine());
         
-              RunnersList.Add(new Runners(firstName, lastName, raceName, distance));
-                
-              foreach (Runners Runners in RunnersList)
+              RunnersList.Add(new Runners(firstName, lastName, raceName, distance, miles));
+            }
+                         
+               foreach (Runners Runners in RunnersList)
               {
-                Console.WriteLine(Runners);
+                Console.WriteLine(Runners); //lists all of the info from the file
               }  // end foreach  
-            Console.WriteLine("");
-         }
-         }
+              Console.WriteLine("");
+          }  
         }
 
 
       //in the S section - save the file
       else if (userChoice == "S" || userChoice == "s")
-        {
-          int index;
-          string firstName;
-          string lastName;
-          string raceName;
-          string distance;
+      {
+        int index;
+        string firstName;
+        string lastName;
+        string raceName;
+        string distance;
 
         Console.WriteLine("In the S/s area");
         //delete the file if it exists; for Ratings
@@ -156,24 +161,59 @@ namespace PetProject //must be the same namespace througout
         string newRaceName = Console.ReadLine();
         Console.WriteLine("What is the main distance they run?");
         string newDistance = Console.ReadLine();
+        Console.WriteLine("How many miles have you run so far this week?");
+        int newMiles = Convert.ToInt16(Console.ReadLine());
         
           bool found = false; 
         //index to add it new employee to the array
         for (index = 0; index < RunnersList.Count; index++)
         {
-            if((RunnersList[index] == null) && found == false) 
+          if(found == false) 
           {
-            RunnersList.Add(new Runners(newUserFName, newUserLName, newRaceName, newDistance));
+            RunnersList[index]= new Runners(newUserFName, newUserLName, newRaceName, newDistance, newMiles);
+            found = true;
           }
         } //close first for loop
           Console.WriteLine(""); 
       }
 
-      else if(userChoice == "T" || userChoice == "t")
-      {
-        Console.WriteLine("How many miles did you run today?");
-        int milesRan = Convert.ToInt32(Console.ReadLine());
-      }
+          // in the T section for Tracking Miles
+         else if (userChoice == "T" || userChoice == "t")
+         {
+           bool found = false;
+           int index;
+            Console.WriteLine("What is the runners first name?");
+            string runnerFName = Console.ReadLine();
+            Console.WriteLine("What is the runners last name");
+            string runnerLName = Console.ReadLine();
+
+          for(index = 0; index < RunnersList.Count; index++) 
+            {
+              if((RunnersList[index].firstName == runnerFName) && RunnersList[index].lastName == runnerLName)
+              {
+                Console.WriteLine("Please enter the miles run today?");
+                int dailyMiles = Convert.ToInt16(Console.ReadLine());
+                while(dailyMiles <= 0)
+                {
+                  Console.WriteLine("To enter miles, please ensure they are greater than 0. Please enter new mileage");
+                  dailyMiles = Convert.ToInt16(Console.ReadLine());
+                }
+                RunnersList[index].SetWeeklyMileage(dailyMiles);
+                found = true;
+              }
+            }
+            if (found)
+              {
+              Console.WriteLine("This has been found and updated");
+              foreach (Runners therunners in RunnersList)
+              {
+                Console.WriteLine(therunners);
+              }
+              }
+            else
+              Console.WriteLine("This has not been found. Nothing was updated");
+              Console.WriteLine("");
+         }
 
           //in the TL sections
        else if(userChoice == "TL" || userChoice == "tl")
@@ -183,7 +223,7 @@ namespace PetProject //must be the same namespace througout
         //subtracts your race day - today to get days left
         double daysUntilRace = inputtedDate.Subtract(DateTime.Today).TotalDays;
         double weeksUntilRace = daysUntilRace/7;
-        Console.WriteLine("You have " + daysUntilRace + " days until your race");
+        Console.WriteLine("You have: " + daysUntilRace + " days until your race");
         Console.WriteLine("You have: " + weeksUntilRace + " weeks until the race!");
         Console.WriteLine("");
       }//close else if  */
