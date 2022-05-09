@@ -100,10 +100,6 @@ namespace PetProject //must be the same namespace througout
       else if (userChoice == "S" || userChoice == "s")
       {
         int index;
-        string firstName;
-        string lastName;
-        string raceName;
-        string distance;
 
         Console.WriteLine("In the S/s area");
         //delete the file if it exists; for Ratings
@@ -124,8 +120,8 @@ namespace PetProject //must be the same namespace througout
               fileStr.WriteLine(RunnersList[index].weeklyMiles);
             }
           }
-        Console.WriteLine(fileName + " has been saved");
         } 
+        Console.WriteLine(fileName + " has been saved");
       }
 
 

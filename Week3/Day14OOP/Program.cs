@@ -112,11 +112,7 @@ namespace Competency //must be the same namespace througout
         else if (userChoice == "S" || userChoice == "s")
          {
             int index;
-            char eType = '\0';
-            string firstName;
-            string lastName;
-            int AnnualSalary;
-
+  
           Console.WriteLine("In the S/s area");
           //delete the file if it exists; for Ratings
           if (File.Exists(fileName))
