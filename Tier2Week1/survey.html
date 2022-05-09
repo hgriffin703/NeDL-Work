@@ -4,20 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RunRating</title>
+    <img src="MyMedia/randomimage.jfif" alt="alternatetext" style="width: 50px;height: 100px;">
+    <h1>Welcome to the Run Rating Survey</h1>
+
+
+    <link rel="stylesheet" href = "survey.css">
+
+    <script>
+        function myFunction() {
+            document.getElementById("greeting").innerHTML = "Thank you for taking our survey"
+        }
+    </script>
+
 </head>
 <body>
     <form>
-    <p1>This is the first question. How was your day?</p1>
-    <br>
-    <input type="text">
-    <br><br>
-    <p2>How would you rate your run?</p2>
-    <br>
-    <input type="radio" id="great" name="runrating" value="Great">
-    <label for="great">Great!</label><br>
-    <input type="radio" id="okay" name="runrating" value="Okay">
-    <label for="okay">Okay</label><br>
+        <p1>How did you feel overall today?</p1>
+        <br>
+        <input type="text">
+        <br><br>
+        <p2>How many miles did you run today?</p2><br>
+        <input type = "text"> <br><br>
+        <p3>How would you rate your run?</p2>
+        <br>
+        <input type="radio" id="great" name="runrating" value="Great">
+        <label for="great">Great!</label><br>
+        <input type="radio" id="okay" name="runrating" value="Okay">
+        <label for="okay">Okay</label><br>
+        <input type="radio" id="Soso" name="runrating" value="Soso">
+        <label for="Soso">So So</label><br>
+        <input type="radio" id="awful" name="runrating" value="Awful">
+        <label for="awful">Awful!</label><br><br>
+        <p4>How would you rate your effort level?</p2> <br>
+        <input type="radio" id="Easy" name="effortlevel" value="Easy">
+        <label for="Easy">Easy!</label><br>
+        <input type="radio" id="Moderate" name="effortlevel" value="Moderate">
+        <label for="Moderate">Moderate</label><br>
+        <input type="radio" id="Difficult" name="effortlevel" value="Difficult">
+        <label for="Difficult">Difficult!</label><br><br>
+        
+        <button type ="button" onclick="myFunction()">Submit</button>
     </form>
 </body>
 </html>

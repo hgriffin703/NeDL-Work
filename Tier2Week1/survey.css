@@ -1,4 +1,11 @@
 body
 {
     background-color: lightgrey;
+    text-align: center;
+}
+h1
+{
+    font-style: Veranda;
+    color:blueviolet;
+    text-align: center;
 }
