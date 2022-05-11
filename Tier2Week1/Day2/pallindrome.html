@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Check</title>
+    <h1>Palindrome Check</h1>
+
+    <link rel="stylesheet" href = "pallindrome.css">
+    <script src="pallindrome.js"></script>
+
+</head>
+<body>
+    <div class: myflexboxRow>
+        <div class: myflexboxColumn>
+            <form name="wordForm">
+                Word Value: <input type ="text" name="enterWord" value=""><br /><br>
+                Number Value (1 or 2): <input type="text" name="enterNumber" value=""><br /><br>
+                <input type="button" value="Add to list" onclick="checkAndAdd()"> <br><br>
+            </form>
+        </div>
+        <div class: myflexboxColumn>
+            <p2>List 1</p2> <br>
+            <p5>Word + Palindrome?</p5><br><br>
+            <table id="List1">
+            </table>
+            <input type="button" value="Clear List 1" onclick="clearlist1()"> <br><br>
+        </div>
+        <div class: myflexboxColumn>
+            <p2>List 2</p2> <br>
+            <p5>Word + Palindrome?</p5><br><br>
+            <table id="List2">
+            </table>
+            <input type="button" value="Clear List 2" onclick="clearlist2()"> <br><br>
+        </div>
+    </div>
+</body>
+</html>

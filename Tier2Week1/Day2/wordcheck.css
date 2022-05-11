@@ -1,0 +1,20 @@
+h1
+{
+    color: purple;
+}
+.myflexboxRow
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.myflexboxColumn
+{
+    flex: 33%;
+    padding:20px;
+}
+@media screen and(max-width: 800px) 
+{
+    .myflexboxRow{
+        flex-direction: column;
+    } 
+}

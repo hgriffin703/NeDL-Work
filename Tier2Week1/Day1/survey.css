@@ -1,0 +1,62 @@
+body
+{
+    background-color: lightgrey;
+    text-align: center;
+}
+img
+{
+    align-content: left;
+}
+h1
+{
+    font-style: Veranda;
+    color:blueviolet;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+p2
+{
+    font-size: 12pt;
+    color: green
+}
+label
+{
+    color: green;
+}
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 50%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: blueviolet; /* Grey background */
+    outline: none; /* Remove outline */
+
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+
+  }

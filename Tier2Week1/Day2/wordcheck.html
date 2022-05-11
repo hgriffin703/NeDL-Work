@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Check 3000</title>
+    <h1>Word Check 3000</h1>
+
+    <link rel="stylesheet" href = "wordcheck.css">
+    <script src="wordcheck.js"></script>
+</head>
+<body>
+
+    <div class ="myflexboxRow">
+        <div class="myflexboxColumn">
+            <form name="wordForm">
+                Word Value: <input type ="text" name="enterWord" value=""><br /><br>
+                Number Value: <input type="text" name="enterNumber" value=""><br /><br>
+                <input type="button" value="Add to list" onclick="checkAndAdd()">
+            </form>
+        </div>
+        <div class ="myflexboxColumn">
+        <h2>List 1</h2>
+            <table id="List1">
+            </table>
+            <br /><br />
+            <input type="button" value="Clear List 1" onclick="clearthelist1()">
+        </div>
+         <div class ="myflexboxColumn">
+            <h2>List 2</h2>
+            <table id="List2">
+            </table>
+            <br /><br />
+            <input type ="button" value="Clear List 2" onclick="clearthelist2()">
+        </div>
+    </div>
+</body>
+</html>
