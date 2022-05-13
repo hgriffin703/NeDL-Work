@@ -16,15 +16,15 @@ function addNewItem() {
     }
 }
 function clearoneitem() {
-    var toDoTable = document.getElementById("ToDoList");
+    var theToDoList = document.getElementById("ToDoList");
     var inputValue = document.forms["ToDoForm"]["clearItemValue"];
-    if (Number(inputValue.value) < 1 || Number(inputValue.value) == null || Number(inputValue.value) > toDoTable.rows.length - 1) {
+    if (Number(inputValue.value) < 1 || Number(inputValue.value) == null || Number(inputValue.value) > theToDoList.rows.length - 1) {
         // no number was enter; tell the user
         alert("Please enter the row number of the To Do to remove");
         return false;
     }
     else {
-        toDoTable.deleteRow(Number(inputValue.value));
+        theToDoList.deleteRow(Number(inputValue.value));
     }
 }
 function clearthelist() {

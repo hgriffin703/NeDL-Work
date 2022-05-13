@@ -28,7 +28,7 @@ function clearoneitem()
       }
        else
       {
-        toDoTable.deleteRow(Number(inputValue.value));
+        theToDoList.deleteRow(Number(inputValue.value));
       } 
 
 }
