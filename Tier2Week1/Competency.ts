@@ -28,7 +28,9 @@ function clearoneitem()
       }
        else
       {
-        theToDoList.deleteRow(Number(inputValue.value));
+        console.log(inputValue.value);
+        theToDoList.deleteRow(Number(inputValue.value)-1);
+        document.forms["ToDoForm"]["clearItemValue"].value = "";
       } 
 
 }

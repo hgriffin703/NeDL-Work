@@ -5,8 +5,10 @@
 }
 .myflexboxColumn
 {
-    flex: 30%;
+    flex: 100%;
     padding: 20px;
+    margin: auto;
+    text-align: center;
 }
 @media screen and(max-width: 800px) 
 {
@@ -17,15 +19,19 @@
 h1
 {
     color: purple;
+    align-content: center;
+    margin: auto;
+    align-items: center;
 }
 h2
 {
    color:purple;
 }
-
 body
 {
     counter-reset: table-counter;
+    background-color: lightgrey;
+    align-items: center;
 }
 table tr::before {
     display: table-cell;
@@ -33,4 +39,9 @@ table tr::before {
     content: counter(table-counter) ".";
     padding-right: 10px;
     text-align: right;
+}
+table, tr, td{
+    border: 2px solid;
+    border-color: black;
+    margin: auto;
 }

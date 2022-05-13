@@ -14,17 +14,17 @@
     <div class ="myflexboxRow">
         <div class="myflexboxColumn">
             <form name="ToDoForm">
-                To Do: <input type ="text" name="enterToDo" value=""><br /><br>
-                <button type="button"  onclick="addNewItem()">Add item to the list</button><br><br>
-                Remove To Do:<input type ="number" name="clearItemValue" value=""><br /><br>
+                Add a To Do: <input type ="text" name="enterToDo" value=""><br /><br>
+                <button type="button"  onclick="addNewItem()">Add item to the list</button><br><br><br><br>
+                Remove One Item:<input type ="number" name="clearItemValue" value=""><br /><br>
                 <button type="button"  onclick="clearoneitem()">Clear item from the list</button><br>
             </form>
         </div>
         <div class ="myflexboxColumn">
         <h2>To Do List</h2>
             <table id="ToDoList">
-            </table>
-            <input type="button" value="Clear To Do List" onclick="clearthelist()">
+            </table><br><br>
+            <input type="button" value="Clear all Items from the List" onclick="clearthelist()">
         </div>
     </div>
 </body>
