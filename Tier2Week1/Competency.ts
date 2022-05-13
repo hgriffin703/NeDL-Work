@@ -1,19 +1,36 @@
-function addNewItem()
+function addNewItem() 
 {
-    let addToDo: string = "";
-    //takes the var and sets it equal to the fname that was entered
-    addToDo = (<HTMLInputElement> document.getElementById("enterToDo")).value;
-    document.getElementById("greeting")!.innerHTML = "Hello there " + addToDo + "!";
-    if(addToDo == "")
-    {
-        alert("Please enter a task to add");
-        return false;
+    let theNewToDo: string = "";
+    // place the values in the form into variables
+    theNewToDo = document.forms["ToDoForm"]["enterToDo"].value;
+    // validate that something was entered as a word
+    if (theNewToDo == "") {
+      // no word was entered so tell the user
+      alert("Please enter a To Do to add");
+      return false;
     }
-    //else
-    //{
-        //var tableRef = document.getElementById("ToDoList");
-        //(tableRef.insertRow(tableRef.rows.length)).innerHTML = addToDo;
-    //}
+    else
+    {
+        let tableRef = <HTMLTableElement> document.getElementById("ToDoList");
+        var row = tableRef.insertRow(-1);
+        row.innerHTML = theNewToDo;
+        document.forms["ToDoForm"]["enterToDo"].value = "";
+     }
+}
+function clearoneitem()
+{
+  let theToDoList = document.getElementById("ToDoList") as HTMLTableElement;
+  const inputValue = document.forms["ToDoForm"]["clearItemValue"] as HTMLInputElement;
+    if (Number(inputValue.value) < 1 || Number(inputValue.value) == null || Number(inputValue.value)> theToDoList.rows.length-1) {
+        // no number was enter; tell the user
+        alert("Please enter the row number of the To Do to remove");
+        return false;
+      }
+       else
+      {
+        toDoTable.deleteRow(Number(inputValue.value));
+      } 
+
 }
 
 function clearthelist() {

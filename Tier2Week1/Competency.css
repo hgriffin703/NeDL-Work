@@ -20,5 +20,17 @@ h1
 }
 h2
 {
-   color:purple
+   color:purple;
+}
+
+body
+{
+    counter-reset: table-counter;
+}
+table tr::before {
+    display: table-cell;
+    counter-increment: table-counter;
+    content: counter(table-counter) ".";
+    padding-right: 10px;
+    text-align: right;
 }
