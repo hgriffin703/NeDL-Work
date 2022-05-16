@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes</title>
+    <h1>Need Inspiration?</h1>
+    <h4>Get a quote here!</h4>
+
+    <link rel="stylesheet" href = "bacon.css">
+    <script src="quotes.js"></script>
+</head>
+<body>
+    <div class: flexboxrow>
+        <div class: flexboxcolumn>
+            <form id:Quotes>
+                Quote Length <select name = "quoteSearch" id="quoteSearch">
+                <option value = 1>Short</option>
+                <option value = 2>Not Too Long</option>
+                <option value = 3>Long</option>
+                </select>
+                <br><br><br>
+                <input type="button" value="Generate Quote" onclick="getquotes()"> <br>
+            </form>
+        </div>
+        <div class: flexboxcolumn>
+            <table id="QuoteTable">
+            </table>
+        </div>
+    </div>
+</body>
+</html>
