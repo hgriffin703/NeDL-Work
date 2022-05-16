@@ -10,12 +10,21 @@ async function getquotes()
     else if (theNewLength==2)
         {  // the user wants a medium one
          minLength = 50;
-         maxLength = 500;
+         maxLength = 250;
         }
-    else // the user wants a long one
-        minLength = 500;
+    else// the user wants a long one
+        minLength = 250;
 
     quotesLink = quotesLink + "?minLength=" + minLength + "&maxLength=" + maxLength;
-    alert(quotesLink);
+
+    var response = await fetch(quotesLink);
+
+    var jsonData = await response.json();
+    var theNewQuote = JSON.stringify(jsonData.content);
+    theNewQuote = theNewQuote.substring(1,theNewQuote.length-1);
+    document.getElementById("theQuote").innerHTML = theNewQuote;
+    var theNewAuthor = JSON.stringify(jsonData.author);
+    theNewAuthor = theNewAuthor.substring(1,theNewAuthor.length-1);
+    document.getElementById("theAuthor").innerHTML = theNewAuthor;
 
 }

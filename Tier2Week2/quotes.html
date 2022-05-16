@@ -8,14 +8,14 @@
     <h1>Need Inspiration?</h1>
     <h4>Get a quote here!</h4>
 
-    <link rel="stylesheet" href = "bacon.css">
+    <link rel="stylesheet" href = "quotes.css">
     <script src="quotes.js"></script>
 </head>
 <body>
     <div class: flexboxrow>
         <div class: flexboxcolumn>
             <form id:Quotes>
-                Quote Length <select name = "quoteSearch" id="quoteSearch">
+                Choose a quote length: <select name = "quoteSearch" id="quoteSearch">
                 <option value = 1>Short</option>
                 <option value = 2>Not Too Long</option>
                 <option value = 3>Long</option>
@@ -26,6 +26,8 @@
         </div>
         <div class: flexboxcolumn>
             <table id="QuoteTable">
+                <h1 class="display-10 fw-normal" id="theQuote"></h1>
+                <p class="lead fw-normal" id="theAuthor"></p>
             </table>
         </div>
     </div>
