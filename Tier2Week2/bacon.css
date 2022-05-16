@@ -1,0 +1,16 @@
+h1
+{
+    color: brown;
+}
+.MeatList
+{
+    flex: 100%;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+}
+.baconfinder
+{
+    text-align: center;
+    padding: 20px;
+}
