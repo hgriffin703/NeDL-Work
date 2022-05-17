@@ -13,17 +13,17 @@
 
 </head>
 <body>
-    <div class: flexBoxRow>
-        <div class: flexboxColumn>
-            <form areyoubored>
-                <p>Are you bored?</p>
-                <input type="radio" id="yes" name="imbored" value="1">
-                <label for="yes">YES!</label><br>
-                <input type="radio" id="no" name="imnotbored" value="2">
-                <label for="no">No Way!</label><br>
-                <input type="button" value ="Give me something to do" onclick="GetToDo()">
+    <div class="flexBoxRow">
+        <div class="flexboxColumn">
+            <form id:areyoubored>
+                Are you bored?: <select name = "bored" id="bored">
+                    <option value = 1>YES! VERY!</option>
+                    <option value = 2>No, not at all!</option>
+                    </select>
+                    <br><br><br>
+                    <input type="button" value="Show Me the Forecast" onclick="getToDo()">
             </form>
-            <div class: flexboxColumn>
+            <div class= "flexboxColumn">
                 <table id="hobbyTable">
                     <h2>Here's what you should do:</h2>
                 </table>

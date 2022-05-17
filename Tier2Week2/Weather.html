@@ -4,33 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quotes</title>
-    <h1>Need Inspiration?</h1>
-    <h4>Get a quote here!</h4>
+    <title>Weather Forecast</title>
+    <h1>Get the Forecast</h1>
+    <h4>Be Prepared for any weather!</h4>
 
     <link rel="stylesheet" href = "Weather.css">
     <script src="Weather.js"></script>
 </head>
 <body>
-    <div class: flexboxrow>
-        <div class: flexboxcolumn>
+    <div class="flexboxrow">
+        <div class="flexboxcolumn">
             <form id:forecast>
                 Choose city: <select name = "forecast" id="forecast">
                 <option value = MKX>Milwaukee</option>
                 <option value = OAX>Omaha</option>
                 <option value = LOT>Chicago</option>
-                <option vlaue = BOU>Denver</option>
+                <option value = BOU>Denver</option>
+                <option value = TOP>Topeka</option>
                 </select>
                 <br><br><br>
-                <input type="button" value="Generate Quote" onclick="getForecast()">
+                <input type="button" value="Show Me the Forecast" onclick="getForecast()">
             </form>
         </div>
-        <div class: flexboxcolumn>
-            <table id="ForecastTable">
-                <h1 class="display-10 fw-normal" id="theQuote"></h1>
-                <p class="lead fw-normal" id="theAuthor"></p>
-            </table>
-        </div>
+        <div class="flexboxcolumn">
+            <div class="card-body">
+              <div class="card-text" id="myDate">Date:
+              </div>
+            </div>
+
+
+            <div class="card-body">
+              <div class="card-text" id="myForecast">Forecast:</div>
+            </div>
+            <div class="card-body">
+              <div class="card-text" id="myTemp">Temperature:</div>
+            </div>
+    </div>
     </div>
 </body>
 </html>

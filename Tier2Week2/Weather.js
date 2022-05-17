@@ -1,16 +1,24 @@
 async function getForecast()
 {
-var APIstring = "https://api.weather.gov/";
-var cityselect = document.getElementById("forecast").value;
-APIstring = APIstring + cityselect + "/31,80/forecast";
-alert(APIstring);
+  var APIstring = "https://api.weather.gov/gridpoints/";
+  var cityselect = document.getElementById("forecast").value;
+  APIstring = APIstring + cityselect + "/31,80/forecast";
+  alert(APIstring);
+  console.log(APIstring);
 
-    //calls the API and waits until data is fetched to do anything
-    var response = await fetch(APIstring);
+  var response = await fetch(APIstring);
+  var jsonData = await response.json();
 
-    //clear what was there before
-    document.getElementById("ForecastTable").innerHTML = ""; 
+  days=jsonData.properties.periods.length;
 
-    //convert to a JSON
-    var jsonData = await response.json();
+/*   document.getElementById("myDate").innerHTML = "";
+  document.getElementById("myForecast").innerHTML = "";
+  document.getElementById("myTemp").innerHTML = ""; */
+
+  for (let i=0;i<days;i++)
+  {
+    document.getElementById("myDate").innerHTML += jsonData.properties.periods[i].name + "<br><br>";
+    document.getElementById("myForecast").innerHTML += jsonData.properties.periods[i].shortForecast + "<br><br>";
+    document.getElementById("myTemp").innerHTML += jsonData.properties.periods[i].temperature + " degrees Farenheit" + "<br><br>";
+  }
 }
