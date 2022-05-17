@@ -11,9 +11,9 @@ async function getForecast()
 
   days=jsonData.properties.periods.length;
 
-/*   document.getElementById("myDate").innerHTML = "";
+  /* document.getElementById("myDate").innerHTML = "";
   document.getElementById("myForecast").innerHTML = "";
-  document.getElementById("myTemp").innerHTML = ""; */
+  document.getElementById("myTemp").innerHTML = ""; */ 
 
   for (let i=0;i<days;i++)
   {
