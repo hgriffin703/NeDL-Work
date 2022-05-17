@@ -3,7 +3,7 @@ async function getForecast()
   var APIstring = "https://api.weather.gov/gridpoints/";
   var cityselect = document.getElementById("forecast").value;
   APIstring = APIstring + cityselect + "/31,80/forecast";
-  alert(APIstring);
+
   console.log(APIstring);
 
   var response = await fetch(APIstring);
@@ -11,9 +11,9 @@ async function getForecast()
 
   days=jsonData.properties.periods.length;
 
-  /* document.getElementById("myDate").innerHTML = "";
+  document.getElementById("myDate").innerHTML = ""; //innerHTML will delete
   document.getElementById("myForecast").innerHTML = "";
-  document.getElementById("myTemp").innerHTML = ""; */ 
+  document.getElementById("myTemp").innerHTML = ""; 
 
   for (let i=0;i<days;i++)
   {
