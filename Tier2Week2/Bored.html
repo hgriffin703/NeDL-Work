@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Am Bored</title>
+    <h1>I am Bored!</h1>
+    <h3>I need new Hobbies!</h3>
+
+    <link rel="stylesheet" href = "Bored.css">
+    <script>src= "Bored.js"</script>
+
+</head>
+<body>
+    <div class: flexBoxRow>
+        <div class: flexboxColumn>
+            <form areyoubored>
+                <p>Are you bored?</p>
+                <input type="radio" id="yes" name="imbored" value="1">
+                <label for="yes">YES!</label><br>
+                <input type="radio" id="no" name="imnotbored" value="2">
+                <label for="no">No Way!</label><br>
+                <input type="button" value ="Give me something to do" onclick="GetToDo()">
+            </form>
+            <div class: flexboxColumn>
+                <table id="hobbyTable">
+                    <h2>Here's what you should do:</h2>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
