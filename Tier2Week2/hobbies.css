@@ -46,11 +46,13 @@ h3
 {
     text-align: center;
 }
-.myHobbyTable, tr, th
+.mySavedHobbies
 {
     border: 1px solid;
     color: black;
-    border-collapse: collapse;
+    margin-left: auto;
+    margin-right:auto;
+    border-collapse: collapse; 
 }
 
 
