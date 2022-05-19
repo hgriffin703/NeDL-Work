@@ -14,6 +14,7 @@
   {
     flex: 25%;
     padding: 20px;
+    text-align: center;
   }
   
   /* Media query - on screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
@@ -45,6 +46,12 @@ h3
 {
     text-align: center;
 }
-.checked {
-    color: orange;
-  }
+.myHobbyTable, tr, th
+{
+    border: 1px solid;
+    color: black;
+    border-collapse: collapse;
+}
+
+
+   

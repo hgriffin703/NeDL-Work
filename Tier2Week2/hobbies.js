@@ -3,7 +3,6 @@ async function getParticipants()
     var APIstring = "https://www.boredapi.com/api/";
     var newPeople = document.getElementById("people").value;
 
-
     APIstring = APIstring +"activity?participants=" +newPeople;
 
     var response = await fetch(APIstring);
@@ -22,6 +21,7 @@ async function getToDo()
 
     var minprice = 0.0;
     var maxprice = 0.8;
+
     if(newCost==1)
         {
             minprice = 0.0;
