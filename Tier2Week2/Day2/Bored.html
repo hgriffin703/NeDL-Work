@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Ideas</title>
+    <h1>Need a Date Night or something To Do?</h1>
+    <h3>Let us give you something fun to do!</h3>
+
+    <link rel="stylesheet" href = "Bored.css">
+    <script src= "Bored.js"></script>
+
+</head>
+<body>
+    <div class="flexBoxRow">
+        <div class="flexboxColumn">
+            <form id="areyoubored">
+                Do you need a new activity?: <select name = "bored" id="bored">
+                    <option value=0></option>
+                    <option value = 1>YES!</option>
+                    <option value = 2>No, not tonight!</option>
+                    </select>
+                    <br><br><br>
+                How expensive?: <select name = "cost" id= "cost">
+                <option value=0></option>
+                <option value=1>Cheap!</option>
+                <option value=2>Middle of the road</option>
+                <option value=3>Expensive</option>
+            </select>
+            <br><br><br>
+            <input type="button" value="Generate a Date" onclick="getToDo()">
+            </form>
+            <div class= "flexboxColumn">
+                <table id="hobbyTable">
+                    <h2>Here's what you should do:</h2><br>
+                    <h1 class="display-10 fw-normal" id="theHobby"></h1>
+                    <h3 class="display-10 fw-nromal" id="theCost"></h3>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
