@@ -45,3 +45,6 @@ h3
 {
     text-align: center;
 }
+.checked {
+    color: orange;
+  }
