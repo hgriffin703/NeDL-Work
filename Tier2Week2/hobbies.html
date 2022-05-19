@@ -23,24 +23,29 @@
                 <option value=3>3 people</option>
                 <option value=4>4 people</option>
             </select>
-            <br><br><br>
+            <br><br>
             <input type="button" value="Generate an Activty by Participants" onclick="getParticipants()">
+            <br><br>
             How much should it cost?: <select name = "cost" id= "cost">
                 <option value=0></option>
                 <option value=1>Cheap(Free to .2)</option>
                 <option value=2>Middle of the Road(.21 to .45)</option>
                 <option value=3>Expensive!(.46 to .8)</option>
             </select>
-            <input type="button" value="Generate a Date" onclick="getToDo()">
-            <br><br><br>
-            <input type="button" value="Save this Activity to a List" onclick="savehobby()">
+            <br><br>
+            <input type="button" value="Generate an Activity by Cost" onclick="getToDo()">
+            <br><br>
             </form>
             <div class= "flexboxColumn">
                 <table id="hobbyTable">
                     <h2>Here's what you should do:</h2><br>
                     <h1 class="display-10 fw-normal" id="theHobby"></h1>
-                    <h3 class="display-10 fw-nromal" id="thePeople"></h3>
-                    <h3 class="display-10 fw-nromal" id="theCost"></h3>
+                    <h3>The Amount of People</h3>
+                    <h3 class="display-10 fw-normal" id="thePeople"></h3>
+                    <h3>The Cost:</h3>
+                    <h3 class="display-8 fw-normal" id="theCost"></h3>
+                    <input type="button" value="Save this Activity to a List" onclick="savehobby()">
+                    <br><br>
                 </table>
             </div>
             <div class="flexboxColumn">

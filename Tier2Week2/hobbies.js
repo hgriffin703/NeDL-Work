@@ -19,26 +19,27 @@ async function getToDo()
 {
     var APIstring = "https://www.boredapi.com/api/";
     var newCost = document.getElementById("cost").value;
+
     var minprice = 0.0;
     var maxprice = 0.8;
-
-    if(newCost == 1)
-    {
-        minprice = 0.0;
-        maxprice = 0.2;
-    }
+    if(newCost==1)
+        {
+            minprice = 0.0;
+            maxprice = 0.2;
+        }
     else if(newCost == 2)
-    {
-        minprice = 0.21;
-        maxprice = 0.45;
-    }
-    else (newCost == 3)
-    {
-        minprice = 0.46;
-        maxprice = 0.8;
-    }
+        {
+            minprice = 0.21;
+            maxprice = 0.45;
+        }
+    else
+        {
+            minprice = 0.46;
+            maxprice = 0.79;
+        }
 
     APIstring = APIstring +"activity?minprice=" + minprice + "&maxprice=" + maxprice;
+
 
     var response = await fetch(APIstring);
     var jsonData = await response.json();
@@ -57,8 +58,4 @@ function savehobby()
         var tableRef = document.getElementById("SavedHobbies");
         (tableRef.insertRow(tableRef.rows.length)).innerHTML = content;
     }
-/*     var theNewHobby= document.getElementById("theHobby").innerHTML = theNewHobby;
-    alert(theNewHobby);
-    var tableRef = document.getElementById("SavedHobbies");
-    (tableRef.insertRow(tableRef.rows.length)).innerHTML = theNewHobby; */
 }

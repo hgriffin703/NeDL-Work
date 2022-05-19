@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Container for flexboxes */
+  .flexboxRow 
+  {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Create equal entries in myflexbox */
+  .flexboxColumn 
+  {
+    flex: 25%;
+    padding: 20px;
+  }
+  
+  /* Media query - on screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) 
+  {
+    .flexboxRow 
+    {
+      flex-direction: column;
+    }
+  }
+h1
+{
+    color: blue;
+    text-align: center;
+}
+body
+{
+    background-color: lightgray;
+}
+p
+{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    color: rgb(0, 128, 255)
+}
+h3
+{
+    text-align: center;
+}
