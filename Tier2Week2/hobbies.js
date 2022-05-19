@@ -50,8 +50,15 @@ async function getToDo()
 
 function savehobby()
 {
-    var theNewHobby= document.getElementById("theHobby").innerHTML = theNewHobby;
+    localStorage.setItem("content", document.getElementById("theHobby").innerHTML);
+    var content = localStorage.content;
+    if(content !== undefined)
+    {
+        var tableRef = document.getElementById("SavedHobbies");
+        (tableRef.insertRow(tableRef.rows.length)).innerHTML = content;
+    }
+/*     var theNewHobby= document.getElementById("theHobby").innerHTML = theNewHobby;
     alert(theNewHobby);
     var tableRef = document.getElementById("SavedHobbies");
-    (tableRef.insertRow(tableRef.rows.length)).innerHTML = theNewHobby;
+    (tableRef.insertRow(tableRef.rows.length)).innerHTML = theNewHobby; */
 }
