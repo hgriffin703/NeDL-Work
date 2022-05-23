@@ -1,0 +1,16 @@
+C:\Users\HGriffin\Desktop\NeDL\HelloWorldVS\HelloWorldVS\bin\Debug\net5.0\HelloWorldVS.exe
+C:\Users\HGriffin\Desktop\NeDL\HelloWorldVS\HelloWorldVS\bin\Debug\net5.0\HelloWorldVS.deps.json
+C:\Users\HGriffin\Desktop\NeDL\HelloWorldVS\HelloWorldVS\bin\Debug\net5.0\HelloWorldVS.runtimeconfig.json
+C:\Users\HGriffin\Desktop\NeDL\HelloWorldVS\HelloWorldVS\bin\Debug\net5.0\HelloWorldVS.runtimeconfig.dev.json
+C:\Users\HGriffin\Desktop\NeDL\HelloWorldVS\HelloWorldVS\bin\Debug\net5.0\HelloWorldVS.dll
+C:\Users\HGriffin\Desktop\NeDL\HelloWorldVS\HelloWorldVS\bin\Debug\net5.0\ref\HelloWorldVS.dll
+C:\Users\HGriffin\Desktop\NeDL\HelloWorldVS\HelloWorldVS\bin\Debug\net5.0\HelloWorldVS.pdb
+C:\Users\HGriffin\Desktop\NeDL\HelloWorldVS\HelloWorldVS\obj\Debug\net5.0\HelloWorldVS.csproj.AssemblyReference.cache
+C:\Users\HGriffin\Desktop\NeDL\HelloWorldVS\HelloWorldVS\obj\Debug\net5.0\HelloWorldVS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HGriffin\Desktop\NeDL\HelloWorldVS\HelloWorldVS\obj\Debug\net5.0\HelloWorldVS.AssemblyInfoInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\HelloWorldVS\HelloWorldVS\obj\Debug\net5.0\HelloWorldVS.AssemblyInfo.cs
+C:\Users\HGriffin\Desktop\NeDL\HelloWorldVS\HelloWorldVS\obj\Debug\net5.0\HelloWorldVS.csproj.CoreCompileInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\HelloWorldVS\HelloWorldVS\obj\Debug\net5.0\HelloWorldVS.dll
+C:\Users\HGriffin\Desktop\NeDL\HelloWorldVS\HelloWorldVS\obj\Debug\net5.0\ref\HelloWorldVS.dll
+C:\Users\HGriffin\Desktop\NeDL\HelloWorldVS\HelloWorldVS\obj\Debug\net5.0\HelloWorldVS.pdb
+C:\Users\HGriffin\Desktop\NeDL\HelloWorldVS\HelloWorldVS\obj\Debug\net5.0\HelloWorldVS.genruntimeconfig.cache

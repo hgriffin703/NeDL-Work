@@ -1,0 +1,16 @@
+C:\Users\HGriffin\Desktop\NeDL\RunnerRoster\RunnerRoster\bin\Debug\net5.0\RunnerRoster.exe
+C:\Users\HGriffin\Desktop\NeDL\RunnerRoster\RunnerRoster\bin\Debug\net5.0\RunnerRoster.deps.json
+C:\Users\HGriffin\Desktop\NeDL\RunnerRoster\RunnerRoster\bin\Debug\net5.0\RunnerRoster.runtimeconfig.json
+C:\Users\HGriffin\Desktop\NeDL\RunnerRoster\RunnerRoster\bin\Debug\net5.0\RunnerRoster.runtimeconfig.dev.json
+C:\Users\HGriffin\Desktop\NeDL\RunnerRoster\RunnerRoster\bin\Debug\net5.0\RunnerRoster.dll
+C:\Users\HGriffin\Desktop\NeDL\RunnerRoster\RunnerRoster\bin\Debug\net5.0\ref\RunnerRoster.dll
+C:\Users\HGriffin\Desktop\NeDL\RunnerRoster\RunnerRoster\bin\Debug\net5.0\RunnerRoster.pdb
+C:\Users\HGriffin\Desktop\NeDL\RunnerRoster\RunnerRoster\obj\Debug\net5.0\RunnerRoster.csproj.AssemblyReference.cache
+C:\Users\HGriffin\Desktop\NeDL\RunnerRoster\RunnerRoster\obj\Debug\net5.0\RunnerRoster.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HGriffin\Desktop\NeDL\RunnerRoster\RunnerRoster\obj\Debug\net5.0\RunnerRoster.AssemblyInfoInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\RunnerRoster\RunnerRoster\obj\Debug\net5.0\RunnerRoster.AssemblyInfo.cs
+C:\Users\HGriffin\Desktop\NeDL\RunnerRoster\RunnerRoster\obj\Debug\net5.0\RunnerRoster.csproj.CoreCompileInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\RunnerRoster\RunnerRoster\obj\Debug\net5.0\RunnerRoster.dll
+C:\Users\HGriffin\Desktop\NeDL\RunnerRoster\RunnerRoster\obj\Debug\net5.0\ref\RunnerRoster.dll
+C:\Users\HGriffin\Desktop\NeDL\RunnerRoster\RunnerRoster\obj\Debug\net5.0\RunnerRoster.pdb
+C:\Users\HGriffin\Desktop\NeDL\RunnerRoster\RunnerRoster\obj\Debug\net5.0\RunnerRoster.genruntimeconfig.cache
