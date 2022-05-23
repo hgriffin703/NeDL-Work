@@ -1,6 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Get Activities</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="Bored.js"></script>
+</head>
+<body>
+
+<div class="bg"></div>
+<div class="jumbotron text-center">
+  <h2>Activities Generator</h2>
+  <p>Let us give you something to do!</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3><u>Activities!</u></h3>
+        <form id="hobbygenerator">
+            How many participants?: <select name = "people" id= "people">
+            <option value=0></option>
+            <option value=1>1 person</option>
+            <option value=2>2 people</option>
+            <option value=3>3 people</option>
+            <option value=4>4 people</option>
+        </select>
+        <br><br>
+        <input type="button" value="Generate an Activty by Participants" onclick="getParticipants()">
+        <br><br>
+        How much should it cost?: <select name = "cost" id= "cost">
+            <option value=0></option>
+            <option value=1>Cheap(Free to .2)</option>
+            <option value=2>Middle of the Road(.21 to .45)</option>
+            <option value=3>Expensive!(.46 to .8)</option>
+        </select>
+        <br><br>
+        <input type="button" value="Generate an Activity by Cost" onclick="getToDo()">
+        <br><br>
+        </form>
+    </div>
+    <div class="col-sm-4">
+        <table class="myHobbyTable" id="hobbyTable">
+            <h3><u>Heres what you should do:</u></h3>
+            <h2 class="display-10 fw-normal" id="theHobby"></h2>
+            <h4>The Amount of People/The Cost</h4>
+            <h5 class="display-10 fw-normal" id="thePeople"></h5>
+            <h5 class="display-8 fw-normal" id="theCost"></h5>
+            <input type="button" value="Save this Activity to a List" onclick="savehobby()"><br><br>
+            Item to Cross Off:<input type ="string" name="clearItemValue" value=""><br /><br>
+            <input type="button" value="Cross an Activity off the List" onclick="crossoffhobby()"> 
+            <br><br>
+        </table>
+    </div>
+    <div class="col-sm-4">       
+        <table class="mySavedHobbies table-bordered" id="SavedHobbies">
+            <h3><u>Here are the hobbies you have saved!</u></h3>
+            <th>Activity</th>
+            <tr></tr>
+        </table>
+        <input type="button" value="Clear Activity List" onclick="clearAll()">
+    </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,37 +89,54 @@
     <h1>Need a Date Night or something To Do?</h1>
     <h3>Let us give you something fun to do!</h3>
 
-    <link rel="stylesheet" href = "Bored.css">
-    <script src= "Bored.js"></script>
+    <link rel="stylesheet" href = "hobbies.css">
+    <script src= "hobbies.js"></script>
 
 </head>
 <body>
     <div class="flexBoxRow">
         <div class="flexboxColumn">
-            <form id="areyoubored">
-                Do you need a new activity?: <select name = "bored" id="bored">
-                    <option value=0></option>
-                    <option value = 1>YES!</option>
-                    <option value = 2>No, not tonight!</option>
-                    </select>
-                    <br><br><br>
-                How expensive?: <select name = "cost" id= "cost">
+            <form id="hobbygeneratory">
+                How many participants?: <select name = "people" id= "people">
                 <option value=0></option>
-                <option value=1>Cheap!</option>
-                <option value=2>Middle of the road</option>
-                <option value=3>Expensive</option>
+                <option value=1>1 person</option>
+                <option value=2>2 people</option>
+                <option value=3>3 people</option>
+                <option value=4>4 people</option>
             </select>
-            <br><br><br>
-            <input type="button" value="Generate a Date" onclick="getToDo()">
+            <br><br>
+            <input type="button" value="Generate an Activty by Participants" onclick="getParticipants()">
+            <br><br>
+            How much should it cost?: <select name = "cost" id= "cost">
+                <option value=0></option>
+                <option value=1>Cheap(Free to .2)</option>
+                <option value=2>Middle of the Road(.21 to .45)</option>
+                <option value=3>Expensive!(.46 to .8)</option>
+            </select>
+            <br><br>
+            <input type="button" value="Generate an Activity by Cost" onclick="getToDo()">
+            <br><br>
             </form>
             <div class= "flexboxColumn">
-                <table id="hobbyTable">
+                <table class="myHobbyTable" id="hobbyTable">
                     <h2>Here's what you should do:</h2><br>
                     <h1 class="display-10 fw-normal" id="theHobby"></h1>
-                    <h3 class="display-10 fw-nromal" id="theCost"></h3>
+                    <h3>The Amount of People</h3>
+                    <h3 class="display-10 fw-normal" id="thePeople"></h3>
+                    <h3>The Cost:</h3>
+                    <h3 class="display-8 fw-normal" id="theCost"></h3>
+                    <input type="button" value="Save this Activity to a List" onclick="savehobby()">
+                    <br><br>
+                </table>
+            </div>
+            <div class="flexboxColumn">
+                <table class="mySavedHobbies" id="SavedHobbies">
+                    <h2>Here are the hobbies you have saved!</h2>
+                    <th>Activity</th>
+                    <tr></tr>
                 </table>
             </div>
         </div>
     </div>
 </body>
-</html>
+</html> -->

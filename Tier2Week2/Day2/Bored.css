@@ -1,47 +1,44 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  /* Container for flexboxes */
-  .flexboxRow 
-  {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  /* Create equal entries in myflexbox */
-  .flexboxColumn 
-  {
-    flex: 30%;
-    padding: 20px;
-  }
-  
-  /* Media query - on screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) 
-  {
-    .flexboxRow 
-    {
-      flex-direction: column;
-    }
-  }
-h1
+h3
 {
-    color: blue;
-    text-align: center;
+  padding: 0px;
+  text-decoration: underline;
+  color: purple;
+}
+h2
+{
+  text-align: center;
+  align-items: center;
+  color: purple;
 }
 body
 {
-    background-color: lightgray;
+    /*counter-reset: table-counter;*/
+    background-color: lightgrey;
+    align-items: center;
 }
-p
+table
 {
-    text-align: center;
+  counter-reset: table-counter;
 }
-h2{
-    text-align: center;
-    color: rgb(0, 128, 255)
+table tr::before {
+    display: table-cell;
+    counter-increment: table-counter;
+    content: counter(table-counter) ".";
+    padding-right: 10px;
+    text-align: right;
 }
-Quotes
-{
-    text-align: center;
+body, html {
+  height: 100%;
+}
+.bg {
+  /* The image used */
+  background-image: url(https://www.google.com/imgres?imgurl=https%3A%2F%2Fmedia.istockphoto.com%2Fphotos%2Fgroup-of-hikers-walks-in-mountains-at-sunset-picture-id1189969126%3Fk%3D20%26m%3D1189969126%26s%3D612x612%26w%3D0%26h%3D6JPjSS9UORT-DAnIoa0mopA9lwFxX8tX8HQrJdb_i70%3D&imgrefurl=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fhiking&tbnid=tu5YmkDfLg-BpM&vet=12ahUKEwin4vz4v-73AhVPn3IEHV9eCRUQMygAegUIARCfAg..i&docid=DGTsp0J-8NFTbM&w=612&h=408&q=hiking%20image%20non-licensed&hl=en-US&ved=2ahUKEwin4vz4v-73AhVPn3IEHV9eCRUQMygAegUIARCfAg);
+
+  /* Full height */
+  height: 25%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
