@@ -1,0 +1,16 @@
+C:\Users\HGriffin\Desktop\NeDL\TipCalculator\TipCalculator\bin\Debug\net5.0\TipCalculator.exe
+C:\Users\HGriffin\Desktop\NeDL\TipCalculator\TipCalculator\bin\Debug\net5.0\TipCalculator.deps.json
+C:\Users\HGriffin\Desktop\NeDL\TipCalculator\TipCalculator\bin\Debug\net5.0\TipCalculator.runtimeconfig.json
+C:\Users\HGriffin\Desktop\NeDL\TipCalculator\TipCalculator\bin\Debug\net5.0\TipCalculator.runtimeconfig.dev.json
+C:\Users\HGriffin\Desktop\NeDL\TipCalculator\TipCalculator\bin\Debug\net5.0\TipCalculator.dll
+C:\Users\HGriffin\Desktop\NeDL\TipCalculator\TipCalculator\bin\Debug\net5.0\ref\TipCalculator.dll
+C:\Users\HGriffin\Desktop\NeDL\TipCalculator\TipCalculator\bin\Debug\net5.0\TipCalculator.pdb
+C:\Users\HGriffin\Desktop\NeDL\TipCalculator\TipCalculator\obj\Debug\net5.0\TipCalculator.csproj.AssemblyReference.cache
+C:\Users\HGriffin\Desktop\NeDL\TipCalculator\TipCalculator\obj\Debug\net5.0\TipCalculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HGriffin\Desktop\NeDL\TipCalculator\TipCalculator\obj\Debug\net5.0\TipCalculator.AssemblyInfoInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\TipCalculator\TipCalculator\obj\Debug\net5.0\TipCalculator.AssemblyInfo.cs
+C:\Users\HGriffin\Desktop\NeDL\TipCalculator\TipCalculator\obj\Debug\net5.0\TipCalculator.csproj.CoreCompileInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\TipCalculator\TipCalculator\obj\Debug\net5.0\TipCalculator.dll
+C:\Users\HGriffin\Desktop\NeDL\TipCalculator\TipCalculator\obj\Debug\net5.0\ref\TipCalculator.dll
+C:\Users\HGriffin\Desktop\NeDL\TipCalculator\TipCalculator\obj\Debug\net5.0\TipCalculator.pdb
+C:\Users\HGriffin\Desktop\NeDL\TipCalculator\TipCalculator\obj\Debug\net5.0\TipCalculator.genruntimeconfig.cache

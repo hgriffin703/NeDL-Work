@@ -1,0 +1,16 @@
+C:\Users\HGriffin\Desktop\NeDL\CalculatorMVC\CalculatorMVC\bin\Debug\net5.0\CalculatorMVC.exe
+C:\Users\HGriffin\Desktop\NeDL\CalculatorMVC\CalculatorMVC\bin\Debug\net5.0\CalculatorMVC.deps.json
+C:\Users\HGriffin\Desktop\NeDL\CalculatorMVC\CalculatorMVC\bin\Debug\net5.0\CalculatorMVC.runtimeconfig.json
+C:\Users\HGriffin\Desktop\NeDL\CalculatorMVC\CalculatorMVC\bin\Debug\net5.0\CalculatorMVC.runtimeconfig.dev.json
+C:\Users\HGriffin\Desktop\NeDL\CalculatorMVC\CalculatorMVC\bin\Debug\net5.0\CalculatorMVC.dll
+C:\Users\HGriffin\Desktop\NeDL\CalculatorMVC\CalculatorMVC\bin\Debug\net5.0\ref\CalculatorMVC.dll
+C:\Users\HGriffin\Desktop\NeDL\CalculatorMVC\CalculatorMVC\bin\Debug\net5.0\CalculatorMVC.pdb
+C:\Users\HGriffin\Desktop\NeDL\CalculatorMVC\CalculatorMVC\obj\Debug\net5.0\CalculatorMVC.csproj.AssemblyReference.cache
+C:\Users\HGriffin\Desktop\NeDL\CalculatorMVC\CalculatorMVC\obj\Debug\net5.0\CalculatorMVC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HGriffin\Desktop\NeDL\CalculatorMVC\CalculatorMVC\obj\Debug\net5.0\CalculatorMVC.AssemblyInfoInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\CalculatorMVC\CalculatorMVC\obj\Debug\net5.0\CalculatorMVC.AssemblyInfo.cs
+C:\Users\HGriffin\Desktop\NeDL\CalculatorMVC\CalculatorMVC\obj\Debug\net5.0\CalculatorMVC.csproj.CoreCompileInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\CalculatorMVC\CalculatorMVC\obj\Debug\net5.0\CalculatorMVC.dll
+C:\Users\HGriffin\Desktop\NeDL\CalculatorMVC\CalculatorMVC\obj\Debug\net5.0\ref\CalculatorMVC.dll
+C:\Users\HGriffin\Desktop\NeDL\CalculatorMVC\CalculatorMVC\obj\Debug\net5.0\CalculatorMVC.pdb
+C:\Users\HGriffin\Desktop\NeDL\CalculatorMVC\CalculatorMVC\obj\Debug\net5.0\CalculatorMVC.genruntimeconfig.cache

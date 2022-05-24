@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator
+namespace BankingMVC
 {
-    internal class Class1
+    class BankModel
     {
+        private string bankId;
+        private double amount;
+        private double 
     }
-}
