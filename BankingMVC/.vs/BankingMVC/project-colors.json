@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "65c8c72b-d7b8-471d-bbe0-d7c796329bb2": {
+      "ProjectGuid": "65c8c72b-d7b8-471d-bbe0-d7c796329bb2",
+      "DisplayName": "BankingMVC",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

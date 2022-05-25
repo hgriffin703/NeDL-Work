@@ -13,13 +13,13 @@ namespace CalculatorMVC
 
         public CalcController()
         {
-            calcView = new CalcView();
-            calcModel = new CalcModel(calcView.Number1, calcView.Number2);
-            calcView.Addition = calcModel.Addition();
-            calcView.Subtraction = calcModel.Subtraction();
-            calcView.Multiplication = calcModel.Multiplication();
-            calcView.Division = calcModel.Division();
-            calcView.GetMathOption();
+                calcView = new CalcView();
+                calcModel = new CalcModel(calcView.Number1, calcView.Number2);
+                calcView.Addition = calcModel.Addition();
+                calcView.Subtraction = calcModel.Subtraction();
+                calcView.Multiplication = calcModel.Multiplication();
+                calcView.Division = calcModel.Division();
+                calcView.GetMathOption();
         }
     }
 }

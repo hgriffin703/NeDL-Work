@@ -1,0 +1,16 @@
+C:\Users\HGriffin\Desktop\NeDL\DIMessageExample\DIMessageExample\obj\Debug\net5.0\DIMessageExample.csproj.AssemblyReference.cache
+C:\Users\HGriffin\Desktop\NeDL\DIMessageExample\DIMessageExample\obj\Debug\net5.0\DIMessageExample.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HGriffin\Desktop\NeDL\DIMessageExample\DIMessageExample\obj\Debug\net5.0\DIMessageExample.AssemblyInfoInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\DIMessageExample\DIMessageExample\obj\Debug\net5.0\DIMessageExample.AssemblyInfo.cs
+C:\Users\HGriffin\Desktop\NeDL\DIMessageExample\DIMessageExample\obj\Debug\net5.0\DIMessageExample.csproj.CoreCompileInputs.cache
+C:\Users\HGriffin\Desktop\NeDL\DIMessageExample\DIMessageExample\bin\Debug\net5.0\DIMessageExample.exe
+C:\Users\HGriffin\Desktop\NeDL\DIMessageExample\DIMessageExample\bin\Debug\net5.0\DIMessageExample.deps.json
+C:\Users\HGriffin\Desktop\NeDL\DIMessageExample\DIMessageExample\bin\Debug\net5.0\DIMessageExample.runtimeconfig.json
+C:\Users\HGriffin\Desktop\NeDL\DIMessageExample\DIMessageExample\bin\Debug\net5.0\DIMessageExample.runtimeconfig.dev.json
+C:\Users\HGriffin\Desktop\NeDL\DIMessageExample\DIMessageExample\bin\Debug\net5.0\DIMessageExample.dll
+C:\Users\HGriffin\Desktop\NeDL\DIMessageExample\DIMessageExample\bin\Debug\net5.0\ref\DIMessageExample.dll
+C:\Users\HGriffin\Desktop\NeDL\DIMessageExample\DIMessageExample\bin\Debug\net5.0\DIMessageExample.pdb
+C:\Users\HGriffin\Desktop\NeDL\DIMessageExample\DIMessageExample\obj\Debug\net5.0\DIMessageExample.dll
+C:\Users\HGriffin\Desktop\NeDL\DIMessageExample\DIMessageExample\obj\Debug\net5.0\ref\DIMessageExample.dll
+C:\Users\HGriffin\Desktop\NeDL\DIMessageExample\DIMessageExample\obj\Debug\net5.0\DIMessageExample.pdb
+C:\Users\HGriffin\Desktop\NeDL\DIMessageExample\DIMessageExample\obj\Debug\net5.0\DIMessageExample.genruntimeconfig.cache

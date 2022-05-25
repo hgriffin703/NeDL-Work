@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "DIMessageExample/1.0.0": {
+        "runtime": {
+          "DIMessageExample.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DIMessageExample/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
