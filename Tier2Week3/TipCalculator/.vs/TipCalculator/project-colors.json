@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "ff0a3f6e-7934-471b-8848-4c09fdb4ce95": {
+      "ProjectGuid": "ff0a3f6e-7934-471b-8848-4c09fdb4ce95",
+      "DisplayName": "TipCalculator",
+      "ColorIndex": 0
+    },
+    "270636ad-9cea-4eb4-959d-1eec4620718f": {
+      "ProjectGuid": "270636ad-9cea-4eb4-959d-1eec4620718f",
+      "DisplayName": "TipTests",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
