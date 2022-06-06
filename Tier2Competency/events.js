@@ -5,42 +5,43 @@ const app = express();
 
 app.use(express.json()); //ading a piece of middleware
 
-const events = [
-  {id: 1, name: 'Hayleys Graduation', date: "May 13th"},
-  {id: 2, name: 'Rachels Wedding', date: "September 24th"},
-  {id: 3, name: 'Hunters Baptism', date: "June 25th"}
+const clothes = [
+  {id: 1, name: 'Green Dress', brand: "H&M", Size: "Small", price: 10.50},
+  {id: 2, name: 'Flowered Top', brand: "Banana Republic", Size: "Small", price: 35.00},
+  {id: 3, name: 'Navy Blue Purse', brand: "Longchamp", Size: "One Size", price: 100.00},
+  {id: 4, name: 'Sandals', brand: "Birkenstock", Size: "9", price: 120.00},
 ]
 
-app.get('/api/events', (req, res) => {
-  res.send(events);
+app.get('/api/clothes', (req, res) => {
+  res.send(clothes);
 });
 
-app.post('/api/events', (req, res) => {
-  const { error } = validateEvent(req.body);
+app.post('/api/clothes', (req, res) => {
+  const { error } = validateClothes(req.body);
   //if invalid 400 error
   if(error) {
     res.status(400).send(error.details[0].message);
     return;
   };
 
-  const event = {
-    id: events.length + 1,
+  const clothing = {
+    id: clothes.length + 1,
     name: req.body.name,
-    date: req.body.date
+    brand: req.body.brand
   };
-  events.push(event);
-  res.send(event);
+  clothes.push(clothing);
+  res.send(clothing);
 });
 
-app.put('/api/events/:id', (req,res) => {
-  //look up the course
-  const event = events.find(c => c.id === parseInt(req.params.id));
-  if(!event) {
-  return res.status(404).send('The course was not found with that id');
+app.put('/api/clothes/:id', (req,res) => {
+  //look up the clothing item
+  const clothing = clothes.find(c => c.id === parseInt(req.params.id));
+  if(!clothing) {
+  return res.status(404).send('The item you were looking for with that id was not found');
   };
 
-  //validate course
-  const { error } = validateEvent(req.body);
+  //validate clothes
+  const { error } = validateClothes(req.body);
   //if invalid 400 error
   if(error) {
     res.status(400).send(error.details[0].message);
@@ -48,33 +49,31 @@ app.put('/api/events/:id', (req,res) => {
   };
 
   //update course
-  event.name = req.body.name;
-  event.date = req.body.date;
+  clothing.name = req.body.name;
+  clothing.brand = req.body.brand;
   //return updated course
-  res.send(event);
+  res.send(clothing);
 }); //this code does not work... no errors either
 
-app.delete('/api/events/:id', (req, res) => {
+app.delete('/api/clothes/:id', (req, res) => {
   //look up the courese
   //return 404 if error
-  const event = events.find(c => c.id === parseInt(req.params.id));
-  if(!event) res.status(404).send('The event was not found with that id');
+  const clothing = clothes.find(c => c.id === parseInt(req.params.id));
+  if(!clothing) res.status(404).send('The itme was not found with that id');
 
   //delete
-  const index = events.indexOf(event);
-  events.splice(index, 1);
+  const index = clothes.indexOf(clothing);
+  clothes.splice(index, 1);
 
-  res.send(event);
+  res.send(clothing);
 
   //return the same coures
 })
 
-
-// /api/courses/1 
-app.get('/api/events/:id', (req, res)=> {
- const event = events.find(c => c.id === parseInt(req.params.id));
- if(!event) res.status(404).send('The course was not found with that id');//404 error status; object not found
- res.send(event);
+app.get('/api/clothes/:id', (req, res)=> {
+ const clothing = clothes.find(c => c.id === parseInt(req.params.id));
+ if(!clothing) res.status(404).send('The clothing item was not found with that id');//404 error status; object not found
+ res.send(clothing);
 }) //id is a parameter here
 
 
@@ -83,11 +82,11 @@ const port = process.env.PORT || 3000;
 app.listen(port, ()=> console.log(`Listening on port ${port}...`));
 
 
-function validateEvent(course) {
+function validateClothes(clothing) {
   const schema = Joi.object({
     name: Joi.string().min(3).required(),
-    date: Joi.string().min(3).required()         
+    brand: Joi.string().min(3).required()         
   });
   
- return schema.validate(course);
+ return schema.validate(clothing);
 }
