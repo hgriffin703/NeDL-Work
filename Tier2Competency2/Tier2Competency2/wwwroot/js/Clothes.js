@@ -32,6 +32,8 @@ function addClothesItems() {
         .then(() => {
             getClothesItems();
             addNameTextbox.value = '';
+            addBrandTextbox.value = '';
+            addPriceTextbox.value = '';
         })
         .catch(error => console.error('Unable to add item.', error));
 }
@@ -48,6 +50,8 @@ function displayEditForm(id) {
     const item = todos.find(item => item.id === id);
 
     document.getElementById('edit-name').value = item.name;
+    document.getElementById('edit-brand').value = item.brand;
+    document.getElementById('edit-price').value = item.price;
     document.getElementById('edit-id').value = item.id;
     document.getElementById('edit-isComplete').checked = item.isComplete;
     document.getElementById('editForm').style.display = 'block';
@@ -58,7 +62,9 @@ function updateClothesItems() {
     const item = {
         id: parseInt(itemId, 10),
         isComplete: document.getElementById('edit-isComplete').checked,
-        name: document.getElementById('edit-name').value.trim()
+        name: document.getElementById('edit-name').value.trim(),
+        brand: document.getElementById('edit-brand').value.trim(),
+        price: document.getElementById('edit-price').value.trim()
     };
 
     fetch(`${uri}/${itemId}`, {
@@ -89,7 +95,6 @@ function _displayCount(itemCount) {
 
 function _displayItems(data) {
     const tBody = document.getElementById('todos');
-    //const tableV = document.getElementById('brand');
     tBody.innerHTML = '';
 
     _displayCount(data.length);
@@ -107,8 +112,8 @@ function _displayItems(data) {
         editButton.setAttribute('onclick', `displayEditForm(${item.id})`);
 
         let deleteButton = button.cloneNode(false);
-        deleteButton.innerText = 'Delete';
-        deleteButton.setAttribute('onclick', `deleteItem(${item.id})`);
+        deleteButton.innerText = 'Removed Item?';
+        deleteButton.setAttribute('onclick', `deleteClothesItems(${item.id})`);
 
         let tr = tBody.insertRow();
 

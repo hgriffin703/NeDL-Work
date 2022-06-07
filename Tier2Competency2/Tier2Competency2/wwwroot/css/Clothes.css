@@ -8,16 +8,31 @@
 
 table {
     font-family: Arial, sans-serif;
-    border: 1px solid;
+    border: 1px solid black;
     border-collapse: collapse;
 }
 
 th {
     background-color: #f8f8f8;
     padding: 5px;
+    border: 1px solid black;
 }
 
 td {
     border: 1px solid;
     padding: 5px;
+}
+h1 {
+    color: purple;
+    text-align: center;
+}
+p {
+    text-align: center;
+}
+#container mt-5{
+    text-align: center;
+}
+
+#col-sm-4 {
+    align-content: 50%;
 }

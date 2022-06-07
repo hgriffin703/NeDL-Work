@@ -3,44 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <title>Clothes Finder</title>
-    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/Clothes.css" />
 </head>
 <body>
-    <h1>Find clothes in my closet</h1>
-    <p>Tired of not knowing, what is in your closet?</p>
-    <p>Search and add all of your clothes in your closet here!</p>
-    <h3>Add</h3>
-    <form action="javascript:void(0);" method="POST" onsubmit="addClothesItems()">
-        <input type="text" id="add-name" placeholder="Clothing Name"><br /><br/>
-        <input type="text" id="add-brand" placeholder="Brand Name" /><br />
-        <input type="text" id="add-price" placeholder="Price" /><br />
-        <input type="submit" value="Add">
-    </form>
+    <div class="container-fluid p-5 bg-primary text-white text-center">
+        <h1>Find clothes in my closet</h1>
+        <p>Tired of not knowing, what is in your closet?</p>
+        <p>Search and add all of your clothes in your closet here!</p>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>Add a New Clothing Item</h3>
+                <form action="javascript:void(0);" method="POST" onsubmit="addClothesItems()">
+                    <input type="text" id="add-name" placeholder="Clothing Name"><br /><br />
+                    <input type="text" id="add-brand" placeholder="Brand Name" /><br /><br />
+                    <input type="text" id="add-price" placeholder="Price" /><br /><br />
+                    <input type="submit" value="Add">
+                </form>
 
-    <div id="editForm">
-        <h3>Edit</h3>
-        <form action="javascript:void(0);" onsubmit="updateClothesItems()">
-            <input type="hidden" id="edit-id">
-            <input type="checkbox" id="edit-isComplete">
-            <input type="text" id="edit-name">
-            <input type="submit" value="Save">
-            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
-        </form>
+                <div id="editForm">
+                    <h3>Edit an Existing Item</h3>
+                    <form action="javascript:void(0);" onsubmit="updateClothesItems()">
+                        <input type="hidden" id="edit-id">
+                        <input type="checkbox" id="edit-isComplete">
+                        <input type="text" id="edit-name">
+                        <input type="text" id="edit-brand">
+                        <input type="text" id="edit-price">
+                        <input type="submit" value="Save">
+                        <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+                    </form>
+                </div>
+             </div>
+
+
+                <p id="counter"></p>
+                <div class="col-sm-4">
+                    <table>
+                        <tr>
+                            <th>Donating?</th>
+                            <th>Name</th>
+                            <th>Brand</th>
+                            <th>Price</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tbody id="todos"></tbody>
+                    </table>
+                </div>
+                <div class="col-sm-4">
+                </div>
+        </div>
     </div>
 
-    <p id="counter"></p>
-
-    <table>
-        <tr>
-            <th>Is Complete?</th>
-            <th>Name</th>
-            <th>Brand</th>
-            <th>Price</th>
-            <th></th>
-            <th></th>
-        </tr>
-        <tbody id="todos"></tbody>
-    </table>
 
     <script src="js/Clothes.js" asp-append-version="true"></script>
     <script type="text/javascript">
