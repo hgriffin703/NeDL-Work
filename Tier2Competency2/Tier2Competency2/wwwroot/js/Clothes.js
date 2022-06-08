@@ -88,7 +88,7 @@ function closeInput() {
 }
 
 function _displayCount(itemCount) {
-    const name = (itemCount === 1) ? 'to-do' : 'to-dos';
+    const name = (itemCount === 1) ? 'Items' : 'Items';
 
     document.getElementById('counter').innerText = `${itemCount} ${name}`;
 }
@@ -112,7 +112,7 @@ function _displayItems(data) {
         editButton.setAttribute('onclick', `displayEditForm(${item.id})`);
 
         let deleteButton = button.cloneNode(false);
-        deleteButton.innerText = 'Removed Item?';
+        deleteButton.innerText = 'Donated?';
         deleteButton.setAttribute('onclick', `deleteClothesItems(${item.id})`);
 
         let tr = tBody.insertRow();

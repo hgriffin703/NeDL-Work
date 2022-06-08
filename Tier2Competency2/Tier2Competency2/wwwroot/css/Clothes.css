@@ -28,11 +28,13 @@ h1 {
 }
 p {
     text-align: center;
+    color: darkblue;
 }
 #container mt-5{
     text-align: center;
+    flex: 50%;
 }
 
-#col-sm-4 {
-    align-content: 50%;
+col-sm-4 {
+    flex: 50%;
 }
