@@ -25,20 +25,23 @@
                 </form>
             </div>
 
-                <div class="col-sm-4">
-                    <div id="editForm">
-                        <h3>Edit an Existing Item</h3>
-                        <form action="javascript:void(0);" onsubmit="updateClothesItems()">
-                            <input type="hidden" id="edit-id">
-                            <!--<input type="checkbox" id="edit-isComplete">-->
-                            <input type="text" id="edit-name"> <br /><br />
-                            <input type="text" id="edit-brand"><br /><br />
-                            <input type="text" id="edit-price"><br /><br />
-                            <input type="submit" value="Save">
-                            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
-                        </form>
-                    </div>
+            <div class="col-sm-4">
+                <div id="editForm">
+                    <h3>Edit an Existing Item</h3>
+                    <form action="javascript:void(0);" onsubmit="updateClothesItems()">
+                        <input type="hidden" id="edit-id">
+                        <input type="checkbox" id="edit-isComplete" style="float: left" ; />
+                        <div style="margin-left: 25px;">
+                            Would you like to donate this item?
+                        </div>
+                        <input type="text" id="edit-name"> <br /><br />
+                        <input type="text" id="edit-brand"><br /><br />
+                        <input type="text" id="edit-price"><br /><br />
+                        <input type="submit" value="Save">
+                        <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+                    </form>
                 </div>
+            </div>
 
             <div class="col-sm-4">
                 <p id="counter"></p>
